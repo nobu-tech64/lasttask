@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: lasttask_production
-  username: lasttask
-  password: <%= ENV['LASTTASK_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
