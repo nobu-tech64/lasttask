@@ -1,0 +1,56 @@
+.aaaaa{
+  &__logo{
+    background-color: olive;
+    height: 10vh;
+    text-align: center;
+  }
+}
+
+.bbbbb{
+  .Cform{
+    background-color: black;
+    height: 2500px;
+    width: 80vw;
+    margin:0 auto;
+    &__imageform{
+      background-color: pink;
+      height: 500px;
+      &--title{
+        
+      }
+    }
+    &__itemname{
+      background-color: red;
+      height: 250px;
+
+    }
+    &__description{
+      background-color: blue;
+      height: 250px;
+
+    }
+    &__productdetails{
+      background-color: mediumspringgreen;
+      height: 500px;
+    }
+    &__delivery{
+        background-color: magenta;
+      height: 500px;
+    }
+    &__price{
+        background-color: coral;
+      height: 500px;
+    }
+
+
+  }
+
+}
+
+.ccccc{
+  height: 200px;
+}
+
+.ddddd{
+  height: 200px;
+}
