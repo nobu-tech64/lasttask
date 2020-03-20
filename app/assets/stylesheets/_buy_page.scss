@@ -1,0 +1,82 @@
+a{
+  text-decoration: none;
+}
+
+.aaaaa{
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  .aaabbb{
+    &__logo{
+      width: 25vw;
+      height: 100px;
+      margin-top: 25px;
+    }
+  }
+}
+
+.bbbbb{
+  .Cform{
+    background-color: black;
+    height: 2500px;
+    width: 60vw;
+    margin:0 auto;
+
+    .varification{
+      .varification__title{
+
+      }
+      .varification__infomation{
+
+      }
+      .varification__price{
+
+      }
+      .varification__paymentmethod{
+
+      }
+      .varification__address{
+
+      }
+
+      .varification__buy_btn{
+
+      }
+
+    }
+  }
+  
+}
+
+
+
+
+
+.footer{
+  padding:60px 0;
+  color:#fff;
+  background-color: black;
+  text-align:center;
+  display: flex;
+  .content{
+    width:calc(1 / 3 * 100%);
+  }
+  .title{
+
+    }
+  .a{
+    padding-top: 15px;
+  }
+}
+.footerlogo{
+  background-color: black;
+  text-align: center;
+  .logo{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+  }
+  .copyright{
+    color: white;
+  }
+}
