@@ -2,11 +2,52 @@ a{
   text-decoration: none;
 }
 
+//プルダウンメニューのcss
+.selectwrap{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.selectwrap::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-bottom: solid 2px #b4b3b3;
+  border-right: solid 2px #b4b3b3;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -4px;
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 0 40px 0 10px;
+  border: 1px solid #b4b3b3;
+  border-radius: 2px;
+}
+select::-ms-expand {
+    display: none;
+}
+
+
+
+
 a:visited{
   color: white;
 }
 
-.aaaaa{
+.header{
   height: 150px;
   width: 100%;
   text-align: center;
@@ -51,9 +92,9 @@ a:visited{
         padding-top: 10px;
         padding-bottom: 10px;
       }
-      .Cform__imagebox{
+      .Cform__dropbox{
         .inputarea{
-
+          text-align: center;
         }
       }
     }
@@ -220,28 +261,24 @@ a:visited{
 }
 
 .ccccc{
-  height: 200px;
+  height: 280px;
   width: 100%;
   text-align: center;
   .exhibition_btn{
-    display: block;
-    height: 60px;
-    width: 400px;
-    background-color: red;
-    color: white;
-    font-size: 40px;
-    margin: auto;
     margin-top: 40px;
+    font-size: 40px;
+    color: white;
+    background-color: red;
+    width: 400px;
+    height: 80px;
   }
   .home_btn{
-    display: block;
-    height: 60px;
-    width: 400px;
-    background-color: blue;
-    color: white;
+    margin-top: 20px;
     font-size: 40px;
-    margin: auto;
-    margin-top: 40px;
+    color: white;
+    background-color: blue;
+    width: 400px;
+    height: 80px;
   }
 }
 

@@ -1,7 +1,5 @@
-%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
 
-
-.aaaaa
+.header
   = link_to root_path do
     %img.aaabbb__logo{:src => "/assets/logo.png"}
 .bbbbb
@@ -14,9 +12,9 @@
           必須
       .Cform__imageform--title2
         最大X枚まで投稿できます
-      .Cform__imagebox
+      .Cform__dropbox
         .inputarea
-          画像□
+          画像ドロップエリア（仮）
 
 
     .Cform__itemname
@@ -28,7 +26,7 @@
           必須
       .Cform__itemnamebox
         .inputform
-          書き込み□
+          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
     .Cform__description
       .Cform__description--title
         .title
@@ -37,7 +35,7 @@
           必須
       .Cform__descriptionbox
         .inputform
-          書き込み□
+          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
 
 
     .Cform__productdetails
@@ -49,13 +47,20 @@
           必須
       .Cform__productdetailsbox
         .pulldown
-          プルダウン□
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 001
+              %option{:value => ""} 002
+              %option{:value => ""} 003
+
+
       .Cform__productdetails--title
         .title
           ブランド
       .Cform__productdetailsbox
         .inputform
-          プルダウン□
+          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
+
       .Cform__productdetails--title
         .title
           出品の状態
@@ -63,7 +68,11 @@
           必須
       .Cform__productdetailsbox
         .pulldown
-          プルダウン□
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 001
+              %option{:value => ""} 002
+              %option{:value => ""} 003
 
 
     .Cform__delivery
@@ -75,7 +84,11 @@
           必須
       .Cform__deliverybox
         .pulldown
-          プルダウン□
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 001
+              %option{:value => ""} 002
+              %option{:value => ""} 003
       .Cform__delivery--title
         .title
           配送元地域
@@ -83,7 +96,11 @@
           必須
       .Cform__deliverybox
         .pulldown
-          プルダウン□
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 001
+              %option{:value => ""} 002
+              %option{:value => ""} 003
       .Cform__delivery--title
         .title
           配送準備日数
@@ -91,7 +108,11 @@
           必須
       .Cform__deliverybox
         .pulldown
-          プルダウン□
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 001
+              %option{:value => ""} 002
+              %option{:value => ""} 003
 
 
     .Cform__price
@@ -103,15 +124,14 @@
           必須
       .Cform__pricebox
         .inputform
-          書き込み□
+          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
 
 .ccccc
-  .exhibition_btn
+  %button.exhibition_btn{:name => "button", :type => "submit"}
     出品する
-    -# = f.submit "出品する", class:"button"
-  .home_btn
+  %br
+  %button.home_btn{:name => "button", :type => "submit"}
     ホームに戻る
-    -# =link_to "ホームに戻る", root_path,class:"back-btn"
 
 .footer
   .content
