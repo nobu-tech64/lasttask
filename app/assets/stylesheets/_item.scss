@@ -15,7 +15,7 @@ a:visited{
 .bbbbb{
   .Cform{
     background-color: #f2f2f2;
-    height: 1850px;
+    height: 2000px;
     width: 60vw;
     margin:0 auto;
     .itembox{
@@ -40,6 +40,15 @@ a:visited{
         font-size: 50px;
       }
       &__pricestatus{
+      }
+      .deliveryfee_status{
+      }
+      .buy_btn{
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: red;
+        width: 400px;
+        height: 80px;
       }
       .itemdetail{
         word-break: break-all;
