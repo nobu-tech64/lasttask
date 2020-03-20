@@ -8,8 +8,7 @@
       .varification__title
         購入内容の確認
       .varification__infomation
-        .a
-          画像
+        %img.buyimage{:src => "assets/pict-reason-01.jpg"}
         .b
           商品説明
       .varification__price
@@ -23,16 +22,19 @@
         .card
           (カード情報)
         .b
-          変更する
+          %button.change_btn{:name => "button", :type => "submit"}
+            変更する
       .varification__address
         .a
           配送先
         .adress
           住所
         .b
-          変更する
+          %button.change_btn{:name => "button", :type => "submit"}
+            変更する
       .varification__buy_btn
-
+        %button.buy_btn{:name => "button", :type => "submit"}
+          購入する
 
 
 .footer
