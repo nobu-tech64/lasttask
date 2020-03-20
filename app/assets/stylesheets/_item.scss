@@ -1,0 +1,36 @@
+
+.aaaaa{
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+
+.bbbbb{
+  .Cform{
+    background-color: #f2f2f2;
+    height: 2500px;
+    width: 60vw;
+    margin:0 auto;
+    .itembox{
+      text-align: center;
+      &__name{
+        font-size: 40px;
+      }
+      &__body{
+        .mainimage{
+          width: 500px;
+          height: 500px;
+        }
+        .subimage{
+          width: 75px;
+          height: 75px;
+        }
+      }
+
+
+    }
+
+
+
+  }
+}
