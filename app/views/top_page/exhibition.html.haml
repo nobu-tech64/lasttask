@@ -1,73 +1,148 @@
 %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
 
+
 .aaaaa
-  .aaaaa__logo
-    ロゴ
+  = link_to root_path do
+    %img.aaabbb__logo{:src => "/assets/logo.png"}
 .bbbbb
   .Cform
     .Cform__imageform
       .Cform__imageform--title
+        .title
         出品画像
+        .require
+          必須
+      .Cform__imageform--title2
+        最大X枚まで投稿できます
       .Cform__imagebox
-        画像選択BOXです
-        □
+        .inputarea
+          画像□
+
+
     .Cform__itemname
+      商品について
       .Cform__itemname--title
-        商品名
+        .title
+          商品名
+        .require
+          必須
       .Cform__itemnamebox
-        商品名書き込みフォームです
         .inputform
-          □
+          書き込み□
     .Cform__description
       .Cform__description--title
-        商品説明
+        .title
+          出品説明
+        .require
+          必須
       .Cform__descriptionbox
-        説明書き込みフォームです
         .inputform
-          □
+          書き込み□
+
+
     .Cform__productdetails
+      商品の詳細
       .Cform__productdetails--title
-        商品の詳細設定
+        .title
+          カテゴリー
+        .require
+          必須
       .Cform__productdetailsbox
-        カテゴリーBOXです
         .pulldown
-          □
+          プルダウン□
+      .Cform__productdetails--title
+        .title
+          ブランド
       .Cform__productdetailsbox
-        ブランド書き込みフォームです
         .inputform
-          □
+          プルダウン□
+      .Cform__productdetails--title
+        .title
+          出品の状態
+        .require
+          必須
       .Cform__productdetailsbox
-        商品状態設定BOXです
         .pulldown
-          □
+          プルダウン□
+
+
     .Cform__delivery
+      配送について
       .Cform__delivery--title
-        配送について
+        .title
+          配送料の負担
+        .require
+          必須
       .Cform__deliverybox
-        配送方法等決定BOXです
         .pulldown
-          □
+          プルダウン□
+      .Cform__delivery--title
+        .title
+          配送元地域
+        .require
+          必須
       .Cform__deliverybox
-        配送方法等決定BOXです
         .pulldown
-          □
+          プルダウン□
+      .Cform__delivery--title
+        .title
+          配送準備日数
+        .require
+          必須
       .Cform__deliverybox
-        配送方法等決定BOXです
         .pulldown
-          □
+          プルダウン□
+
+
     .Cform__price
+      価格について
       .Cform__price--title
-        価格設定
+        .title
+          価格設定
+        .require
+          必須
       .Cform__pricebox
-        価格BOXです
         .inputform
-          □
+          書き込み□
 
 .ccccc
-  .Ebtn
+  .exhibition_btn
     出品する
-  .homebtn
+    -# = f.submit "出品する", class:"button"
+  .home_btn
     ホームに戻る
+    -# =link_to "ホームに戻る", root_path,class:"back-btn"
 
-.ddddd
-  フッターです
+.footer
+  .content
+    .title
+      FURIMAについて
+    .a
+      %a{:href => "#"} 会社概要（運営会社）
+    .a
+      %a{:href => "#"} プライバシーポリシー
+    .a
+      %a{:href => "#"} FURIMA利用規約
+    .a
+      %a{:href => "#"} ポイントに関する特約
+  .content
+    .title
+      FURIMAを見る
+    .a
+      %a{:href => "#"} カテゴリー一覧
+    .a
+      %a{:href => "#"} ブランド一覧
+  .content
+    .title
+      ヘルプ＆ガイド
+    .a
+      %a{:href => "#"} FURIMAガイド
+    .a
+      %a{:href => "#"} FURIMAロゴ利用ガイドライン
+    .a
+      %a{:href => "#"} お知らせ
+.footerlogo
+  %a{:href => "/"}
+    %img.logo{:src => "/assets/logo-white.png"}/
+  .copyright
+    © FURIMA
