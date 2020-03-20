@@ -1,0 +1,194 @@
+.pcHeader {
+  padding: 0 60px;
+  &__headerInner{
+    padding: 15px 0 0;
+    margin: 0 auto;
+    max-width: 1040px;
+    &__mainHeader{
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      &__icon{
+        img{
+          width: 140px;
+          height: 100%;
+        }
+      }
+      &__searchBox{
+        display: flex;
+        align-items: center;
+        &__searchInput{
+          width: 800px;
+          height: 30px;
+        }
+        &__icon{
+          img{
+            width: 15px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main{
+  &__firstVisual{
+    width: 100%;
+    height: 500px;
+    background-image: url(/assets/bg-mainVisual-pict_pc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    &__content{
+      
+      &__subtitle{
+        font-size: 60px;
+        line-height: 1.2;
+        color: #fff;
+        text-shadow: 1px 2px 3px #000;
+      }
+      &__text{
+        font-size: 18px;
+        margin-top: 10px;
+        color: #fff;
+        text-shadow: 1px 2px 3px #808080;
+      }
+    }
+    &__picture{
+
+    }
+  }
+  &__secondVisual{
+    width: 100%;
+    height: 500px;
+    background-image: url(/assets/bg-topMiddleDl-pict.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    &__content{
+      text-shadow: 1px 2px 3px #808080;
+      &__subtitle{
+        font-size: 40px;
+        line-height: 1.2;
+        color: #fff;
+      }
+      &__text{
+        font-size: 15px;
+        margin-top: 10px;
+        color: #fff;
+      }
+    }
+    &__picture{
+      img{
+        width: 1440px;
+      }
+    }
+  }
+  &__thirdVisual{
+    width: 100%;
+    height: 500px;
+    background-image: url(/assets/bg-appBanner-pict.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    &__content{
+      font-size: 20px;
+      margin-top: 10px;
+      color: #fff;
+      text-shadow: 1px 2px 3px #808080;
+      &__subtitle{
+
+      }
+      &__text{
+
+      }
+    }
+    &__picture{
+      img{
+        width: 1440px;
+      }
+    }
+  }
+  &__pickup{
+    text-align: center;
+    padding: 30px 0 30px;
+    &__head{
+      &__productBox{
+        &__productHead{
+          &__title{
+
+          }
+        }
+        &__productLists{
+          display: flex;
+          justify-content: center;
+          &__productList{
+            &--img{
+
+            }
+            &--body{
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  background-color: #808080;
+  &__contents{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 450px;
+    color: #fff;
+    
+    &__content{
+      text-decoration: none;
+      &__head{
+
+      }
+    }
+  }
+  &__logo{
+    text-align: center;
+    img{
+      width: 140px;
+      height: 40px;
+    }
+    p{
+      color: #fff;
+    }
+  }
+
+  &__purchaseBtn{
+    width: 120px;
+    background: #3CC;
+    text-align: center;
+    border-radius: 10%;
+    position: fixed;
+    z-index: 1;
+    
+    &__text{
+      text-decoration: none;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
