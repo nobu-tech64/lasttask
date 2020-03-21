@@ -1,1 +1,48 @@
-マイページです
+.header
+  -# メインページのheaderを入れてください 
+.content
+  .content__left
+    .content__left--menu
+      -# 適宜aタグ等で変更してください
+      %ul.mypage
+        -# 出品、購入関連
+        %li.list-title マイページ
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+      %ul.config
+        -# プロフ、本人確認、クレカ等
+        %li.list-title 設定
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+        %li.list
+          %a{href: "#"}
+  .content__right
+    .content__right--product
+      %p.title
+        購入した商品
+      .transactions
+        -# 最終的にはJS組み込むとこですね
+        %p.current_transactions 
+          取引中
+        %p.past_transactions 
+          過去の取引
+      .product-list
+        %p.message
+          -# 表示する商品がない場合のものです
+          取引中の商品がありません
+.footer
+  -# メインページのfooterを入れてください 
