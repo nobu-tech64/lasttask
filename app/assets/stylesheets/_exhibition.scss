@@ -42,25 +42,22 @@ select::-ms-expand {
 
 
 
-
 a:visited{
   color: white;
 }
 
-.header{
+.logoheader{
   height: 150px;
   width: 100%;
   text-align: center;
-  .aaabbb{
-    &__logo{
-      width: 25vw;
-      height: 100px;
-      margin-top: 25px;
-    }
+  &__logo{
+    width: 25vw;
+    height: 100px;
+    margin-top: 25px;
   }
 }
 
-.bbbbb{
+.ee{
   .Eform{
     background-color: black;
     height: 2500px;
@@ -221,13 +218,9 @@ a:visited{
     }
 
 
-
-
-
-
     &__price{
       background-color: #f2f2f2;
-      height: 500px;
+      height: 650px;
       padding-left: 20px;
       padding-top: 20px;
       margin-bottom: 1px;
@@ -260,8 +253,8 @@ a:visited{
   }
 }
 
-.ccccc{
-  height: 280px;
+.ee{
+  height: 450px;
   width: 100%;
   text-align: center;
   .exhibition_btn{
@@ -282,31 +275,39 @@ a:visited{
   }
 }
 
-.footer{
-  padding:60px 0;
-  color:#fff;
-  background-color: black;
-  text-align:center;
-  display: flex;
-  .content{
-    width:calc(1 / 3 * 100%);
-  }
-  .title{
 
-    }
-  .a{
-    padding-top: 15px;
-  }
-}
-.footerlogo{
-  background-color: black;
+.footer{
+  padding: 60px 0;
+  background-color: #272727;
   text-align: center;
-  .logo{
-    width: 150px;
-    height: 50px;
-    background-color: black;
+  a{
+    color: #fff;
+    font-size: 12px;
   }
-  .copyright{
-    color: white;
+  &__contents{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 450px;
+    color: #fff;
+    &__content{
+      a{
+        text-decoration: none;
+      }
+      &__title{
+        margin: 0 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  &__logo{
+    margin-top: 30px;
+    img{
+      width: 140px;
+      height: 40px;
+    }
+    p{
+      color: #fff;
+    }
   }
 }
