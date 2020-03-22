@@ -1,37 +1,78 @@
 ヘッダー
-.bbbbb
-  .Cform
-    .varification
-      .varification__title
-        購入内容の確認
-      .varification__infomation
-        %img.buyimage{:src => "assets/pict-reason-01.jpg"}
-        .b
-          商品説明
-      .varification__price
-        .a
-          支払金額
-        .b
-          ¥330
-      .varification__paymentmethod
-        .a
-          支払方法
-        .card
-          (カード情報)
-        .b
-          %button.change_btn{:name => "button", :type => "submit"}
-            変更する
-      .varification__address
-        .a
-          配送先
-        .adress
-          住所
-        .b
-          %button.change_btn{:name => "button", :type => "submit"}
-            変更する
-      .varification__buy_btn
-        %button.buy_btn{:name => "button", :type => "submit"}
-          購入する
+.ss
+  .Sform
+    .memberinfo
+      .memberinfo__title
+        会員情報の入力
+      .memberinfo__nickname
+        .memberinfo__nickname__titleblock
+          .memberinfo__nickname__titleblock__title
+            ニックネーム
+          .memberinfo__nickname__titleblock__require
+            必須
+        .memberinfo__nickname__inputblock
+        %textarea.textarea{:cols => "40", :rows => "1"} ここに記入してください
+    
+      .memberinfo__email
+        .memberinfo__email__titleblock
+          .memberinfo__email__titleblock__title
+            メールアドレス
+          .memberinfo__email__titleblock__require
+            必須
+        .memberinfo__email__inputblock
+        %textarea.textarea{:cols => "40", :rows => "1"} ここに記入してください
+
+      .memberinfo__password
+        .memberinfo__password__titleblock
+          .memberinfo__password__titleblock__title
+            パスワード
+          .memberinfo__password__titleblock__require
+            必須
+        .memberinfo__password__inputblock
+        %textarea.textarea{:cols => "40", :rows => "1"} ここに記入してくださ
+
+      .memberinfo__name
+        .memberinfo__name__titleblock
+          .memberinfo__name__titleblock__title
+            お名前
+          .memberinfo__name__titleblock__require
+            必須
+        .memberinfo__name__inputblock
+          .firstname
+          .lastname
+
+
+      .memberinfo__namek
+        .memberinfo__namek__titleblock
+          .memberinfo__namek__titleblock__title
+            お名前(カナ)
+          .memberinfo__namek__titleblock__require
+            必須
+        .memberinfo__namek__inputblock
+          .firstname
+
+          .lastname
+
+
+
+      .memberinfo__birthday
+        .memberinfo__birthday__titleblock
+          .memberinfo__birthday__titleblock__title
+            お誕生日
+          .memberinfo__birthday__titleblock__require
+            必須
+        .memberinfo__birthday__inputblock
+          .year
+
+          .month
+
+          .day
+
+
+    .registerbtn
+      %button.register_btn{:name => "button", :type => "submit"}
+        会員登録する
+
 
 
 フッター
