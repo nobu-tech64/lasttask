@@ -1,5 +1,29 @@
 .header
-  -# メインページのheaderを入れてください 
+  .header__headerTop
+    %h1
+      = link_to root_path do
+        %img{src: "/assets/logo.png", width: "150px"}
+    .header__searchPlace
+      .header__searchPlace__content
+        = form_for root_path do |f|
+          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
+      .header__searchPlace__btn
+        %img{src: "/assets/icon-search1.png", width: "25px"}
+  .header__headerBottom
+    .header__headerBottom__left
+      %ul
+        %li
+          = link_to "カテゴリー", "#"
+        %li
+          = link_to "ブランド", "#"
+    .header__headerBottom__right
+      %ul
+        %li
+          = link_to "ログイン", "#"
+        %li
+          = link_to "新規会員登録", "#"
+        %li
+          = link_to "カートを見る", "#" 
 .content
   .content__left
     .content__left--menu
@@ -45,4 +69,28 @@
           -# 表示する商品がない場合のものです
           取引中の商品がありません
 .footer
-  -# メインページのfooterを入れてください 
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "/assets/logo-white.png"}
+    %p © FURIMA
