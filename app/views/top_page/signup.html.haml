@@ -1,2 +1,37 @@
-.aaaa
-  新規登録画面です
+ヘッダー
+.bbbbb
+  .Cform
+    .varification
+      .varification__title
+        購入内容の確認
+      .varification__infomation
+        %img.buyimage{:src => "assets/pict-reason-01.jpg"}
+        .b
+          商品説明
+      .varification__price
+        .a
+          支払金額
+        .b
+          ¥330
+      .varification__paymentmethod
+        .a
+          支払方法
+        .card
+          (カード情報)
+        .b
+          %button.change_btn{:name => "button", :type => "submit"}
+            変更する
+      .varification__address
+        .a
+          配送先
+        .adress
+          住所
+        .b
+          %button.change_btn{:name => "button", :type => "submit"}
+            変更する
+      .varification__buy_btn
+        %button.buy_btn{:name => "button", :type => "submit"}
+          購入する
+
+
+フッター
