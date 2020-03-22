@@ -1,8 +1,74 @@
-.header {
-  height: 100px;
-  width: 100vw;
-  border: solid black;
-  box-sizing: border-box;
+.header{
+  &__headerTop{
+    max-width: 1040px;
+    width: 100%;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+    display: flex;
+    h1{
+      margin-right: 30px;
+    }
+  }
+  &__searchPlace{
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-start;
+    width: 100%;
+    &__content{
+      width: 100%;
+      &__field{
+        width: calc(100% - 26px);
+        margin: 8px 0 0;
+      }
+    }
+    &__btn{
+      width: 36px;
+      border: 0;
+      cursor: pointer;
+      background-color: #3CC;
+      padding: 8px;
+      text-align: center;
+      img{
+        
+      }
+    }
+  }
+  &__headerBottom{
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    &__left{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      a{
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        padding: 0 10px;
+      }
+      li{
+        display: inline;
+      }
+    }
+    &__right{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      a{
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        padding: 0 10px;
+      }
+      li{
+        display: inline;
+      }
+    }
+  }
 }
 
 .content {
@@ -87,9 +153,39 @@
   }
 }
 
-.footer {
-  height: 100px;
-  width: 100vw;
-  border: solid black;
-  box-sizing: border-box;
+.footer{
+  padding: 60px 0;
+  background-color: #272727;
+  text-align: center;
+  a{
+    color: #fff;
+    font-size: 12px;
+  }
+  &__contents{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 450px;
+    color: #fff;
+    &__content{
+      a{
+        text-decoration: none;
+      }
+      &__title{
+        margin: 0 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+
+      }
+    }
+  }
+  &__logo{
+    margin-top: 30px;
+    img{
+      width: 140px;
+      height: 40px;
+    }
+    p{
+      color: #fff;
+    }
+  }
 }
