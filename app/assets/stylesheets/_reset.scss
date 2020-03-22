@@ -18,6 +18,7 @@ html{
 /*
   TODO test putting a class on HEAD.
       - Fails on FF.
+
 */
 body,
 div,
@@ -57,6 +58,7 @@ img {
 }
 /*
   TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+
 */
 address,
 caption,
@@ -67,18 +69,24 @@ em,
 strong,
 th,
 var {
+
   font-style:normal;
   font-weight:normal;
+
 }
 
 ol,
 ul {
+
   list-style:none;
+
 }
 
 caption,
 th {
+
   text-align:left;
+
 }
 h1,
 h2,
@@ -104,6 +112,7 @@ sup {
 }
 sub {
   vertical-align:text-bottom;
+
 }
 input,
 textarea,
@@ -124,3 +133,4 @@ legend {
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
+
