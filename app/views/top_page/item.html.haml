@@ -1,1 +1,125 @@
-商品詳細ページです
+
+.header
+  headder
+.bbbbb
+  .Cform
+    .itembox
+      .itembox__name
+        ウェルチ
+      .itembox__image
+        .mainbox
+          %img.mainimage{:src => "assets/ウェルチ.jpg"}
+          .subbox
+            %img.subimage{:src => "assets/ウェルチサブ１.jpg"}
+            %img.subimage{:src => "assets/ウェルチサブ２.jpg"}
+            %img.subimage{:src => "assets/ウェルチサブ３.jpg"}
+      .itembox__price
+        ¥330
+      .itembox__pricestatus
+        (税込)
+        /送料パスと連動
+      .deliveryfee_status
+        送料込み
+      %button.buy_btn{:name => "button", :type => "submit"}
+        購入画面に進む
+      .itemdetail 
+        キンッキンに冷えてやがる・・・！悪魔的だあああああああああああああああああああああああああああ
+    .products_infomation
+      .a
+        .b
+          出品者
+        %ul.seller_name
+          ユーザネームパス
+      .a
+        .b
+          カテゴリー
+        %ul.categorypass
+          %a.Lcategory{:href => "#"} 飲料
+          %a.Mcategory{:href => "#"} うまい
+          %a.Scategory{:href => "#"} 最強
+      .a
+        .b
+          ブランド
+        %ul.brand
+          ブランドパス
+      .a
+        .b
+          商品のサイズ
+        %ul.size
+          サイズパス
+      .a
+        .b
+          商品の状態
+        %ul.item_status
+          商品状態パス
+      .a
+        .b
+          配送料負担
+        %ul.delivery_fee
+          配送料パス
+      .a
+        .b
+          配送元地域
+        %ul.areaname
+          地域パス
+      .a
+        .b
+          発送準備日数
+        %ul.days
+          配送準備パス
+    .like_or_hate
+      .likebbtn
+        -# %i.fa.fa-star
+        お気に入り 0
+      .hatebtn
+      %a{:href => "#"} 不適切な商品の通報
+      
+    .comment
+      %textarea{:cols => "60", :rows => "10"} ここに記入してください
+      .noticeMsg
+        相手のことを考え丁寧なコメントを心がけましょう。
+        %br/
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %button.commentbtn{:name => "button", :type => "submit"}
+        コメントする
+.links
+  .nextitem
+    %a{:href => "#"} 前の商品
+  .backitem
+    %a{:href => "#"} 後ろの商品
+.otheritem
+  %a{:href => "#"} 飲料をもっと見る
+
+.footer
+  .content
+    .title
+      FURIMAについて
+    .f
+      %a{:href => "#"} 会社概要（運営会社）
+    .f
+      %a{:href => "#"} プライバシーポリシー
+    .f
+      %a{:href => "#"} FURIMA利用規約
+    .f
+      %a{:href => "#"} ポイントに関する特約
+  .content
+    .title
+      FURIMAを見る
+    .f
+      %a{:href => "#"} カテゴリー一覧
+    .f
+      %a{:href => "#"} ブランド一覧
+  .content
+    .title
+      ヘルプ＆ガイド
+    .f
+      %a{:href => "#"} FURIMAガイド
+    .f
+      %a{:href => "#"} FURIMAロゴ利用ガイドライン
+    .f
+      %a{:href => "#"} お知らせ
+.footerlogo
+  %a{:href => "/"}
+    %img.logo{:src => "/assets/logo-white.png"}/
+  .copyright
+    © FURIMA
