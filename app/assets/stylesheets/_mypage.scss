@@ -1,0 +1,95 @@
+.header {
+  height: 100px;
+  width: 100vw;
+  border: solid black;
+  box-sizing: border-box;
+}
+
+.content {
+  height: 1000px;
+  padding: 40px 200px;
+  background-color: #f8f8f8;
+  display: flex;
+  &__left {
+    width: 300px;
+    &--menu {
+      ul {
+        margin-bottom: 40px;
+        .list-title {
+          height: 50px;
+          width: 300px;
+          padding: 0 20px;
+          color: black;
+          background-color: #EEEEEE;
+          border: solid gray 1px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        }
+        .list {
+          height: 50px;
+          width: 300px;
+          padding: 0 15px;
+          background-color: #fff;
+          border-bottom: solid gray 1px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  &__right {
+    margin-left: 70px;
+      &--product {
+        .title {
+        height: 80px;
+        width: 600px;
+        padding-left: 40px;
+        font-size: 20px;
+        background-color: #EEEEEE;
+        border: solid gray 1px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        }
+      }
+      .transactions {
+        display: flex;
+        p {
+          height: 80px;
+          width: 300px;
+          font-size: 20px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .current_transactions {
+          border-top: solid #5DCFD3 3px;
+          box-sizing: border-box;
+        }
+        .past_transactions {
+          background-color: #EEEEEE;
+        }
+      }
+      .product-list {
+        height: 400px;
+        width: 600px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .message {
+          color: lightgray;
+        }
+      }
+  }
+}
+
+.footer {
+  height: 100px;
+  width: 100vw;
+  border: solid black;
+  box-sizing: border-box;
+}
