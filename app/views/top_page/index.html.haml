@@ -1,3 +1,7 @@
+%head
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css", rel: "stylesheet", type: "text/css"}
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css", rel: "stylesheet", type: "text/css"}
+
 .header
   .header__headerTop
     %h1
@@ -25,8 +29,8 @@
         %li
           = link_to "カートを見る", "#"
 .main
-  .main__adCarousel
-    .main__adCarousel__first
+  %ul.main__adCarousel
+    %li.main__adCarousel__first
       .main__adCarousel__first__content
         %h2
           人生を変えるフリマアプリ
@@ -35,13 +39,13 @@
           %br
           フリマアプリです
 
-    .main__adCarousel__second
+    %li.main__adCarousel__second
       .main__adCarousel__second__content
         %h2
           FURIMAは、フリマアプリで最も人気。
         %p
           ほしかったあの商品に出会えるかもしれません。
-    .main__adCarousel__third
+    %li.main__adCarousel__third
       .main__adCarousel__third__content
         %h2
           だれでもかんたん、人生を変えるフリマアプリ
@@ -97,3 +101,12 @@
   .footer__logo
     %img{src: "/assets/logo-white.png"}
     %p © FURIMA
+
+%script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+%script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"}
+%script{src: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js", type: "text/javascript"}
+:javascript
+  $('.main__adCarousel').slick({
+    autoplay: true,
+    dots: true,
+  });
