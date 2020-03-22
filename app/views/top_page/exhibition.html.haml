@@ -1,51 +1,52 @@
 
+
 .header
   = link_to root_path do
     %img.aaabbb__logo{:src => "/assets/logo.png"}
 .bbbbb
-  .Cform
-    .Cform__imageform
-      .Cform__imageform--title
+  .Eform
+    .Eform__imageform
+      .Eform__imageform--title
         .title
         出品画像
         .require
           必須
-      .Cform__imageform--title2
+      .Eform__imageform--title2
         最大X枚まで投稿できます
-      .Cform__dropbox
+      .Eform__dropbox
         .inputarea
           画像ドロップエリア（仮）
 
 
-    .Cform__itemname
+    .Eform__itemname
       商品について
-      .Cform__itemname--title
+      .Eform__itemname--title
         .title
           商品名
         .require
           必須
-      .Cform__itemnamebox
+      .Eform__itemnamebox
         .inputform
           %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
-    .Cform__description
-      .Cform__description--title
+    .Eform__description
+      .Eform__description--title
         .title
           出品説明
         .require
           必須
-      .Cform__descriptionbox
+      .Eform__descriptionbox
         .inputform
           %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
 
 
-    .Cform__productdetails
+    .Eform__productdetails
       商品の詳細
-      .Cform__productdetails--title
+      .Eform__productdetails--title
         .title
           カテゴリー
         .require
           必須
-      .Cform__productdetailsbox
+      .Eform__productdetailsbox
         .pulldown
           .selectwrap
             %select.select{:id => "", :name => ""}
@@ -54,19 +55,19 @@
               %option{:value => ""} 003
 
 
-      .Cform__productdetails--title
+      .Eform__productdetails--title
         .title
           ブランド
-      .Cform__productdetailsbox
+      .Eform__productdetailsbox
         .inputform
           %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
 
-      .Cform__productdetails--title
+      .Eform__productdetails--title
         .title
           出品の状態
         .require
           必須
-      .Cform__productdetailsbox
+      .Eform__productdetailsbox
         .pulldown
           .selectwrap
             %select.select{:id => "", :name => ""}
@@ -75,38 +76,38 @@
               %option{:value => ""} 003
 
 
-    .Cform__delivery
+    .Eform__delivery
       配送について
-      .Cform__delivery--title
+      .Eform__delivery--title
         .title
           配送料の負担
         .require
           必須
-      .Cform__deliverybox
+      .Eform__deliverybox
         .pulldown
           .selectwrap
             %select.select{:id => "", :name => ""}
               %option{:value => ""} 001
               %option{:value => ""} 002
               %option{:value => ""} 003
-      .Cform__delivery--title
+      .Eform__delivery--title
         .title
           配送元地域
         .require
           必須
-      .Cform__deliverybox
+      .Eform__deliverybox
         .pulldown
           .selectwrap
             %select.select{:id => "", :name => ""}
               %option{:value => ""} 001
               %option{:value => ""} 002
               %option{:value => ""} 003
-      .Cform__delivery--title
+      .Eform__delivery--title
         .title
           配送準備日数
         .require
           必須
-      .Cform__deliverybox
+      .Eform__deliverybox
         .pulldown
           .selectwrap
             %select.select{:id => "", :name => ""}
@@ -115,14 +116,14 @@
               %option{:value => ""} 003
 
 
-    .Cform__price
+    .Eform__price
       価格について
       .Cform__price--title
         .title
           価格設定
         .require
           必須
-      .Cform__pricebox
+      .Eform__pricebox
         .inputform
           %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
 
