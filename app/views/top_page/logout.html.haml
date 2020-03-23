@@ -62,19 +62,9 @@
           %a{href: "#"} ログアウト
 
   .content__right
-    .content__right--product
-      %p.title
-        購入した商品
-      .transactions
-        -# 最終的にはJS組み込むとこですね
-        %p.current_transactions 
-          取引中
-        %p.past_transactions 
-          過去の取引
-      .product-list
-        %p.message
-          -# 表示する商品がない場合のものです
-          取引中の商品がありません
+    .content__right__logout
+      %button.logout_btn{:name => "button", :type => "submit"}
+        ログアウト
 
 
 .footer
