@@ -53,12 +53,12 @@ select::-ms-expand {
 
 .ss{
   .Sform{
-    height: 1700px;
+    height: 1500px;
     width: 60vw;
     margin:0 auto;
     .memberinfo{
       background-color: #f2f2f2;
-      height: 1350px;
+      height: 1200px;
       padding-top: 20px;
       padding-left: 100px;
       padding-right: 100px;
@@ -71,7 +71,7 @@ select::-ms-expand {
         line-height: 100px;
       }
       &__nickname{
-        height: 150px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -100,7 +100,7 @@ select::-ms-expand {
 
 
       &__email{
-        height: 150px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -129,7 +129,7 @@ select::-ms-expand {
 
 
       &__password{
-        height: 150px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -157,7 +157,7 @@ select::-ms-expand {
       }
 
       &__repassword{
-        height: 150px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -185,7 +185,7 @@ select::-ms-expand {
       }
 
       &__name{
-        height: 150px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -216,7 +216,7 @@ select::-ms-expand {
       }
 
       &__namek{
-        height: 150px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -248,7 +248,7 @@ select::-ms-expand {
       }
 
       &__birthday{
-        height: 200px;
+        height: 120px;
         font-size: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -297,7 +297,8 @@ select::-ms-expand {
     }
 
     .registerbtn{
-      height: 200px;
+      height: 150px;
+      line-height: 150px;
       font-size: 20px;
       padding-left: 20px;
       padding-top: 20px;
