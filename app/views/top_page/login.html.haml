@@ -1,1 +1,50 @@
-ログイン画面です
+
+.logoheader
+  = link_to root_path do
+    %img.logoheader__logo{:src => "/assets/logo.png"}
+
+.ll
+  .Lform
+    .logininfo
+      .logininfo__mailadress
+        %input.inputarea{:size => "50", :placeholder => "メールアドレス"} 
+      .logininfo__password
+        %input.inputarea{:type => "password", :size => "50", :placeholder => "パスワード"} 
+      .logininfo__loginbtn
+        %button.login_btn{:name => "button", :type => "submit"}
+          ログイン
+
+    .signuplinktitle
+      アカウントをお持ちではない方はこちら
+    .signupbtn
+      %button.signup_btn{:name => "button", :type => "submit"}
+        新規会員登録
+
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "/assets/logo-white.png"}
+    %p © FURIMA
+
+
