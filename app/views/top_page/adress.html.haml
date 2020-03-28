@@ -1,0 +1,131 @@
+.logoheader
+  = link_to root_path do
+    %img.logoheader__logo{:src => "/assets/logo.png"}
+
+.ad
+  .ADform
+    .adressinfo
+      .adressinfo__title
+        住所入力
+      .adressinfo__name
+        .adressinfo__name__titleblock
+          .adressinfo__name__titleblock__title
+            お名前
+          .adressinfo__name__titleblock__require
+            必須
+        .adressinfo__name__inputblock
+          .firstname_title
+            姓：
+          .firstname
+            %input.inputarea{:placeholder => "例）範馬"} 
+          .lastname_title
+            名：
+          .lastname
+            %input.inputarea{:placeholder => "例）刃牙"} 
+
+
+      .adressinfo__namek
+        .adressinfo__namek__titleblock
+          .adressinfo__namek__titleblock__title
+            お名前(カナ)
+          .adressinfo__namek__titleblock__require
+            必須
+        .adressinfo__namek__inputblock
+          .firstname_title
+            姓（カナ）：
+          .firstname
+            %input.inputarea{:placeholder => "例）ハンマ"} 
+          .lastname_title
+            名（カナ）：
+          .lastname
+            %input.inputarea{:placeholder => "例）バキ"} 
+
+      .adressinfo__postal_code
+        .adressinfo__postal_code__titleblock
+          .adressinfo__postal_code__titleblock__title
+            郵便番号
+          .adressinfo__postal_code__titleblock__require
+            必須
+        .adressinfo__postal_code__inputblock
+          %input.inputarea{:size => "50", :placeholder => "ここに記入してください"} 
+
+      .adressinfo__prefectures
+        .adressinfo__prefectures__titleblock
+          .adressinfo__prefectures__titleblock__title
+            都道府県
+          .adressinfo__prefectures__titleblock__require
+            必須
+        .adressinfo__prefectures__inputblock
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 北海道
+              %option{:value => ""} 青森
+              %option{:value => ""} 岩手
+
+      .adressinfo__municipality
+        .adressinfo__municipality__titleblock
+          .adressinfo__municipality__titleblock__title
+            市区町村
+          .adressinfo__municipality__titleblock__require
+            必須
+        .adressinfo__municipality__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+      .adressinfo__adress
+        .adressinfo__adress__titleblock
+          .adressinfo__adress__titleblock__title
+            番地
+          .adressinfo__adress__titleblock__require
+            必須
+        .adressinfo__adress__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+      .adressinfo__building
+        .adressinfo__building__titleblock
+          .adressinfo__building__titleblock__title
+            建物名（マンション名等）
+        .adressinfo__building__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+
+      .adressinfo__phonenumber
+        .adressinfo__phonenumber__titleblock
+          .adressinfo__phonenumber__titleblock__title
+            電話番号
+          .adressinfo__phonenumber__titleblock__require
+            必須
+        .adressinfo__phonenumber__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+
+    .nextbtn
+      %button.next_btn{:name => "button", :type => "submit"}
+        次へ
+
+
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "/assets/logo-white.png"}
+    %p © FURIMA

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "/item" => "top_page#item"
   get "/exhibition" => "top_page#exhibition"
   get "/buy_page" => "top_page#buy_page"
+  get "/adress" => "top_page#adress"
+  get "/card" => "top_page#card"
 end
