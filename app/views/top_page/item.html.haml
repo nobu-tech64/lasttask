@@ -1,18 +1,48 @@
+%head
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css", rel: "stylesheet", type: "text/css"}
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css", rel: "stylesheet", type: "text/css"}
 
 .header
-  headder
+  .header__headerTop
+    %h1
+      = link_to root_path do
+        %img{src: "/assets/logo.png", width: "150px"}
+    .header__searchPlace
+      .header__searchPlace__content
+        = form_for root_path do |f|
+          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
+      .header__searchPlace__btn
+        %img{src: "/assets/icon-search1.png", width: "25px"}
+  .header__headerBottom
+    .header__headerBottom__left
+      %ul
+        %li
+          = link_to "カテゴリー", "#"
+        %li
+          = link_to "ブランド", "#"
+    .header__headerBottom__right
+      %ul
+        %li
+          = link_to "ログイン", "#"
+        %li
+          = link_to "新規会員登録", "#"
+        %li
+          = link_to "カートを見る", "#"
+
+
+
 .bbbbb
   .Cform
     .itembox
       .itembox__name
-        ウェルチ
+        カレー
       .itembox__image
         .mainbox
-          %img.mainimage{:src => "assets/ウェルチ.jpg"}
+          %img.mainimage{:src => "assets/a001.png"}
           .subbox
-            %img.subimage{:src => "assets/ウェルチサブ１.jpg"}
-            %img.subimage{:src => "assets/ウェルチサブ２.jpg"}
-            %img.subimage{:src => "assets/ウェルチサブ３.jpg"}
+            %img.subimage{:src => "assets/a001.png"}
+            %img.subimage{:src => "assets/a001.png"}
+            %img.subimage{:src => "assets/a001.png"}
       .itembox__price
         ¥330
       .itembox__pricestatus
@@ -68,11 +98,12 @@
         %ul.days
           配送準備パス
     .like_or_hate
-      .likebbtn
-        -# %i.fa.fa-star
+      .likebtn
+        -# %i.fas.fa-star
         お気に入り 0
       .hatebtn
-      %a{:href => "#"} 不適切な商品の通報
+        %a{:href => "#"}
+          不適切な商品の通報
       
     .comment
       %textarea{:cols => "60", :rows => "10"} ここに記入してください
@@ -84,42 +115,10 @@
         コメントする
 .links
   .nextitem
-    %a{:href => "#"} 前の商品
+    %a{:href => "#"} < 前の商品
+  .otheritem
+    %a{:href => "#"} 飲料をもっと見る
   .backitem
-    %a{:href => "#"} 後ろの商品
-.otheritem
-  %a{:href => "#"} 飲料をもっと見る
+    %a{:href => "#"} 後ろの商品 >
 
-.footer
-  .content
-    .title
-      FURIMAについて
-    .f
-      %a{:href => "#"} 会社概要（運営会社）
-    .f
-      %a{:href => "#"} プライバシーポリシー
-    .f
-      %a{:href => "#"} FURIMA利用規約
-    .f
-      %a{:href => "#"} ポイントに関する特約
-  .content
-    .title
-      FURIMAを見る
-    .f
-      %a{:href => "#"} カテゴリー一覧
-    .f
-      %a{:href => "#"} ブランド一覧
-  .content
-    .title
-      ヘルプ＆ガイド
-    .f
-      %a{:href => "#"} FURIMAガイド
-    .f
-      %a{:href => "#"} FURIMAロゴ利用ガイドライン
-    .f
-      %a{:href => "#"} お知らせ
-.footerlogo
-  %a{:href => "/"}
-    %img.logo{:src => "/assets/logo-white.png"}/
-  .copyright
-    © FURIMA
+フッター
