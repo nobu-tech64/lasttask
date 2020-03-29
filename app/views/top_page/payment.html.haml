@@ -1,10 +1,34 @@
-.Cheader
-  = render 'header'
+.header
+  .header__headerTop
+    %h1
+      = link_to root_path do
+        %img{src: "/assets/logo.png", width: "150px"}
+    .header__searchPlace
+      .header__searchPlace__content
+        = form_for root_path do |f|
+          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
+      .header__searchPlace__btn
+        %img{src: "/assets/icon-search1.png", width: "25px"}
+  .header__headerBottom
+    .header__headerBottom__left
+      %ul
+        %li
+          = link_to "カテゴリー", "#"
+        %li
+          = link_to "ブランド", "#"
+    .header__headerBottom__right
+      %ul
+        %li
+          = link_to "ログイン", "#"
+        %li
+          = link_to "新規会員登録", "#"
+        %li
+          = link_to "カートを見る", "#"
 
 
-.mycontent
-  .mycontent__left
-    .mycontent__left--menu
+.content
+  .content__left
+    .content__left--menu
       -# 適宜aタグ等で変更してください
       %ul.mypage
         -# 出品、購入関連
@@ -37,20 +61,11 @@
         %li.list
           %a{href: "#"} ログアウト
 
-  .mycontent__right
-    .mycontent__right--product
-      %p.title
-        購入した商品
-      .transactions
-        -# 最終的にはJS組み込むとこですね
-        %p.current_transactions 
-          取引中
-        %p.past_transactions 
-          過去の取引
-      .product-list
-        %p.message
-          -# 表示する商品がない場合のものです
-          取引中の商品がありません
+  .content__right
+    .content__right__payment
+      %button.payment_btn{:name => "button", :type => "submit"}
+        クレジットカードを追加
+
 
 
 .footer
