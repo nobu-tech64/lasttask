@@ -1,0 +1,140 @@
+.mycontent__right{
+  &__card{
+    background-color: white;
+    width: 700px;
+    height: 670px;
+    text-align: center;
+    .cardinfo{  
+      background-color: white;
+      height: 570px;
+      padding-top: 20px;
+      padding-left: 100px;
+      padding-right: 100px;
+      &__title{
+        border-bottom: 1px solid  #f2f2f2;
+        height: 100px;
+        font-size: 25px;
+        line-height: 100px;
+      }
+
+
+      &__cardnumber{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
+        }
+        .cardicon{
+          i{
+            font-size: 35px;
+          }
+        }
+      }
+
+
+      &__deadline{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 40px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: center;
+          .year{
+            background-color: white;
+          }
+          .year_title{
+            margin-top: 8px;
+            padding-right: 50px;
+          }
+          .month{
+            background-color: white;
+          }
+          .month_title{
+            margin-top: 8px;
+            padding-right: 50px;
+          }
+        }
+      }
+      &__securitynumber{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
+        }
+      }
+    }
+    .mycardbtn{
+      background-color: white;
+      text-align: center;
+      .mycard_btn{
+        font-size: 20px;
+        color: white;
+        background-color: red;
+        width: 320px;
+        height: 64px;
+      }
+    }
+
+  }
+}

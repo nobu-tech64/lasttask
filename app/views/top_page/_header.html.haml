@@ -1,0 +1,39 @@
+%head
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css", rel: "stylesheet", type: "text/css"}
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css", rel: "stylesheet", type: "text/css"}
+
+.header
+  .header__headerTop
+    %h1
+      = link_to root_path do
+        %img{src: "/assets/logo.png", width: "150px"}
+    .header__searchPlace
+      .header__searchPlace__content
+        = form_for root_path do |f|
+          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
+      .header__searchPlace__btn
+        %img{src: "/assets/icon-search1.png", width: "25px"}
+  .header__headerBottom
+    .header__headerBottom__left
+      %ul
+        %li
+          = link_to "カテゴリー", "#"
+        %li
+          = link_to "ブランド", "#"
+    .header__headerBottom__right
+      -# - if user_signed_in?
+      -# %ul
+      -#   %li
+      -#     = link_to "マイページ", "/mypage"
+      -#   %li
+      -#     = link_to "カートを見る", "#"
+
+      -# - else
+      %ul
+        %li
+          = link_to "ログイン", "/login"
+        %li
+          = link_to "新規会員登録", "signup"
+        %li
+          = link_to "カートを見る", "#"
+

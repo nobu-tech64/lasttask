@@ -1,86 +1,7 @@
-a{
-  text-decoration: none;
-}
 
-a:visited{
-  color: white;
-}
 
-.header{
-  &__headerTop{
-    max-width: 1040px;
-    width: 100%;
-    min-height: 50px;
-    margin: 0 auto;
-    padding: 15px 0 0;
-    display: flex;
-    h1{
-      margin-right: 30px;
-    }
-  }
-  &__searchPlace{
-    display: flex;
-    margin-left: auto;
-    justify-content: flex-start;
-    width: 100%;
-    &__content{
-      width: 100%;
-      &__field{
-        width: calc(100% - 26px);
-        margin: 8px 0 0;
-      }
-    }
-    &__btn{
-      width: 36px;
-      border: 0;
-      cursor: pointer;
-      background-color: #3CC;
-      padding: 8px;
-      text-align: center;
-      img{
-        
-      }
-    }
-  }
-  &__headerBottom{
-    max-width: 1040px;
-    width: 100%;
-    margin: 0 auto;
-    height: 40px;
-    display: flex;
-    &__left{
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      a{
-        text-decoration: none;
-        color: #000;
-        font-size: 15px;
-        padding: 0 10px;
-      }
-      li{
-        display: inline;
-      }
-    }
-    &__right{
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      a{
-        text-decoration: none;
-        color: #000;
-        font-size: 15px;
-        padding: 0 10px;
-      }
-      li{
-        display: inline;
-      }
-    }
-  }
-}
-
-.ii{
-  .Iform{
+.bbbbb{
+  .Cform{
     background-color: #f2f2f2;
     height: 2000px;
     width: 60vw;
@@ -114,8 +35,9 @@ a:visited{
         margin-top: 20px;
         font-size: 20px;
         background-color: red;
-        width: 400px;
-        height: 80px;
+        color: white;
+        width: 320px;
+        height: 64px;
       }
       .itemdetail{
         word-break: break-all;
@@ -150,6 +72,36 @@ a:visited{
       margin-right: 40px;
       display: flex;
       justify-content: space-between;
+      .likebtn{
+        border-radius: 20px;
+        background-color: #fff;
+        color: #66CCCC;
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        line-height: 40px;
+        display: block;
+      }
+      .likebtn:hover{
+        color: #CCCCCC;
+      }
+      .hatebtn{
+        height: 40px;
+        width: 180px;
+        border: solid 1px black;
+        text-align: center;
+        line-height: 40px;
+        background-color: white;
+        border-radius: 5px;
+        a{
+          color: black;
+          display: block;
+        }
+        a:hover{
+          color: #CCCCCC;
+        }
+
+      }
     }
     .comment{
       padding-top: 20px;
@@ -159,21 +111,35 @@ a:visited{
       textarea{
       }
       .commentbtn{
-
+        border-radius: 15px;
+        width: 250px;
+        height: 50px;
+        background-color: #66CCCC;
+        color: white;
+        font-size: 15px;
       }
     }
   }
 }
 .links{
+  font-size: 22px;
+  margin-left: 20vw;
+  margin-right: 20vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
+  a{
+    color: #66CCCC;
+  }
+  .otheritem{
+    font-size: 25px;
+    text-align: center;
+    a{
+      color: #66CCCC;
+    }
+  }
 }
-.otheritem{
-  font-size: 20px;
-  text-align: center;
-  padding-bottom: 40px;
-}
+
 
 .footer{
   padding: 60px 0;
@@ -196,7 +162,6 @@ a:visited{
         margin: 0 0 20px;
         font-size: 16px;
         font-weight: bold;
-
       }
     }
   }

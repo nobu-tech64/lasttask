@@ -2,20 +2,114 @@ a{
   text-decoration: none;
 }
 
-//ヘッダーcss
 
-.bbbbb{
-  .Cform{
-    height: 1200px;
+//プルダウンメニューのcss
+.selectwrap{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.selectwrap::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-bottom: solid 2px #b4b3b3;
+  border-right: solid 2px #b4b3b3;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -4px;
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 0 40px 0 10px;
+  border: 1px solid #b4b3b3;
+  border-radius: 2px;
+}
+select::-ms-expand {
+    display: none;
+}
+
+.logoheader{
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__logo{
+    width: 25vw;
+    height: 100px;
+    margin-top: 25px;
+  }
+  .signup_progress{
+    display: flex;
+    margin-left: 40px;
+    &__dotsborder{
+      position: absolute;
+      top: 66px;
+      left: 57%;
+      z-index: 1;
+    }
+    &__dots_signup{
+      width: 100px;
+      line-height: 150px;
+      color: red;
+      z-index: 2;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 786px;  
+      }
+    }
+    &__dots2_signup{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: silver;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 886px;  
+      }
+    }
+    &__dots3_signup{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: silver;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 986px;  
+      }
+    }
+  }
+}
+
+.ss{
+  .Sform{
+    height: 1400px;
     width: 60vw;
     margin:0 auto;
-
-    .varification{
+    .memberinfo{
       background-color: #f2f2f2;
-      height: 1050px;
+      height: 1150px;
       padding-top: 20px;
       padding-left: 100px;
       padding-right: 100px;
+      text-align: center;
       &__title{
         border-bottom: 1px solid  silver;
         height: 100px;
@@ -23,91 +117,297 @@ a{
         font-size: 25px;
         line-height: 100px;
       }
-      &__infomation{
-        border-bottom: 1px solid  silver;
-        height: 200px;
+      &__nickname{
+        height: 120px;
         font-size: 20px;
-        display: flex;
-        justify-content: space-around;
-        line-height: 200px;
-        .buyimage{
-          margin-top: 25px;
-          width: 150px;
-          height: 150px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
         }
-        .b{
+        &__inputblock{
           font-size: 15px;
-        }
-      }
-      &__price{
-        border-bottom: 1px solid  silver;
-        height: 100px;
-        font-size: 20px;
-        line-height: 100px;
-        display: flex;
-        justify-content: space-around;
-        .a{
-          text-align: center;
-
-        }
-        .b{
-          text-align: center;
-          font-size: 30px;
-        }
-
-      }
-      &__paymentmethod{
-        border-bottom: 1px solid  silver;
-        height: 200px;
-        font-size: 20px;
-        line-height: 200px;
-        display: flex;
-        justify-content: space-around;
-        .a{
-
-        }
-        .card{
-          font-size: 15px;
-        }
-        .b{
-          font-size: 15px;
-        }
-      }
-      &__address{
-        border-bottom: 1px solid  silver;
-        height: 200px;
-        font-size: 20px;
-        line-height: 200px;
-        display: flex;
-        justify-content: space-around;
-        .a{
-
-        }
-        .adress{
-          font-size: 15px;
-        }
-        .b{
-          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
         }
       }
 
-      &__buy_btn{
-        border-bottom: 1px solid  silver;
-        height: 200px;
-        text-align: center;
-        line-height: 200px;
-        .buy_btn{
-          margin-top: 20px;
-          font-size: 20px;
-          background-color: red;
-          width: 400px;
-          height: 80px;
+
+      &__email{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
+        }
+      }
+
+
+      &__password{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
+        }
+      }
+
+      &__repassword{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
+        }
+      }
+
+      &__name{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          padding-top: 20px;
+          display: flex;
+          justify-content: center;
+          font-size: 15px;
+          .firstname{
+            padding-right: 40px;
+          }
+        }
+      }
+
+      &__namek{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          padding-top: 20px;
+          display: flex;
+          font-size: 15px;
+          .firstname_title{
+          }
+          .firstname{
+            padding-right: 80px;
+          }
+        }
+      }
+
+      &__birthday{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: center;
+          .year{
+            background-color: white;
+          }
+          .year_title{
+            margin-top: 8px;
+            padding-right: 50px;
+          }
+          .month{
+            background-color: white;
+          }
+          .month_title{
+            margin-top: 8px;
+            padding-right: 50px;
+          }
+          .day{
+            background-color: white;
+          }
+          .day_title{
+            margin-top: 8px;
+          }
         }
       }
     }
+
+    .registerbtn{
+      height: 150px;
+      line-height: 150px;
+      font-size: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      text-align: center;
+      .register_btn{
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: red;
+        color: white;
+        width: 320px;
+        height: 64px;
+      }
+    }
+
+
+
+
+
   }
-  
 }
 
 
-//フッターcss
+.signup_footer{
+  background-color: black;
+  height: 190px;
+  &__contents{
+    display: flex;
+    justify-content: center;
+    color: white;
+    a{
+      color: #fff;
+      font-size: 12px;
+    }
+    .c1{
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    .c2{
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    .c3{
+      margin-top: 40px;
+
+    }
+  }
+  &__logo{
+    margin-top: 30px;
+    text-align: center;
+    img{
+      width: 140px;
+      height: 40px;
+    }
+    .slogo{
+      color: #fff;
+    }
+  }
+}
