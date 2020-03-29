@@ -1,35 +1,5 @@
-%head
-  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css", rel: "stylesheet", type: "text/css"}
-  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css", rel: "stylesheet", type: "text/css"}
-
-.header
-  .header__headerTop
-    %h1
-      = link_to root_path do
-        %img{src: "/assets/logo.png", width: "150px"}
-    .header__searchPlace
-      .header__searchPlace__content
-        = form_for root_path do |f|
-          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
-      .header__searchPlace__btn
-        %img{src: "/assets/icon-search1.png", width: "25px"}
-  .header__headerBottom
-    .header__headerBottom__left
-      %ul
-        %li
-          = link_to "カテゴリー", "#"
-        %li
-          = link_to "ブランド", "#"
-    .header__headerBottom__right
-      %ul
-        %li
-          = link_to "ログイン", "#"
-        %li
-          = link_to "新規会員登録", "#"
-        %li
-          = link_to "カートを見る", "#"
-
-
+.Cheader
+  = render 'header'
 
 .bbbbb
   .Cform
@@ -99,11 +69,12 @@
           配送準備パス
     .like_or_hate
       .likebtn
-        -# %i.fas.fa-star
+        %i.fas.fa-star
         お気に入り 0
       .hatebtn
         %a{:href => "#"}
-          不適切な商品の通報
+          %i.fas.fa-flag
+            不適切な商品の通報
       
     .comment
       %textarea{:cols => "60", :rows => "10"} ここに記入してください
@@ -112,7 +83,8 @@
         %br/
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       %button.commentbtn{:name => "button", :type => "submit"}
-        コメントする
+        %i.fas.fa-comment
+          コメントする
 .links
   .nextitem
     %a{:href => "#"} < 前の商品

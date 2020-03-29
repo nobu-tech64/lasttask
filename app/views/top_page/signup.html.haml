@@ -264,8 +264,9 @@
 
 
     .registerbtn
-      %button.register_btn{:name => "button", :type => "submit"}
-        次へ
+      = link_to "/adress" do
+        %button.register_btn{:name => "button", :type => "submit"}
+          次へ
 
 
 .signup_footer

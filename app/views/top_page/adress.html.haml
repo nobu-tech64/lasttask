@@ -113,8 +113,9 @@
           %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
 
     .nextbtn
-      %button.next_btn{:name => "button", :type => "submit"}
-        次へ
+      = link_to "/card" do
+        %button.next_btn{:name => "button", :type => "submit"}
+          次へ
 
 
 .signup_footer
