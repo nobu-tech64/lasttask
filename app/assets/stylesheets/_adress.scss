@@ -44,10 +44,64 @@ select::-ms-expand {
   height: 150px;
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
   &__logo{
     width: 25vw;
     height: 100px;
     margin-top: 25px;
+  }
+  .signup_progress{
+    display: flex;
+    margin-left: 40px;
+    &__dotsborder1_adress{
+      position: absolute;
+      top: 66px;
+      left: 57%;
+      z-index: 1;
+    }
+    &__dotsborder2_adress{
+      position: absolute;
+      top: 66px;
+      left: 57%;
+      z-index: 1;
+    }
+
+    &__dots_adress{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: red;
+      &--title{
+        color: silver;
+        position: absolute;
+        top: 30px;
+        left: 786px;  
+      }
+    }
+    &__dots2_adress{
+      width: 100px;
+      line-height: 150px;
+      color: red;
+      z-index: 2;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 886px;  
+      }
+    }
+    &__dots3_adress{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: silver;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 986px;  
+      }
+    }
   }
 }
 
@@ -214,15 +268,6 @@ select::-ms-expand {
           justify-content: center;
           &__title{
           }
-          &__require{
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
         }
         &__inputblock{
           font-size: 15px;
@@ -231,9 +276,6 @@ select::-ms-expand {
           }
         }
       }
-
-
-
 
 
       &__name{
@@ -314,47 +356,46 @@ select::-ms-expand {
         font-size: 20px;
         background-color: red;
         color: white;
-        width: 400px;
-        height: 80px;
+        width: 320px;
+        height: 64px;
       }
     }
-
-
   }
 }
 
 
-.footer{
-  padding: 60px 0;
-  background-color: #272727;
-  text-align: center;
-  a{
-    color: #fff;
-    font-size: 12px;
-  }
+.signup_footer{
+  background-color: black;
+  height: 190px;
   &__contents{
     display: flex;
-    justify-content: space-between;
-    padding: 0 450px;
-    color: #fff;
-    &__content{
-      a{
-        text-decoration: none;
-      }
-      &__title{
-        margin: 0 0 20px;
-        font-size: 16px;
-        font-weight: bold;
-      }
+    justify-content: center;
+    color: white;
+    a{
+      color: #fff;
+      font-size: 12px;
+    }
+    .c1{
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    .c2{
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    .c3{
+      margin-top: 40px;
+
     }
   }
   &__logo{
     margin-top: 30px;
+    text-align: center;
     img{
       width: 140px;
       height: 40px;
     }
-    p{
+    .slogo{
       color: #fff;
     }
   }

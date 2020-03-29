@@ -1,6 +1,23 @@
 .logoheader
   = link_to root_path do
     %img.logoheader__logo{:src => "/assets/logo.png"}
+  .signup_progress
+    .signup_progress__dotsborder1_adress
+      %hr{:width => "200", :color => "silver"}
+    .signup_progress__dotsborder2_adress
+      %hr{:width => "100", :color => "red"}
+    .signup_progress__dots_adress
+      ●
+      .signup_progress__dots_adress--title
+        会員情報
+    .signup_progress__dots2_adress
+      ●
+      .signup_progress__dots2_adress--title
+        住所情報
+    .signup_progress__dots3_adress
+      ●
+      .signup_progress__dots3_adress--title
+        お支払方法
 
 .ad
   .ADform
@@ -92,40 +109,26 @@
         .adressinfo__phonenumber__titleblock
           .adressinfo__phonenumber__titleblock__title
             電話番号
-          .adressinfo__phonenumber__titleblock__require
-            必須
         .adressinfo__phonenumber__inputblock
           %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
-
 
     .nextbtn
       %button.next_btn{:name => "button", :type => "submit"}
         次へ
 
 
-.footer
-  .footer__contents
-    .footer__contents__content
-      %h1.footer__contents__content__title FURIMAについて
-      %ul
-        %li
-          = link_to "会社概要（運営会社）", "#"
-        %li
-          = link_to "プライバシーポリシー", "#"
-        %li
-          = link_to "FURIMA利用規約", "#"
-        %li
-          = link_to "ポイントに関する特約", "#"
-    
-    .footer__contents__content
-      %h1.footer__contents__content__title ヘルプ＆ガイド
-      %ul
-        %li
-          = link_to "FURIMAガイド", "#"
-        %li
-          = link_to "FURIMAロゴ利用ガイドライン", "#"
-        %li
-          = link_to "お知らせ", "#"
-  .footer__logo
-    %img{src: "/assets/logo-white.png"}
-    %p © FURIMA
+.signup_footer
+  .signup_footer__contents
+    .c1
+      = link_to "#" do
+        会社概要（運用会社）
+    .c2
+      = link_to "#" do
+        プライバシーポリシー
+    .c3
+      = link_to "#" do
+        FURIMA利用規約
+  .signup_footer__logo
+    = link_to root_path do
+      %img{src: "/assets/logo-white.png"}
+      .slogo © FURIMA
