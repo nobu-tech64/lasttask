@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "top_page#index"
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"

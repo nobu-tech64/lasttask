@@ -66,3 +66,4 @@ gem 'haml-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
+
