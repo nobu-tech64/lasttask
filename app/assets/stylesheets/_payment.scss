@@ -1,4 +1,4 @@
-.content__right{
+.mycontent__right{
   &__payment{
     background-color: white;
     width: 700px;
@@ -7,11 +7,11 @@
     line-height: 300px;
     .payment_btn{
       margin-top: 40px;
-      font-size: 30px;
+      font-size: 20px;
       color: white;
       background-color: red;
-      width: 400px;
-      height: 80px;
-  }
+      width: 320px;
+      height: 64px;
+    }
   }
 }

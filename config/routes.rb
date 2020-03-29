@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get "/buy_page" => "top_page#buy_page"
   get "/adress" => "top_page#adress"
   get "/card" => "top_page#card"
+  get "/logout" => "top_page#logout"
+  get "/payment" => "top_page#payment"
+  get "/mypage_card" => "top_page#mypage_card"
 end

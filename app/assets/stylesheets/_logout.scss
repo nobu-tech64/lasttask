@@ -1,18 +1,17 @@
-
-  .content__right{
-    &__logout{
-      background-color: white;
-      width: 700px;
-      height: 300px;
-      text-align: center;
-      line-height: 300px;
-      .logout_btn{
-        margin-top: 40px;
-        font-size: 30px;
-        color: white;
-        background-color: red;
-        width: 400px;
-        height: 80px;
-    }
+.mycontent__right{
+  &__logout{
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    .logout_btn{
+      margin-top: 40px;
+      font-size: 20px;
+      color: white;
+      background-color: red;
+      width: 320px;
+      height: 64px;
     }
   }
+}

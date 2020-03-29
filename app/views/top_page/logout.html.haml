@@ -1,48 +1,42 @@
-.header
-  .header__headerTop
-    %h1
-      = link_to root_path do
-        %img{src: "/assets/logo.png", width: "150px"}
-    .header__searchPlace
-      .header__searchPlace__content
-        = form_for root_path do |f|
-          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
-      .header__searchPlace__btn
-        %img{src: "/assets/icon-search1.png", width: "25px"}
-  .header__headerBottom
-    .header__headerBottom__left
-      %ul
-        %li
-          = link_to "カテゴリー", "#"
-        %li
-          = link_to "ブランド", "#"
-    .header__headerBottom__right
-      %ul
-        %li
-          = link_to "ログイン", "#"
-        %li
-          = link_to "新規会員登録", "#"
-        %li
-          = link_to "カートを見る", "#"
+.Cheader
+  = render 'header'
 
-
-.content
-  .content__left
-    .content__left--menu
+.mycontent
+  .mycontent__left
+    .mycontent__left--menu
       -# 適宜aタグ等で変更してください
       %ul.mypage
         -# 出品、購入関連
         %li.list-title マイページ
         %li.list
-          %a{href: "#"}　
+          %a{href: "#"} おしらせ
         %li.list
-          %a{href: "#"}
+          %a{href: "#"} やることリスト
         %li.list
-          %a{href: "#"}
+          %a{href: "#"} いいね！一覧
         %li.list
-          %a{href: "#"}
+          %a{href: "/exhibition"} 出品する
         %li.list
-          %a{href: "#"}
+          %a{href: "#"} 下書き一覧
+        %li.list
+          %a{href: "#"} 出品中
+        %li.list
+          %a{href: "#"} 取引中
+        %li.list
+          %a{href: "#"} 売却済み
+        %li.list
+          %a{href: "#"} 購入取引中
+        %li.list
+          %a{href: "#"} 購入済み
+        %li.list
+          %a{href: "#"} ニュース一覧
+        %li.list
+          %a{href: "#"} 評価一覧
+        %li.list
+          %a{href: "#"} ガイド
+        %li.list
+          %a{href: "#"} お問い合わせ
+
       %ul.config
         -# プロフ、本人確認、クレカ等
         %li.list-title 設定
@@ -51,7 +45,7 @@
         %li.list
           %a{href: "#"} 発送元・お届け先住所変更
         %li.list
-          %a{href: "#"} お支払方法
+          %a{href: "/payment"} お支払方法
         %li.list
           %a{href: "#"} メール・パスワード
         %li.list
@@ -59,13 +53,13 @@
         %li.list
           %a{href: "#"} 電話番号の確認
         %li.list
-          %a{href: "#"} ログアウト
+          %a{href: "/logout"} ログアウト
 
-  .content__right
-    .content__right__logout
-      %button.logout_btn{:name => "button", :type => "submit"}
-        ログアウト
-
+  .mycontent__right
+    .mycontent__right__logout
+      = link_to "#" do
+        %button.logout_btn{:name => "button", :type => "submit"}
+          ログアウト
 
 .footer
   .footer__contents

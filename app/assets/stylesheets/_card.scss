@@ -148,6 +148,12 @@ select::-ms-expand {
           .textarea{
           }
         }
+        .cardicon{
+          i{
+            font-size: 35px;
+          }
+        }
+
       }
 
 
@@ -155,7 +161,7 @@ select::-ms-expand {
         height: 120px;
         font-size: 20px;
         padding-left: 20px;
-        padding-top: 20px;
+        padding-top: 40px;
         &__titleblock{
           display: flex;
           justify-content: center;

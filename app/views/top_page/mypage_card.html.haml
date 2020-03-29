@@ -1,25 +1,62 @@
-.logoheader
-  = link_to root_path do
-    %img.logoheader__logo{:src => "/assets/logo.png"}
-  .signup_progress
-    .signup_progress__dotsborder_card
-      %hr{:width => "200", :color => "red"}
-    .signup_progress__dots_card
-      ●
-      .signup_progress__dots_card--title
-        会員情報
-    .signup_progress__dots2_card
-      ●
-      .signup_progress__dots2_card--title
-        住所情報
-    .signup_progress__dots3_card
-      ●
-      .signup_progress__dots3_card--title
-        お支払方法
+.Cheader
+  = render 'header'
 
-.cdi
-  .cardinfoform
-    .cardinfo
+.mycontent
+  .mycontent__left
+    .mycontent__left--menu
+      -# 適宜aタグ等で変更してください
+      %ul.mypage
+        -# 出品、購入関連
+        %li.list-title マイページ
+        %li.list
+          %a{href: "#"} おしらせ
+        %li.list
+          %a{href: "#"} やることリスト
+        %li.list
+          %a{href: "#"} いいね！一覧
+        %li.list
+          %a{href: "/exhibition"} 出品する
+        %li.list
+          %a{href: "#"} 下書き一覧
+        %li.list
+          %a{href: "#"} 出品中
+        %li.list
+          %a{href: "#"} 取引中
+        %li.list
+          %a{href: "#"} 売却済み
+        %li.list
+          %a{href: "#"} 購入取引中
+        %li.list
+          %a{href: "#"} 購入済み
+        %li.list
+          %a{href: "#"} ニュース一覧
+        %li.list
+          %a{href: "#"} 評価一覧
+        %li.list
+          %a{href: "#"} ガイド
+        %li.list
+          %a{href: "#"} お問い合わせ
+
+      %ul.config
+        -# プロフ、本人確認、クレカ等
+        %li.list-title 設定
+        %li.list
+          %a{href: "#"} プロフィール
+        %li.list
+          %a{href: "#"} 発送元・お届け先住所変更
+        %li.list
+          %a{href: "/payment"} お支払方法
+        %li.list
+          %a{href: "#"} メール・パスワード
+        %li.list
+          %a{href: "#"} 本人情報
+        %li.list
+          %a{href: "#"} 電話番号の確認
+        %li.list
+          %a{href: "/logout"} ログアウト
+
+  .mycontent__right
+    .mycontent__right__card
       .cardinfo__title
         お支払い方法
       .cardinfo__cardnumber
@@ -38,6 +75,7 @@
           %i.fab.fa-cc-amex
           %i.fab.fa-cc-apple-pay
           %i.fab.fa-cc-amazon-pay
+
 
 
       .cardinfo__deadline
@@ -92,25 +130,34 @@
             必須
         .cardinfo__securitynumber__inputblock
           %input.inputarea{:size => "50", :placeholder => "半角数字のみ"} 
+      .mycardbtn
+        %button.mycard_btn{:name => "button", :type => "submit"}
+          追加する
 
 
-    .nextbtn
-      %button.next_btn{:name => "button", :type => "submit"}
-        会員登録する
-
-
-.signup_footer
-  .signup_footer__contents
-    .c1
-      = link_to "#" do
-        会社概要（運用会社）
-    .c2
-      = link_to "#" do
-        プライバシーポリシー
-    .c3
-      = link_to "#" do
-        FURIMA利用規約
-  .signup_footer__logo
-    = link_to root_path do
-      %img{src: "/assets/logo-white.png"}
-      .slogo © FURIMA
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "/assets/logo-white.png"}
+    %p © FURIMA
