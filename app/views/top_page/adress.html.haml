@@ -1,0 +1,134 @@
+.logoheader
+  = link_to root_path do
+    %img.logoheader__logo{:src => "/assets/logo.png"}
+  .signup_progress
+    .signup_progress__dotsborder1_adress
+      %hr{:width => "200", :color => "silver"}
+    .signup_progress__dotsborder2_adress
+      %hr{:width => "100", :color => "red"}
+    .signup_progress__dots_adress
+      ●
+      .signup_progress__dots_adress--title
+        会員情報
+    .signup_progress__dots2_adress
+      ●
+      .signup_progress__dots2_adress--title
+        住所情報
+    .signup_progress__dots3_adress
+      ●
+      .signup_progress__dots3_adress--title
+        お支払方法
+
+.ad
+  .ADform
+    .adressinfo
+      .adressinfo__title
+        住所入力
+      .adressinfo__name
+        .adressinfo__name__titleblock
+          .adressinfo__name__titleblock__title
+            お名前
+          .adressinfo__name__titleblock__require
+            必須
+        .adressinfo__name__inputblock
+          .firstname_title
+            姓：
+          .firstname
+            %input.inputarea{:placeholder => "例）範馬"} 
+          .lastname_title
+            名：
+          .lastname
+            %input.inputarea{:placeholder => "例）刃牙"} 
+
+
+      .adressinfo__namek
+        .adressinfo__namek__titleblock
+          .adressinfo__namek__titleblock__title
+            お名前(カナ)
+          .adressinfo__namek__titleblock__require
+            必須
+        .adressinfo__namek__inputblock
+          .firstname_title
+            姓（カナ）：
+          .firstname
+            %input.inputarea{:placeholder => "例）ハンマ"} 
+          .lastname_title
+            名（カナ）：
+          .lastname
+            %input.inputarea{:placeholder => "例）バキ"} 
+
+      .adressinfo__postal_code
+        .adressinfo__postal_code__titleblock
+          .adressinfo__postal_code__titleblock__title
+            郵便番号
+          .adressinfo__postal_code__titleblock__require
+            必須
+        .adressinfo__postal_code__inputblock
+          %input.inputarea{:size => "50", :placeholder => "ここに記入してください"} 
+
+      .adressinfo__prefectures
+        .adressinfo__prefectures__titleblock
+          .adressinfo__prefectures__titleblock__title
+            都道府県
+          .adressinfo__prefectures__titleblock__require
+            必須
+        .adressinfo__prefectures__inputblock
+          .selectwrap
+            %select.select{:id => "", :name => ""}
+              %option{:value => ""} 北海道
+              %option{:value => ""} 青森
+              %option{:value => ""} 岩手
+
+      .adressinfo__municipality
+        .adressinfo__municipality__titleblock
+          .adressinfo__municipality__titleblock__title
+            市区町村
+          .adressinfo__municipality__titleblock__require
+            必須
+        .adressinfo__municipality__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+      .adressinfo__adress
+        .adressinfo__adress__titleblock
+          .adressinfo__adress__titleblock__title
+            番地
+          .adressinfo__adress__titleblock__require
+            必須
+        .adressinfo__adress__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+      .adressinfo__building
+        .adressinfo__building__titleblock
+          .adressinfo__building__titleblock__title
+            建物名（マンション名等）
+        .adressinfo__building__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+
+      .adressinfo__phonenumber
+        .adressinfo__phonenumber__titleblock
+          .adressinfo__phonenumber__titleblock__title
+            電話番号
+        .adressinfo__phonenumber__inputblock
+          %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "ここに記入してください"} 
+
+    .nextbtn
+      %button.next_btn{:name => "button", :type => "submit"}
+        次へ
+
+
+.signup_footer
+  .signup_footer__contents
+    .c1
+      = link_to "#" do
+        会社概要（運用会社）
+    .c2
+      = link_to "#" do
+        プライバシーポリシー
+    .c3
+      = link_to "#" do
+        FURIMA利用規約
+  .signup_footer__logo
+    = link_to root_path do
+      %img{src: "/assets/logo-white.png"}
+      .slogo © FURIMA

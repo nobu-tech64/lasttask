@@ -2,7 +2,6 @@ a{
   text-decoration: none;
 }
 
-
 //プルダウンメニューのcss
 .selectwrap{
   width: 100%;
@@ -56,39 +55,41 @@ select::-ms-expand {
   .signup_progress{
     display: flex;
     margin-left: 40px;
-    &__dotsborder{
+    &__dotsborder_card{
       position: absolute;
       top: 66px;
       left: 57%;
       z-index: 1;
     }
-    &__dots_signup{
+    &__dots_card{
       width: 100px;
       line-height: 150px;
       color: red;
       z-index: 2;
       &--title{
+        color: silver;
         position: absolute;
         top: 30px;
         left: 786px;  
       }
     }
-    &__dots2_signup{
+    &__dots2_card{
       width: 100px;
       line-height: 150px;
+      color: red;
       z-index: 2;
-      color: silver;
       &--title{
+        color: silver;
         position: absolute;
         top: 30px;
         left: 886px;  
       }
     }
-    &__dots3_signup{
+    &__dots3_card{
       width: 100px;
       line-height: 150px;
+      color: red;
       z-index: 2;
-      color: silver;
       &--title{
         position: absolute;
         top: 30px;
@@ -98,14 +99,15 @@ select::-ms-expand {
   }
 }
 
-.ss{
-  .Sform{
-    height: 1500px;
+
+.cdi{
+  .cardinfoform{
+    height: 800px;
     width: 60vw;
     margin:0 auto;
-    .memberinfo{
+    .cardinfo{
       background-color: #f2f2f2;
-      height: 1200px;
+      height: 570px;
       padding-top: 20px;
       padding-left: 100px;
       padding-right: 100px;
@@ -117,7 +119,9 @@ select::-ms-expand {
         font-size: 25px;
         line-height: 100px;
       }
-      &__nickname{
+
+
+      &__cardnumber{
         height: 120px;
         font-size: 20px;
         padding-left: 20px;
@@ -147,160 +151,7 @@ select::-ms-expand {
       }
 
 
-      &__email{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          font-size: 15px;
-          padding-top: 20px;
-          .textarea{
-          }
-        }
-      }
-
-
-      &__password{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          font-size: 15px;
-          padding-top: 20px;
-          .textarea{
-          }
-        }
-      }
-
-      &__repassword{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          font-size: 15px;
-          padding-top: 20px;
-          .textarea{
-          }
-        }
-      }
-
-      &__name{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          padding-top: 20px;
-          display: flex;
-          justify-content: center;
-          font-size: 15px;
-          .firstname{
-            padding-right: 40px;
-          }
-        }
-      }
-
-      &__namek{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          padding-top: 20px;
-          display: flex;
-          font-size: 15px;
-          .firstname_title{
-          }
-          .firstname{
-            padding-right: 80px;
-          }
-        }
-      }
-
-      &__birthday{
+      &__deadline{
         height: 120px;
         font-size: 20px;
         padding-left: 20px;
@@ -340,24 +191,45 @@ select::-ms-expand {
             margin-top: 8px;
             padding-right: 50px;
           }
-          .day{
-            background-color: white;
+        }
+      }
+      &__securitynumber{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
           }
-          .day_title{
-            margin-top: 8px;
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
           }
         }
       }
     }
-
-    .registerbtn{
+    .nextbtn{
       height: 150px;
       line-height: 150px;
       font-size: 20px;
       padding-left: 20px;
       padding-top: 20px;
       text-align: center;
-      .register_btn{
+      .next_btn{
         margin-top: 20px;
         font-size: 20px;
         background-color: red;
@@ -366,11 +238,6 @@ select::-ms-expand {
         height: 64px;
       }
     }
-
-
-
-
-
   }
 }
 
