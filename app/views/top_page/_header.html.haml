@@ -6,7 +6,7 @@
   .header__headerTop
     %h1
       = link_to root_path do
-        %img{src: "#{ asset_path "logo.png"}", width: "150px"}
+        %img{src: "/assets/logo.png", width: "150px"}
     .header__searchPlace
       .header__searchPlace__content
         = form_for root_path do |f|
