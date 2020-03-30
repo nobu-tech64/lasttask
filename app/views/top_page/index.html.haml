@@ -1,6 +1,5 @@
-%head
-  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css", rel: "stylesheet", type: "text/css"}
-  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css", rel: "stylesheet", type: "text/css"}
+.Cheader
+  = render 'header'
 
 .header
   .header__headerTop
@@ -59,11 +58,14 @@
         新規投稿商品
       .main__pickup__title__productLists
         .main__pickup__title__productLists__productList
-          %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png"}
+          = link_to "/item" do
+            %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png"}
         .main__pickup__title__productLists__productList
-          %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png"}
+          = link_to "/item" do
+            %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png"}
         .main__pickup__title__productLists__productList
-          %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png"}
+          = link_to "/item" do
+            %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png"}
     
   .main__recommend
     %h1 あなたへのオススメ

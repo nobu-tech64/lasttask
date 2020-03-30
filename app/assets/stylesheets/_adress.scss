@@ -2,7 +2,6 @@ a{
   text-decoration: none;
 }
 
-
 //プルダウンメニューのcss
 .selectwrap{
   width: 100%;
@@ -56,13 +55,32 @@ select::-ms-expand {
   .signup_progress{
     display: flex;
     margin-left: 40px;
-    &__dotsborder{
+    &__dotsborder1_adress{
       position: absolute;
       top: 66px;
       left: 57%;
       z-index: 1;
     }
-    &__dots_signup{
+    &__dotsborder2_adress{
+      position: absolute;
+      top: 66px;
+      left: 57%;
+      z-index: 1;
+    }
+
+    &__dots_adress{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: red;
+      &--title{
+        color: silver;
+        position: absolute;
+        top: 30px;
+        left: 786px;  
+      }
+    }
+    &__dots2_adress{
       width: 100px;
       line-height: 150px;
       color: red;
@@ -70,21 +88,10 @@ select::-ms-expand {
       &--title{
         position: absolute;
         top: 30px;
-        left: 786px;  
-      }
-    }
-    &__dots2_signup{
-      width: 100px;
-      line-height: 150px;
-      z-index: 2;
-      color: silver;
-      &--title{
-        position: absolute;
-        top: 30px;
         left: 886px;  
       }
     }
-    &__dots3_signup{
+    &__dots3_adress{
       width: 100px;
       line-height: 150px;
       z-index: 2;
@@ -98,14 +105,14 @@ select::-ms-expand {
   }
 }
 
-.ss{
-  .Sform{
-    height: 1400px;
+.ad{
+  .ADform{
+    height: 1500px;
     width: 60vw;
     margin:0 auto;
-    .memberinfo{
+    .adressinfo{
       background-color: #f2f2f2;
-      height: 1150px;
+      height: 1250px;
       padding-top: 20px;
       padding-left: 100px;
       padding-right: 100px;
@@ -117,7 +124,9 @@ select::-ms-expand {
         font-size: 25px;
         line-height: 100px;
       }
-      &__nickname{
+
+
+      &__postal_code{
         height: 120px;
         font-size: 20px;
         padding-left: 20px;
@@ -147,7 +156,64 @@ select::-ms-expand {
       }
 
 
-      &__email{
+      &__prefectures{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .select{
+            background-color: white;
+          }
+        }
+      }
+
+      &__municipality{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 20px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+        }
+      }
+
+      &__adress{
         height: 120px;
         font-size: 20px;
         padding-left: 20px;
@@ -176,8 +242,7 @@ select::-ms-expand {
         }
       }
 
-
-      &__password{
+      &__building{
         height: 120px;
         font-size: 20px;
         padding-left: 20px;
@@ -187,15 +252,25 @@ select::-ms-expand {
           justify-content: center;
           &__title{
           }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
+
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .textarea{
+          }
+        }
+      }
+
+      &__phonenumber{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
           }
         }
         &__inputblock{
@@ -206,34 +281,6 @@ select::-ms-expand {
         }
       }
 
-      &__repassword{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          font-size: 15px;
-          padding-top: 20px;
-          .textarea{
-          }
-        }
-      }
 
       &__name{
         height: 120px;
@@ -298,66 +345,19 @@ select::-ms-expand {
             padding-right: 80px;
           }
         }
-      }
 
-      &__birthday{
-        height: 120px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        &__titleblock{
-          display: flex;
-          justify-content: center;
-          &__title{
-          }
-          &__require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 30px;
-            margin-left: 20px;
-          }
-        }
-        &__inputblock{
-          font-size: 15px;
-          padding-top: 20px;
-          display: flex;
-          justify-content: center;
-          .year{
-            background-color: white;
-          }
-          .year_title{
-            margin-top: 8px;
-            padding-right: 50px;
-          }
-          .month{
-            background-color: white;
-          }
-          .month_title{
-            margin-top: 8px;
-            padding-right: 50px;
-          }
-          .day{
-            background-color: white;
-          }
-          .day_title{
-            margin-top: 8px;
-          }
-        }
+
       }
     }
 
-    .registerbtn{
+    .nextbtn{
       height: 150px;
       line-height: 150px;
       font-size: 20px;
       padding-left: 20px;
       padding-top: 20px;
       text-align: center;
-      .register_btn{
+      .next_btn{
         margin-top: 20px;
         font-size: 20px;
         background-color: red;
@@ -366,11 +366,6 @@ select::-ms-expand {
         height: 64px;
       }
     }
-
-
-
-
-
   }
 }
 
