@@ -6,19 +6,45 @@
 .ll
   .Lform
     .logininfo
+      .signuplinktitle
+        アカウントをお持ちではない方はこちら
+      .signupbtn
+        %button.signup_btn{:name => "button", :type => "submit"}
+          新規会員登録
+      .logininfo__facebookbtn
+        %button.facebook_btn{:name => "button", :type => "submit"}
+          %i.fab.fa-facebook-square
+            facebookでログイン
+      .logininfo__googlebtn
+        %button.google_btn{:name => "button", :type => "submit"}
+          .logininfo__googlebtn__btnfont
+            .logininfo__googlebtn__btnfont__fas
+              %i.fab.fa-google
+            .logininfo__googlebtn__btnfont__color
+              .logininfo__googlebtn__btnfont__color--color1
+                G
+              .logininfo__googlebtn__btnfont__color--color2
+                o
+              .logininfo__googlebtn__btnfont__color--color3
+                o
+              .logininfo__googlebtn__btnfont__color--color4
+                g
+              .logininfo__googlebtn__btnfont__color--color5
+                l
+              .logininfo__googlebtn__btnfont__color--color6
+                e
+              .logininfo__googlebtn__btnfont__color--color7
+                でログイン
+            .logininfo__googlebtn__btnfont__space
+
       .logininfo__mailadress
-        %input.inputarea{:size => "50", :placeholder => "メールアドレス"} 
+        %input.inputarea{:size => "50", :placeholder => "　メールアドレス"} 
       .logininfo__password
-        %input.inputarea{:type => "password", :size => "50", :placeholder => "パスワード"} 
+        %input.inputarea{:type => "password", :size => "50", :placeholder => "　パスワード"} 
       .logininfo__loginbtn
         %button.login_btn{:name => "button", :type => "submit"}
           ログイン
 
-    .signuplinktitle
-      アカウントをお持ちではない方はこちら
-    .signupbtn
-      %button.signup_btn{:name => "button", :type => "submit"}
-        新規会員登録
 
 .footer
   .footer__contents
