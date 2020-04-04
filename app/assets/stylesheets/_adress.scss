@@ -143,14 +143,17 @@ select::-ms-expand {
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
         }
         &__inputblock{
           font-size: 15px;
           padding-top: 20px;
-          .textarea{
+          .inputarea{
+            height: 50px;
+            width: 400px;
           }
         }
       }
@@ -173,8 +176,9 @@ select::-ms-expand {
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
         }
         &__inputblock{
@@ -203,13 +207,18 @@ select::-ms-expand {
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
         }
         &__inputblock{
           font-size: 15px;
           padding-top: 20px;
+          .inputarea{
+            height: 50px;
+            width: 400px;
+          }
         }
       }
 
@@ -230,14 +239,17 @@ select::-ms-expand {
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
         }
         &__inputblock{
           font-size: 15px;
           padding-top: 20px;
-          .textarea{
+          .inputarea{
+            height: 50px;
+            width: 400px;
           }
         }
       }
@@ -257,7 +269,9 @@ select::-ms-expand {
         &__inputblock{
           font-size: 15px;
           padding-top: 20px;
-          .textarea{
+          .inputarea{
+            height: 50px;
+            width: 400px;
           }
         }
       }
@@ -276,7 +290,9 @@ select::-ms-expand {
         &__inputblock{
           font-size: 15px;
           padding-top: 20px;
-          .textarea{
+          .inputarea{
+            height: 50px;
+            width: 400px;
           }
         }
       }
@@ -285,7 +301,6 @@ select::-ms-expand {
       &__name{
         height: 120px;
         font-size: 20px;
-        padding-left: 20px;
         padding-top: 20px;
         &__titleblock{
           display: flex;
@@ -299,17 +314,22 @@ select::-ms-expand {
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
         }
         &__inputblock{
           padding-top: 20px;
           display: flex;
           justify-content: center;
-          font-size: 15px;
+          font-size: 30px;
           .firstname{
             padding-right: 40px;
+          }
+          .inputarea{
+            height: 40px;
+            width: 300px;
           }
         }
       }
@@ -317,7 +337,6 @@ select::-ms-expand {
       &__namek{
         height: 120px;
         font-size: 20px;
-        padding-left: 20px;
         padding-top: 20px;
         &__titleblock{
           display: flex;
@@ -331,8 +350,9 @@ select::-ms-expand {
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
         }
         &__inputblock{
@@ -343,6 +363,10 @@ select::-ms-expand {
           }
           .firstname{
             padding-right: 80px;
+          }
+          .inputarea{
+            height: 40px;
+            width: 300px;
           }
         }
 
@@ -359,11 +383,12 @@ select::-ms-expand {
       text-align: center;
       .next_btn{
         margin-top: 20px;
-        font-size: 20px;
-        background-color: red;
+        font-size: 14px;
+        border: #ea352d;
+        background-color: #ea352d;
         color: white;
         width: 320px;
-        height: 64px;
+        height: 50px;
       }
     }
   }
