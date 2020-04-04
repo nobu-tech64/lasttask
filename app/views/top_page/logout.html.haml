@@ -56,8 +56,10 @@
           %a{href: "/logout"} ログアウト
 
   .mycontent__right
-    .mycontent__right__logoutbtn
-      = link_to 'ログアウト', destroy_user_session_path, method: :delete
+    .mycontent__right__background
+      = link_to destroy_user_session_path, method: :delete do
+        %button.logout_btn{:name => "button", :type => "submit"}
+          ログアウト
 
 
 .footer

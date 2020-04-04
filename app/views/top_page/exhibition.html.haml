@@ -17,7 +17,6 @@
           画像ドロップエリア（仮）
 
 
-
     .Eform__itemname
       商品について
       .Eform__itemname--title
@@ -27,7 +26,7 @@
           必須
       .Eform__itemnamebox
         .inputform
-          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
+          %input.inputarea{:size => "50", :placeholder => "　商品名をここに記入"} 
     .Eform__description
       .Eform__description--title
         .title
@@ -36,14 +35,14 @@
           必須
       .Eform__descriptionbox
         .inputform
-          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
+          %input.inputarea{:placeholder => "　商品説明をここに記入"} 
 
     .Eform__productdetails
       商品の詳細
-      .Eform__productdetails--title
-        .title
+      .Eform__productdetails__category
+        .Eform__productdetails__category__title
           カテゴリー
-        .require
+        .Eform__productdetails__category__require
           必須
       .Eform__productdetailsbox
         .pulldown
@@ -53,18 +52,19 @@
               %option{:value => ""} 002
               %option{:value => ""} 003
 
-
-      .Eform__productdetails--title
-        .title
+      .Eform__productdetails__brand
+        .Eform__productdetails__brand__title
           ブランド
+        .Eform__productdetails__brand__require
+          任意
       .Eform__productdetailsbox
         .inputform
-          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
+          %input.inputarea{:placeholder => "　ブランドをここに記入"} 
 
-      .Eform__productdetails--title
-        .title
+      .Eform__productdetails__status
+        .Eform__productdetails__status__title
           出品の状態
-        .require
+        .Eform__productdetails__status__require
           必須
       .Eform__productdetailsbox
         .pulldown
@@ -117,14 +117,28 @@
 
     .Eform__price
       価格について
-      .Eform__price--title
-        .title
-          価格設定
-        .require
-          必須
-      .Eform__pricebox
-        .inputform
-          %textarea{:cols => "60", :rows => "1"} ここをクリックして記入してください
+      .Eform__price__displayarea
+        .Eform__price__displayarea__pricearea
+          .Eform__price__displayarea__pricearea__title
+            販売価格
+          .Eform__price__displayarea__pricearea__require
+            必須
+        .Eform__price__displayarea__pricedisplayarea
+          .Eform__price__displayarea__pricedisplayarea__yen
+            ¥
+          .Eform__price__displayarea__pricedisplayarea__form
+            %input.inputarea{:placeholder => "　　　　　　　　　　０"} 
+      .Eform__price__displayarea__commissionarea
+        .Eform__price__displayarea__commissionarea__title
+          販売手数料（10％）
+        .Eform__price__displayarea__commissionarea__commission
+          ー
+      .Eform__price__displayarea__profitarea
+        .Eform__price__displayarea__profitarea__title
+          販売利益
+        .Eform__price__displayarea__profitarea__profit
+          ー
+
 
 .eee
   %button.exhibition_btn{:name => "button", :type => "submit"}

@@ -9,12 +9,18 @@
       .signuplinktitle
         アカウントをお持ちではない方はこちら
       .signupbtn
-        %button.signup_btn{:name => "button", :type => "submit"}
-          新規会員登録
+        = link_to signup_path do
+          %button.signup_btn{:name => "button", :type => "submit"}
+            新規会員登録          
       .logininfo__facebookbtn
         %button.facebook_btn{:name => "button", :type => "submit"}
-          %i.fab.fa-facebook-square
-            facebookでログイン
+          .logininfo__facebookbtn__fas-font
+            .logininfo__facebookbtn__fas-font__fas
+              %i.fab.fa-facebook-square
+            .logininfo__facebookbtn__fas-font__font
+              facebookでログイン
+            .logininfo__facebookbtn__fas-font__space
+
       .logininfo__googlebtn
         %button.google_btn{:name => "button", :type => "submit"}
           .logininfo__googlebtn__btnfont
@@ -42,8 +48,9 @@
       .logininfo__password
         %input.inputarea{:type => "password", :size => "50", :placeholder => "　パスワード"} 
       .logininfo__loginbtn
-        %button.login_btn{:name => "button", :type => "submit"}
-          ログイン
+        = link_to destroy_user_session_path, method: :delete do
+          %button.login_btn{:name => "button", :type => "submit"}
+            ログイン          
 
 
 .footer

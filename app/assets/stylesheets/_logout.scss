@@ -1,21 +1,19 @@
 .mycontent__right{
-  &__logoutbtn{
+  &__background{
     background-color: white;
     width: 700px;
     height: 300px;
     position: relative;
-    a{
+    .logout_btn{
       position: absolute;
-      top: 125px;
-      right: 190px;
-      text-align: center;
-      line-height: 50px;
       height: 50px;
       width: 320px;
-      display: block;
       background-color: #ea352d;
-      font-size: 14px;
       color: white;
+      font-size: 14px;
+      top: 125px;
+      right: 190px;
+      border: #ea352d;
     }
   }
 }

@@ -4,6 +4,7 @@ a{
 
 //プルダウンメニューのcss
 .selectwrap{
+  font-weight: normal;
   width: 100%;
   position: relative;
   display: inline-block;
@@ -41,10 +42,6 @@ select::-ms-expand {
 }
 
 
-a:visited{
-  color: white;
-}
-
 .logoheader{
   height: 150px;
   width: 100%;
@@ -58,15 +55,16 @@ a:visited{
 
 .ee{
   .Eform{
-    background-color: black;
-    height: 2500px;
+    background-color: silver;
+    height: 2000px;
     width: 60vw;
     margin:0 auto;
     &__imageform{
       background-color: #F2F2F2;
       height: 500px;
-      padding-left: 20px;
-      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
       margin-bottom: 1px;
       &--title{
         display: flex;
@@ -75,13 +73,15 @@ a:visited{
             text-align: center;
           }
           .require{
+            border-radius: 5px;
             color: white;
             background-color: red;
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
       }
       &--title2{
@@ -97,28 +97,37 @@ a:visited{
 
     &__itemname{
       background-color: #f2f2f2;
-      height: 250px;
-      padding-left: 20px;
-      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
+      font-weight: bold;
       &--title{
         display: flex;
         font-size: 20px;
+        font-weight: normal;
           .title{
             text-align: center;
           }
           .require{
+            border-radius: 5px;
             color: white;
             background-color: red;
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
       }
       .Eform__itemnamebox{
         .inputform{
-
+          .inputarea{
+            width: 700px;
+            height: 40px;
+            font-size: 16px;
+            font-weight: normal;
+          }
         }
       }
     }
@@ -126,9 +135,10 @@ a:visited{
 
     &__description{
       background-color:#f2f2f2;
-      height: 250px;
-      padding-left: 20px;
-      padding-top: 20px;
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 40px;
       margin-bottom: 1px;
       &--title{
         display: flex;
@@ -137,18 +147,24 @@ a:visited{
             font-size: 20px;
           }
           .require{
+            border-radius: 5px;
             color: white;
             background-color: red;
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
       }
       .Eform__descriptionbox{
         .inputform{
-
+          .inputarea{
+            width: 700px;
+            height: 200px;
+            font-size: 16px;
+          }
         }
       }
     }
@@ -156,122 +172,214 @@ a:visited{
 
     &__productdetails{
       background-color: #f2f2f2;
-      height: 500px;
-      padding-left: 20px;
-      padding-top: 20px;
+      height: 350px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
       margin-bottom: 1px;
-      &--title{
+      font-weight: bold;
+      &__category{
         display: flex;
-          .title{
-            text-align: center;
+          &__title{
             font-size: 20px;
+            font-weight: normal;
           }
-          .require{
+          &__require{
+            font-weight: normal;
+            border-radius: 5px;
             color: white;
             background-color: red;
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      &__brand{
+        display: flex;
+        font-weight: normal;
+          &__title{
+            text-align: center;
+            font-size: 20px;
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      &__status{
+        display: flex;
+        font-weight: normal;
+          &__title{
+            text-align: center;
+            font-size: 20px;
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
           }
       }
       .Eform__productdetailsbox{
-        .inputform{
-
+        font-weight: normal;
+        .inputarea{
+          width: 700px;
+          height: 50px;
+          font-size: 16px;
+          margin-bottom: 20px;
         }
         .pulldown{
-          
+          background-color: white;
+          margin-bottom: 30px;
         }
       }
     }
 
-
     &__delivery{
+      font-weight: bold;
       background-color: #f2f2f2;
-      height: 500px;
-      padding-left: 20px;
-      padding-top: 20px;
+      height: 350px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
       margin-bottom: 1px;
       &--title{
+        font-weight: normal;
         display: flex;
           .title{
             text-align: center;
             font-size: 20px;
           }
           .require{
+            border-radius: 5px;
             color: white;
             background-color: red;
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
+            font-weight: normal;
           }
       }
-      .Eform__deriverybox{
+      .Eform__deliverybox{
         .pulldown{
-          
+          background-color: white;
+          margin-bottom: 30px;
         }
-      }
+     }
     }
-
 
     &__price{
       background-color: #f2f2f2;
-      height: 650px;
-      padding-left: 20px;
-      padding-top: 20px;
-      margin-bottom: 1px;
-      &--title{
+      height: 450px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
+      font-weight: bold;
+      &__displayarea{
+        font-weight: normal;
         display: flex;
-          .title{
-            text-align: center;
+        justify-content: space-between;
+        line-height: 40px;
+        height: 40px;
+        &__pricearea{
+          display: flex;
+          position: relative;
+          &__title{
             font-size: 20px;
           }
-          .require{
+          &__require{
+            position: absolute;
+            top: 6px;
+            left: 80px;
+            border-radius: 5px;
             color: white;
             background-color: red;
             height: 28px;
             width: 46px;
             text-align: center;
-            line-height: 30px;
+            line-height: 28px;
             margin-left: 20px;
+            font-size: 16px;
           }
-      }
-      .Eform__productdetailsbox{
-        .inputform{
+        }
+        &__pricedisplayarea{
+          display: flex;
+          &__yen{
+          }
+          &__form{
+            .inputarea{
+              width: 200px;
+              height: 40px;
+              font-size: 16px;
+              font-weight: normal;
+            }
+          }
+        }
+        &__commissionarea{
+          display: flex;
+          justify-content: space-between;
+          font-weight: normal;
+          padding-top: 30px;
+          border-bottom: 1px solid silver;
+          padding-bottom: 30px;
+          &__title{
+          }
+        }
+        &__profitarea{
+          display: flex;
+          justify-content: space-between;
+          font-weight: normal;
+          padding-top: 30px;
 
         }
-      }
+      }  
     }
-
-
-
-
   }
 }
 
+
 .eee{
-  height: 450px;
+  height: 300px;
   width: 100%;
   text-align: center;
   .exhibition_btn{
     margin-top: 40px;
-    font-size: 40px;
+    font-size: 14px;
+    background-color: #ea352d;
     color: white;
-    background-color: red;
-    width: 400px;
-    height: 80px;
-  }
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    border: #ea352d;
+}
   .home_btn{
     margin-top: 20px;
-    font-size: 40px;
+    font-size: 14px;
+    background-color: rgb(73, 73, 255);
     color: white;
-    background-color: blue;
-    width: 400px;
-    height: 80px;
-  }
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    border:  rgb(73, 73, 255);
+}
 }
 
 

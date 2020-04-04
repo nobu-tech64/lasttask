@@ -13,14 +13,14 @@
       &__title{
         border-bottom: 1px solid  #f2f2f2;
         height: 100px;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 100px;
       }
 
 
       &__cardnumber{
         height: 120px;
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 20px;
         padding-top: 20px;
         &__titleblock{
@@ -47,7 +47,7 @@
         }
         .cardicon{
           i{
-            font-size: 35px;
+            font-size: 30px;
           }
         }
       }
@@ -55,7 +55,7 @@
 
       &__deadline{
         height: 120px;
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 20px;
         padding-top: 40px;
         &__titleblock{
@@ -97,7 +97,7 @@
       }
       &__securitynumber{
         height: 120px;
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 20px;
         padding-top: 20px;
         &__titleblock{
@@ -128,11 +128,12 @@
       background-color: white;
       text-align: center;
       .mycard_btn{
-        font-size: 20px;
+        font-size: 14px;
         color: white;
-        background-color: red;
+        background-color: #ea352d;
         width: 320px;
-        height: 64px;
+        height: 50px;
+        border: #ea352d;
       }
     }
 
