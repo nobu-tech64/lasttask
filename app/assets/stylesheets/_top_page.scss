@@ -1,5 +1,5 @@
-
 .main{
+  overflow: hidden;
   &__adCarousel{
     &__first{
       width: 100%;
@@ -11,19 +11,27 @@
       align-items: center;
       &__content{
         position: absolute;
-        padding: 0 60px;
+        padding: 100px 60px;
         text-shadow: 1px 2px 3px #808080;
         h2{
           font-size: 60px;
           line-height: 1.2;
           color: #fff;
-          text-shadow: 1px 2px 3px #000;
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
         }
         p{
           font-size: 18px;
-          margin-top: 10px;
+          margin-top: 16px;
+          line-height: 1.8;
           color: #fff;
-          text-shadow: 1px 2px 3px #808080;
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        }
+        &__link{
+          margin-top: 30px;
+          display: flex;
+          img{
+            padding: 0 10px;
+          }
         }
       }
     }
@@ -37,40 +45,61 @@
       align-items: center;
       &__content{
         position: absolute;
-        padding: 0 60px;
+        padding: 100px 200px;
         text-shadow: 1px 2px 3px #808080;
+        color: #fff;
         h2{
-          font-size: 40px;
-          line-height: 1.2;
-          color: #fff;
+          font-size: 27px;
+          font-weight: bold;
+          line-height: 1.4;
         }
         p{
-          font-size: 15px;
-          margin-top: 10px;
-          color: #fff;
+          font-size: 18px;
+          margin: 20px 0 30px;
+          line-height: 1.5;
+        }
+        &__link{
+          margin-top: 30px;
+          display: flex;
+          img{
+            padding: 0 10px;
+          }
         }
       }
     }
     &__third{
-      width: 100%;
+      width: 1440px;
       height: 500px;
       background-image: url("https://lasttask2020.s3-ap-northeast-1.amazonaws.com/bg-appBanner-pict.jpg");
       background-size: cover;
       position: relative;
-      display: flex;
-      align-items: center;
       &__content{
         position: absolute;
-        padding: 0 60px;
+        width: 100%;
+        padding: 150px 0;
+        margin: auto;
         font-size: 20px;
         margin-top: 10px;
         color: #fff;
         text-shadow: 1px 2px 3px #808080;
+        text-align: center;
         h2{
-
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1.4;
         }
         p{
-          
+          font-size: 35px;
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        }
+        &__link{
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          img{
+            padding: 0 10px;
+          }
         }
       }
     }
