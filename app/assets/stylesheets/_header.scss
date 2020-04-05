@@ -3,6 +3,7 @@ a{
 }
 
 .header{
+  background-color: #f8f8f8;
   &__headerTop{
     max-width: 1040px;
     width: 100%;
@@ -11,30 +12,35 @@ a{
     padding: 15px 0 0;
     display: flex;
     h1{
+      padding-bottom: 10px;
       margin-right: 30px;
+      border-radius: 4px;
     }
   }
   &__searchPlace{
     display: flex;
     margin-left: auto;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     width: 100%;
     &__content{
       width: 100%;
       &__field{
-        width: calc(100% - 26px);
-        margin: 8px 0 0;
+        width: calc(100% - 26px);  
+        height: 36px;
+        padding-left: 5px;
+        // margin: 8px 0 0;
       }
     }
     &__btn{
-      width: 36px;
+      width: 25px;
+      height: 25px;
       border: 0;
       cursor: pointer;
       background-color: #3CC;
       padding: 8px;
       text-align: center;
       img{
-        
+        border: 0;
       }
     }
   }
@@ -48,10 +54,11 @@ a{
       width: 100%;
       display: flex;
       justify-content: flex-start;
+      align-items: center;
       a{
         text-decoration: none;
         color: #000;
-        font-size: 15px;
+        font-size: 14px;
         padding: 0 10px;
       }
       li{
@@ -62,10 +69,11 @@ a{
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       a{
         text-decoration: none;
         color: #000;
-        font-size: 15px;
+        font-size: 14px;
         padding: 0 10px;
       }
       li{
