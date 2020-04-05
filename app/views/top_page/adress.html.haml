@@ -23,7 +23,7 @@
   .ADform
     .adressinfo
       .adressinfo__title
-        住所入力
+        発送元・お届け先住所入力
       .adressinfo__name
         .adressinfo__name__titleblock
           .adressinfo__name__titleblock__title
@@ -31,12 +31,12 @@
           .adressinfo__name__titleblock__require
             必須
         .adressinfo__name__inputblock
-          .firstname_title
-            姓：
+          -# .firstname_title
+          -#   姓：
           .firstname
             %input.inputarea{:placeholder => "　例）範馬"} 
-          .lastname_title
-            名：
+          -# .lastname_title
+          -#   名：
           .lastname
             %input.inputarea{:placeholder => "　例）刃牙"} 
 
@@ -44,18 +44,18 @@
       .adressinfo__namek
         .adressinfo__namek__titleblock
           .adressinfo__namek__titleblock__title
-            お名前(カナ)
+            お名前
           .adressinfo__namek__titleblock__require
             必須
         .adressinfo__namek__inputblock
-          .firstname_title
-            姓（カナ）：
           .firstname
             %input.inputarea{:placeholder => "　例）ハンマ"} 
-          .lastname_title
-            名（カナ）：
           .lastname
             %input.inputarea{:placeholder => "　例）バキ"} 
+
+
+
+
 
       .adressinfo__postal_code
         .adressinfo__postal_code__titleblock
@@ -73,11 +73,12 @@
           .adressinfo__prefectures__titleblock__require
             必須
         .adressinfo__prefectures__inputblock
-          .selectwrap
-            %select.select{:id => "", :name => ""}
-              %option{:value => ""} 北海道
-              %option{:value => ""} 青森
-              %option{:value => ""} 岩手
+          .pulldowns
+            .selectwrap
+              %select.select{:id => "", :name => ""}
+                %option{:value => ""} 青森
+                %option{:value => ""} 岩手
+                %option{:value => ""} 北海道
 
       .adressinfo__municipality
         .adressinfo__municipality__titleblock
@@ -101,6 +102,8 @@
         .adressinfo__building__titleblock
           .adressinfo__building__titleblock__title
             建物名（マンション名等）
+          .adressinfo__building__titleblock__require
+            任意
         .adressinfo__building__inputblock
           %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "　ここに記入してください"} 
 
@@ -109,6 +112,8 @@
         .adressinfo__phonenumber__titleblock
           .adressinfo__phonenumber__titleblock__title
             電話番号
+          .adressinfo__phonenumber__titleblock__require
+            任意
         .adressinfo__phonenumber__inputblock
           %input.inputarea{:type => "prefectures", :size => "50", :placeholder => "　ここに記入してください"} 
 
