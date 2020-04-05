@@ -1,6 +1,6 @@
 .logoheader
   = link_to root_path do
-    %img.logoheader__logo{:src => "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+    %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
 
 .bb
   .Bform
@@ -8,7 +8,7 @@
       .varification__title
         購入内容の確認
       .varification__infomation
-        %img.buyimage{:src => "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/pict-reason-01.jpg"}
+        %img.buyimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/pict-reason-01.jpg"}
         .b
           商品説明
       .varification__price
@@ -22,7 +22,7 @@
         .card
           (カード情報)
         .b
-          %button.change_btn{:name => "button", :type => "submit"}
+          %button.change_btn{name: "button", type: "submit"}
             変更する
       .varification__address
         .a
@@ -30,10 +30,10 @@
         .adress
           住所
         .b
-          %button.change_btn{:name => "button", :type => "submit"}
+          %button.change_btn{name: "button", type: "submit"}
             変更する
       .varification__buy_btn
-        %button.buy_btn{:name => "button", :type => "submit"}
+        %button.buy_btn{name: "button", type: "submit"}
           購入する
 
 

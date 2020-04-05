@@ -1,7 +1,7 @@
 
 .logoheader
   = link_to root_path do
-    %img.logoheader__logo{:src => "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+    %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
 
 .ll
   .Lform
@@ -10,10 +10,10 @@
         アカウントをお持ちではない方はこちら
       .signupbtn
         = link_to signup_path do
-          %button.signup_btn{:name => "button", :type => "submit"}
+          %button.signup_btn{name: "button", type: "submit"}
             新規会員登録          
       .logininfo__facebookbtn
-        %button.facebook_btn{:name => "button", :type => "submit"}
+        %button.facebook_btn{name: "button", type: "submit"}
           .logininfo__facebookbtn__fas-font
             .logininfo__facebookbtn__fas-font__fas
               %i.fab.fa-facebook-square
@@ -22,7 +22,7 @@
             .logininfo__facebookbtn__fas-font__space
 
       .logininfo__googlebtn
-        %button.google_btn{:name => "button", :type => "submit"}
+        %button.google_btn{name: "button", type: "submit"}
           .logininfo__googlebtn__btnfont
             .logininfo__googlebtn__btnfont__fas
               %i.fab.fa-google
@@ -44,12 +44,12 @@
             .logininfo__googlebtn__btnfont__space
 
       .logininfo__mailadress
-        %input.inputarea{:size => "50", :placeholder => "　メールアドレス"} 
+        %input.inputarea{size: "50", placeholder: "　メールアドレス"} 
       .logininfo__password
-        %input.inputarea{:type => "password", :size => "50", :placeholder => "　パスワード"} 
+        %input.inputarea{type: "password", size: "50", placeholder: "　パスワード"} 
       .logininfo__loginbtn
         = link_to destroy_user_session_path, method: :delete do
-          %button.login_btn{:name => "button", :type => "submit"}
+          %button.login_btn{name: "button", type: "submit"}
             ログイン          
 
 

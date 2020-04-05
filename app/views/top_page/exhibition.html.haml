@@ -1,6 +1,6 @@
 .logoheader
   = link_to root_path do
-    %img.logoheader__logo{:src => "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+    %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
 
 .ee
   .Eform
@@ -26,7 +26,7 @@
           必須
       .Eform__itemnamebox
         .inputform
-          %input.inputarea{:size => "50", :placeholder => "　商品名をここに記入"} 
+          %input.inputarea{size: "50", placeholder: "　商品名をここに記入"} 
     .Eform__description
       .Eform__description--title
         .title
@@ -35,7 +35,7 @@
           必須
       .Eform__descriptionbox
         .inputform
-          %input.inputarea{:placeholder => "　商品説明をここに記入"} 
+          %input.inputarea{placeholder: "　商品説明をここに記入"} 
 
     .Eform__productdetails
       商品の詳細
@@ -47,10 +47,10 @@
       .Eform__productdetailsbox
         .pulldown
           .selectwrap
-            %select.select{:id => "", :name => ""}
-              %option{:value => ""} 001
-              %option{:value => ""} 002
-              %option{:value => ""} 003
+            %select.select{id: "", name: ""}
+              %option{value: ""} 001
+              %option{value: ""} 002
+              %option{value: ""} 003
 
       .Eform__productdetails__brand
         .Eform__productdetails__brand__title
@@ -59,7 +59,7 @@
           任意
       .Eform__productdetailsbox
         .inputform
-          %input.inputarea{:placeholder => "　ブランドをここに記入"} 
+          %input.inputarea{placeholder: "　ブランドをここに記入"} 
 
       .Eform__productdetails__status
         .Eform__productdetails__status__title
@@ -69,10 +69,10 @@
       .Eform__productdetailsbox
         .pulldown
           .selectwrap
-            %select.select{:id => "", :name => ""}
-              %option{:value => ""} 001
-              %option{:value => ""} 002
-              %option{:value => ""} 003
+            %select.select{id: "", name: ""}
+              %option{value: ""} 001
+              %option{value: ""} 002
+              %option{value: ""} 003
 
 
     .Eform__delivery
@@ -85,10 +85,10 @@
       .Eform__deliverybox
         .pulldown
           .selectwrap
-            %select.select{:id => "", :name => ""}
-              %option{:value => ""} 001
-              %option{:value => ""} 002
-              %option{:value => ""} 003
+            %select.select{id: "", name: ""}
+              %option{value: ""} 001
+              %option{value: ""} 002
+              %option{value: ""} 003
       .Eform__delivery--title
         .title
           配送元地域
@@ -97,10 +97,10 @@
       .Eform__deliverybox
         .pulldown
           .selectwrap
-            %select.select{:id => "", :name => ""}
-              %option{:value => ""} 001
-              %option{:value => ""} 002
-              %option{:value => ""} 003
+            %select.select{id: "", name: ""}
+              %option{value: ""} 001
+              %option{value: ""} 002
+              %option{value: ""} 003
       .Eform__delivery--title
         .title
           配送準備日数
@@ -109,10 +109,10 @@
       .Eform__deliverybox
         .pulldown
           .selectwrap
-            %select.select{:id => "", :name => ""}
-              %option{:value => ""} 001
-              %option{:value => ""} 002
-              %option{:value => ""} 003
+            %select.select{id: "", name: ""}
+              %option{value: ""} 001
+              %option{value: ""} 002
+              %option{value: ""} 003
 
 
     .Eform__price
@@ -127,7 +127,7 @@
           .Eform__price__displayarea__pricedisplayarea__yen
             ¥
           .Eform__price__displayarea__pricedisplayarea__form
-            %input.inputarea{:placeholder => "　　　　　　　　　　０"} 
+            %input.inputarea{placeholder: "　　　　　　　　　　０"} 
       .Eform__price__displayarea__commissionarea
         .Eform__price__displayarea__commissionarea__title
           販売手数料（10％）
@@ -141,10 +141,10 @@
 
 
 .eee
-  %button.exhibition_btn{:name => "button", :type => "submit"}
+  %button.exhibition_btn{name: "button", type: "submit"}
     出品する
   %br
-  %button.home_btn{:name => "button", :type => "submit"}
+  %button.home_btn{name: "button", type: "submit"}
     ホームに戻る
 
 .footer
