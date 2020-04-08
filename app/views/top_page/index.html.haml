@@ -45,6 +45,37 @@
           = link_to "#" do
             %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", width: "170px"}
 
+  .main__firstIntro
+    %h1.subTitle
+      FURIMAが選ばれる3つの理由
+    %ul.main__firstIntro__lists
+      %li.main__firstIntro__lists__list
+        .main__firstIntro__lists__list__pict
+          %span.number 1
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/pict-reason-01.jpg"}
+        .main__firstIntro__lists__list__text
+          %span 3分
+          ですぐに出品
+        %p スマホで入力するだけで簡単に出品できる!
+        
+      %li.main__firstIntro__lists__list
+        .main__firstIntro__lists__list__pict
+          %span.number 2
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/pict-reason-02.jpg"}
+        .main__firstIntro__lists__list__text
+          %span シンプル
+          で使いやすい
+        %p めんどくさい入力は必要なく、検索も購入もスムーズ!
+
+      %li.main__firstIntro__lists__list--last
+        .main__firstIntro__lists__list__pict
+          %span.number 3
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/pict-reason-03.jpg"}
+        .main__firstIntro__lists__list__text
+          手数料
+          %span 業界最安
+        %p 最大3%でお得に出品&購入!
+    
   .main__pickup
     %h1 ピックアップカテゴリー
     .main__pickup__title
@@ -61,6 +92,32 @@
           = link_to "/item" do
             %img{src: "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png"}
     
+  .main__secondIntro
+    %h2.subTitle
+      FURIMAの特徴
+    .main__secondIntro__lists
+      %section.main__secondIntro__lists__list
+        .main__secondIntro__lists__list__pict
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/icon-01.png"}
+        .main__secondIntro__lists__list__text
+          簡単に売り買いできる
+          %p スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+    
+      %section.main__secondIntro__lists__list
+        .main__secondIntro__lists__list__pict
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/icon-03.png"}
+        .main__secondIntro__lists__list__text
+          売上金は即日振込みに対応
+          %p 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+      
+      %section.main__secondIntro__lists__list
+        .main__secondIntro__lists__list__pict
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/icon-04.png"}
+        .main__secondIntro__lists__list__text
+          様々な支払いに対応
+          %p お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+
+
   .main__recommend
     %h1 あなたへのオススメ
     .main__recommend__title
@@ -111,7 +168,8 @@
 .putupBtn
   .putupBtn__text
     出品する
-  %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/icon_camera.png"}
+  =link_to "#" do
+    %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/icon_camera.png"}
 
 %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
 %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"}
