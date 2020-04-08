@@ -21,9 +21,15 @@
           = link_to "ブランド", "#"
     .header__headerBottom__right
       %ul
-        %li
-          = link_to "ログイン", "/login"
-        %li
-          = link_to "新規会員登録", "signup"
-        %li
-          = link_to "カートを見る", "#"
+        - if user_signed_in?
+          %li
+            = link_to "マイページ", "/mypage"
+          %li
+            = link_to "カートを見る", "#"
+        - else
+          %li
+            = link_to "ログイン", new_user_session_path
+          %li
+            = link_to "新規会員登録", new_user_registration_path
+          %li
+            = link_to "カートを見る", "#"
