@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get "/logout" => "top_page#logout"
   get "/payment" => "top_page#payment"
   get "/mypage_card" => "top_page#mypage_card"
+  get "/card_edit" => "top_page#card_edit"
+  get "/adress_edit" => "top_page#adress_edit"
 end

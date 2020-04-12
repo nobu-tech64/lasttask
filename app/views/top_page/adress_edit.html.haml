@@ -1,0 +1,123 @@
+.logoheader
+  = link_to root_path do
+    %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+
+.ad
+  .ADform
+    .adressinfo
+      .adressinfo__title
+        発送元・お届け先住所変更
+      .adressinfo__name
+        .adressinfo__name__titleblock
+          .adressinfo__name__titleblock__title
+            お名前
+          .adressinfo__name__titleblock__require
+            必須
+        .adressinfo__name__inputblock
+          -# .firstname_title
+          -#   姓：
+          .firstname
+            %input.inputarea{placeholder: "　例）範馬"} 
+          -# .lastname_title
+          -#   名：
+          .lastname
+            %input.inputarea{placeholder: "　例）刃牙"} 
+
+
+      .adressinfo__namek
+        .adressinfo__namek__titleblock
+          .adressinfo__namek__titleblock__title
+            お名前
+          .adressinfo__namek__titleblock__require
+            必須
+        .adressinfo__namek__inputblock
+          .firstname
+            %input.inputarea{placeholder: "　例）ハンマ"} 
+          .lastname
+            %input.inputarea{placeholder: "　例）バキ"} 
+
+
+
+
+
+      .adressinfo__postal_code
+        .adressinfo__postal_code__titleblock
+          .adressinfo__postal_code__titleblock__title
+            郵便番号
+          .adressinfo__postal_code__titleblock__require
+            必須
+        .adressinfo__postal_code__inputblock
+          %input.inputarea{size: "50", placeholder: "　ここに記入してください"} 
+
+      .adressinfo__prefectures
+        .adressinfo__prefectures__titleblock
+          .adressinfo__prefectures__titleblock__title
+            都道府県
+          .adressinfo__prefectures__titleblock__require
+            必須
+        .adressinfo__prefectures__inputblock
+          .pulldowns
+            .selectwrap
+              %select.select{:id => "", :name => ""}
+                %option{value: ""} 青森
+                %option{value: ""} 岩手
+                %option{value: ""} 北海道
+
+      .adressinfo__municipality
+        .adressinfo__municipality__titleblock
+          .adressinfo__municipality__titleblock__title
+            市区町村
+          .adressinfo__municipality__titleblock__require
+            必須
+        .adressinfo__municipality__inputblock
+          %input.inputarea{type: "prefectures", size: "50", placeholder: "　ここに記入してください"} 
+
+      .adressinfo__adress
+        .adressinfo__adress__titleblock
+          .adressinfo__adress__titleblock__title
+            番地
+          .adressinfo__adress__titleblock__require
+            必須
+        .adressinfo__adress__inputblock
+          %input.inputarea{type: "prefectures", size: "50", placeholder: "　ここに記入してください"} 
+
+      .adressinfo__building
+        .adressinfo__building__titleblock
+          .adressinfo__building__titleblock__title
+            建物名（マンション名等）
+          .adressinfo__building__titleblock__require
+            任意
+        .adressinfo__building__inputblock
+          %input.inputarea{type: "prefectures", size: "50", placeholder: "　ここに記入してください"} 
+
+
+      .adressinfo__phonenumber
+        .adressinfo__phonenumber__titleblock
+          .adressinfo__phonenumber__titleblock__title
+            電話番号
+          .adressinfo__phonenumber__titleblock__require
+            任意
+        .adressinfo__phonenumber__inputblock
+          %input.inputarea{type: "prefectures", size: "50", placeholder: "　ここに記入してください"} 
+
+    .nextbtn
+      = link_to "/card" do
+        %button.next_btn{:name => "button", type: "submit"}
+          変更する
+
+
+.signup_footer
+  .signup_footer__contents
+    .c1
+      = link_to "#" do
+        会社概要（運用会社）
+    .c2
+      = link_to "#" do
+        プライバシーポリシー
+    .c3
+      = link_to "#" do
+        FURIMA利用規約
+  .signup_footer__logo
+    = link_to root_path do
+      %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+      .slogo © FURIMA
