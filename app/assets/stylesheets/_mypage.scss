@@ -1,6 +1,6 @@
 
 .mycontent {
-  height: 1300px;
+  height: 1500px;
   padding: 40px 200px;
   background-color: #f8f8f8;
   display: flex;
@@ -41,7 +41,147 @@
   }
   &__right {
     margin-left: 70px;
+    .mmmm{
+      height: 900px;
+      width: 700px;
+      .mmmmatop{
+        background-image: url("https://lasttask2020.s3-ap-northeast-1.amazonaws.com/bg-mainVisual-pict_pc.jpg");
+        background-size:700px 200px;
+        height: 200px;
+        text-align: center;
+        .mmmmaa{
+        }
+        .mmmmaabb{
+
+        }
+        .mmmmbb{
+          display: flex;
+          justify-content: center;
+          .mmmmaaa{
+
+          }
+          .mmmmaaa{
+
+          }
+        }
+      }
+      .mmmmamain{
+        height: 600px;
+        .mtitle{
+          height: 100px;
+          display: flex;
+          justify-content: space-around;
+          line-height: 100px;
+          text-align: center;
+          .mtitlea{
+            background-color: white;
+            width: 350px;
+          }
+          .mtitleb{
+            background-color: gray;
+            width: 350px;
+          }
+        }
+        .mca{
+          height: 90px;
+          display: flex;
+          padding-top: 10px;
+          padding-left: 10px;
+          border-bottom: solid 1px #f2f2f2;
+          background-color: white;
+          &__logo{
+            margin-right: 10px;
+            background-color: #d8d8d8;
+            line-height: 88px;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .mcb{
+          height: 90px;
+          display: flex;
+          padding-top: 10px;
+          padding-left: 10px;
+          border-bottom: solid 1px #f2f2f2;
+          background-color: white;
+          &__logo{
+            margin-right: 10px;
+            background-color: #d8d8d8;
+            line-height: 88px;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .mcc{
+          height: 90px;
+          display: flex;
+          padding-top: 10px;
+          padding-left: 10px;
+          border-bottom: solid 1px #f2f2f2;
+          background-color: white;
+
+          &__logo{
+            margin-right: 10px;
+            background-color: #d8d8d8;
+            line-height: 88px;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .mcd{
+          height: 90px;
+          display: flex;
+          padding-top: 10px;
+          padding-left: 10px;
+          border-bottom: solid 1px #f2f2f2;
+          background-color: white;
+
+          &__logo{
+            margin-right: 10px;
+            background-color: #d8d8d8;
+            line-height: 88px;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .mce{
+          height: 90px;
+          display: flex;
+          padding-top: 10px;
+          padding-left: 10px;
+          border-bottom: solid 1px #f2f2f2;
+          background-color: white;
+
+          &__logo{
+            margin-right: 10px;
+            background-color: #d8d8d8;
+            line-height: 88px;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+      .mmmmafoot{
+        background-color: white;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        .list_btn{
+          font-size: 14px;
+          background-color: #f2f2f2;
+          width: 650px;
+          height: 60px;
+          border: #f2f2f2;
+        }
+      }
+    }
       &--product {
+        padding-top: 50px;
         .title {
         height: 80px;
         width: 600px;
