@@ -7,7 +7,7 @@
     .Eform__imageform
       .Eform__imageform--title
         .title
-        出品画像
+          出品画像
         .require
           必須
       .Eform__imageform--title2
@@ -18,7 +18,8 @@
 
 
     .Eform__itemname
-      商品について
+      .Eform__itemname--top
+        商品について
       .Eform__itemname--title
         .title
           商品名
@@ -26,7 +27,7 @@
           必須
       .Eform__itemnamebox
         .inputform
-          %input.inputarea{size: "50", placeholder: "　商品名をここに記入"} 
+          %input.inputarea{size: "50", placeholder: "商品名をここに記入"} 
     .Eform__description
       .Eform__description--title
         .title
@@ -35,10 +36,11 @@
           必須
       .Eform__descriptionbox
         .inputform
-          %input.inputarea{placeholder: "　商品説明をここに記入"} 
+          %input.inputarea{placeholder: "商品説明をここに記入"} 
 
     .Eform__productdetails
-      商品の詳細
+      .Eform__productdetails__text
+        商品の詳細
       .Eform__productdetails__category
         .Eform__productdetails__category__title
           カテゴリー
@@ -48,6 +50,7 @@
         .pulldown
           .selectwrap
             %select.select{id: "", name: ""}
+              %option{value: ""} 選択してください
               %option{value: ""} 001
               %option{value: ""} 002
               %option{value: ""} 003
@@ -59,7 +62,7 @@
           任意
       .Eform__productdetailsbox
         .inputform
-          %input.inputarea{placeholder: "　ブランドをここに記入"} 
+          %input.inputarea{placeholder: "ブランドをここに記入"} 
 
       .Eform__productdetails__status
         .Eform__productdetails__status__title
@@ -70,13 +73,15 @@
         .pulldown
           .selectwrap
             %select.select{id: "", name: ""}
+              %option{value: ""} 選択してください
               %option{value: ""} 001
               %option{value: ""} 002
               %option{value: ""} 003
 
 
     .Eform__delivery
-      配送について
+      .Eform__delivery--top
+        配送について
       .Eform__delivery--title
         .title
           配送料の負担
@@ -86,6 +91,7 @@
         .pulldown
           .selectwrap
             %select.select{id: "", name: ""}
+              %option{value: ""} 選択してください
               %option{value: ""} 001
               %option{value: ""} 002
               %option{value: ""} 003
@@ -98,6 +104,7 @@
         .pulldown
           .selectwrap
             %select.select{id: "", name: ""}
+              %option{value: ""} 選択してください
               %option{value: ""} 001
               %option{value: ""} 002
               %option{value: ""} 003
@@ -110,13 +117,15 @@
         .pulldown
           .selectwrap
             %select.select{id: "", name: ""}
+              %option{value: ""} 選択してください
               %option{value: ""} 001
               %option{value: ""} 002
               %option{value: ""} 003
 
 
     .Eform__price
-      価格について
+      .Eform__price__top
+        価格について
       .Eform__price__displayarea
         .Eform__price__displayarea__pricearea
           .Eform__price__displayarea__pricearea__title
@@ -127,7 +136,7 @@
           .Eform__price__displayarea__pricedisplayarea__yen
             ¥
           .Eform__price__displayarea__pricedisplayarea__form
-            %input.inputarea{placeholder: "　　　　　　　　　　０"} 
+            %input.inputarea{placeholder: "0"} 
       .Eform__price__displayarea__commissionarea
         .Eform__price__displayarea__commissionarea__title
           販売手数料（10％）
@@ -144,8 +153,9 @@
   %button.exhibition_btn{name: "button", type: "submit"}
     出品する
   %br
-  %button.home_btn{name: "button", type: "submit"}
-    ホームに戻る
+  = link_to "/" do
+    %button.home_btn{name: "button", type: "submit"}
+      ホームに戻る
 
 .footer
   .footer__contents
