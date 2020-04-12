@@ -56,6 +56,74 @@
           %a{href: "/logout"} ログアウト
 
   .mycontent__right
+    .mmmm
+      .mmmmatop
+        .mmmmaa
+          %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/member_photo_noimage_thumb.png", width: "70px"}
+        .mmmmaabb
+          user name
+        .mmmmbb
+          .mmmmaaa
+            評価　０
+          .mmmmaaa
+            出品数　０
+      .mmmmamain
+        .mtitle
+          .mtitlea
+            お知らせ
+          .mtitleb
+            やることリスト
+        .mca
+          .mca__logo
+            %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png", width: "70px"}
+            .mca__logo__back
+          .mca__content
+            事務局から個別メッセージ「Googleログイン通知」
+            .mca__content__time
+              1時間前
+
+        .mcb
+          .mcb__logo
+            %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png", width: "70px"}
+
+            .mcb__logo__back
+          .mcb__content
+            事務局から個別メッセージ「Googleログイン通知」
+
+            .mcb__content__time
+              1時間前
+
+        .mcc
+          .mcc__logo
+            %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png", width: "70px"}
+            .mcc__logo__back
+          .mcc__content
+            事務局から個別メッセージ「Googleログイン通知」
+            .mcc__content__time
+              1時間前
+        .mcd
+          .mcd__logo
+            %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png", width: "70px"}
+            .mcd__logo__back
+          .mcd__content
+            事務局から個別メッセージ「Googleログイン通知」
+            .mcd__content__time
+              1時間前
+        .mce
+          .mce__logo
+            %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png", width: "70px"}
+            .mce__logo__back
+          .mce__content
+            事務局から個別メッセージ「Googleログイン通知」
+            .mce__content__time
+              1時間前
+
+
+      .mmmmafoot
+        = link_to destroy_user_session_path, method: :delete do
+          %button.list_btn{name: "button", type: "submit"}
+            一覧を見る
+
     .mycontent__right--product
       %p.title
         購入した商品
