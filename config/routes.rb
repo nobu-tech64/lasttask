@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "top_page#index"
+  resources :products, only: [:index, :new, :create]
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
   get "/signup" => "top_page#signup"
