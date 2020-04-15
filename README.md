@@ -30,9 +30,15 @@ Things you may want to cover:
 |email|string|null: false,unique: true|
 |password|string|null: false|
 |encrypted_password|string|null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
+|first_name_ruby|string|null: false|
+|last_name_ruby|string|null: false|
+|birthyear|integer|null: false|
+|birthmonth|integer|null: false|
+|birthday|integer|null: false|
 ### Association
 - has_one :address, dependent: :destroy
-- has_one :profile, dependent: :destroy
 - has_one :creditcard, dependent: :destroy
 - has_one :seller, dependent: :destroy
 - has_one :buyer, dependent: :destroy
@@ -42,15 +48,12 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true|
-|first_name|string|null: false|
-|last_name|string|null: false|
-|first_name_ruby|string|null: false|
-|last_name_ruby|string|null: false|
 |postal_code|integer|null: false|
 |prefecture|string|null: false|
 |city|string|null: false|
 |address|string|null: false|
 |building|string|null: false|
+|phone_number|integer|null: false|
 ### Association
 - belongs_to :user
 
@@ -60,20 +63,6 @@ Things you may want to cover:
 |user_id|references|foreign_key: true|
 |card_id|string|null: false|
 |customer_id|string|null: false|
-### Association
-- belongs_to :user
-
-## profile
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|foreign_key: true|
-|first_name|string|null: false|
-|last_name|string|null: false|
-|first_name_ruby|string|null: false|
-|last_name_ruby|string|null: false|
-|birthyear|integer|null: false|
-|birthmonth|integer|null: false|
-|birthday|integer|null: false|
 ### Association
 - belongs_to :user
 
