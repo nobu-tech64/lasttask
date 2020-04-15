@@ -8,6 +8,19 @@ a{
   width: 100%;
   position: relative;
   display: inline-block;
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    padding: 0 40px 0 10px;
+    border: 1px solid #b4b3b3;
+    border-radius: 4px;
+  }
 }
 .selectwrap::after {
   content: '';
@@ -24,19 +37,7 @@ a{
   right: 10px;
   margin-top: -4px;
 }
-.select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 40px;
-  background: transparent;
-  position: relative;
-  z-index: 1;
-  padding: 0 40px 0 10px;
-  border: 1px solid #b4b3b3;
-  border-radius: 2px;
-}
+
 select::-ms-expand {
     display: none;
 }
@@ -369,6 +370,14 @@ select::-ms-expand {
           justify-content: center;
           .year{
             background-color: white;
+            .selectwrap{
+              .select{
+                height: 300px;
+                width: 300px;
+                background-color: yellowgreen;
+                font-size: 200px;
+              }
+            }
           }
           .year_title{
             margin-top: 8px;
