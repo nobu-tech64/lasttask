@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200414100902) do
+ActiveRecord::Schema.define(version: 20200414113347) do
+
+  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "postal_code",  null: false
+    t.string   "prefecture",   null: false
+    t.string   "city",         null: false
+    t.string   "address",      null: false
+    t.string   "building",     null: false
+    t.integer  "phone_number", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -30,6 +41,18 @@ ActiveRecord::Schema.define(version: 20200414100902) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.index ["name"], name: "index_products_on_name", unique: true, using: :btree
+  end
+
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "first_name",      null: false
+    t.string   "last_name",       null: false
+    t.string   "first_name_ruby", null: false
+    t.string   "last_name_ruby",  null: false
+    t.integer  "birthyear",       null: false
+    t.integer  "birthmonth",      null: false
+    t.integer  "birthday",        null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
