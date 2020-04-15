@@ -94,11 +94,7 @@
         .Eform__deliverybox
           .pulldown
             .selectwrap
-              %select.select{id: "", name: ""}
-                %option{value: ""} 選択してください
-                %option{value: ""} 001
-                %option{value: ""} 002
-                %option{value: ""} 003
+              = f.collection_select :burden, Burden.all, :id, :name, prompt: "選択してください"
         .Eform__delivery--title
           .title
             配送元地域
@@ -107,11 +103,7 @@
         .Eform__deliverybox
           .pulldown
             .selectwrap
-              %select.select{id: "", name: ""}
-                %option{value: ""} 選択してください
-                %option{value: ""} 001
-                %option{value: ""} 002
-                %option{value: ""} 003
+              = f.collection_select :from_area, FromArea.all, :id, :name, prompt: "選択してください"
         .Eform__delivery--title
           .title
             配送準備日数
@@ -120,11 +112,7 @@
         .Eform__deliverybox
           .pulldown
             .selectwrap
-              %select.select{id: "", name: ""}
-                %option{value: ""} 選択してください
-                %option{value: ""} 001
-                %option{value: ""} 002
-                %option{value: ""} 003
+              = f.collection_select :delivery_days, DeliveryDays.all, :id, :name, prompt: "選択してください"
 
 
       .Eform__price

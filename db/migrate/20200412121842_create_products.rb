@@ -5,9 +5,9 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.text :description, null: false
       t.string :condition, null: false
       t.string :size, null: false
-      t.string :burden, null: false
-      t.string :from_area, null: false
-      t.string :delivery_days, null: false
+      t.string :burden_id, null: false
+      t.string :from_area_id, null: false
+      t.string :delivery_days_id, null: false
       t.integer :price, null: false
       t.timestamps
     end
