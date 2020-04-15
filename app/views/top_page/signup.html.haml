@@ -1,4 +1,3 @@
-
 .logoheader
   = link_to root_path do
     %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
@@ -17,7 +16,8 @@
       ●
       .signup_progress__dots3_signup--title
         お支払方法
-
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = render "devise/shared/error_messages", resource: resource
 .ss
   .Sform
     .memberinfo
@@ -30,7 +30,7 @@
           .memberinfo__nickname__titleblock__require
             必須
         .memberinfo__nickname__inputblock
-          %input.inputarea{size: "50", placeholder: "ここに記入してください"} 
+          = f.text_field :nickame, class: "inputarea", size: "50", placeholder: "ここに記入"
     
       .memberinfo__email
         .memberinfo__email__titleblock
@@ -39,7 +39,7 @@
           .memberinfo__email__titleblock__require
             必須
         .memberinfo__email__inputblock
-          %input.inputarea{size: "50", placeholder: "ここに記入してください"} 
+          = f.text_field :email, class: "inputarea", size: "50", placeholder: "ここに記入"
 
       .memberinfo__password
         .memberinfo__password__titleblock
