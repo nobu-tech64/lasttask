@@ -12,6 +12,6 @@ class ProductsController < ApplicationController
 
   private
   def post_params
-    params.require(:product).permit(:name, :description, :condition, :size, :burden, :from_area, :delivery_days, :price)
+    params.require(:product).permit(:name, :description, :condition, :size, :burden_id, :from_area, :delivery_days, :price)
   end
 end

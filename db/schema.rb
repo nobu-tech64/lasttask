@@ -30,16 +30,16 @@ ActiveRecord::Schema.define(version: 20200414113347) do
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                        null: false
-    t.text     "description",   limit: 65535, null: false
-    t.string   "condition",                   null: false
-    t.string   "size",                        null: false
-    t.string   "burden",                      null: false
-    t.string   "from_area",                   null: false
-    t.string   "delivery_days",               null: false
-    t.integer  "price",                       null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "name",                           null: false
+    t.text     "description",      limit: 65535, null: false
+    t.string   "condition",                      null: false
+    t.string   "size",                           null: false
+    t.string   "burden_id",                      null: false
+    t.string   "from_area_id",                   null: false
+    t.string   "delivery_days_id",               null: false
+    t.integer  "price",                          null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.index ["name"], name: "index_products_on_name", unique: true, using: :btree
   end
 
