@@ -75,7 +75,7 @@
         .Eform__productdetailsbox
           .pulldown
             .selectwraps
-              = f.select :condition, ["001", "002", "003"], prompt: "選択してください", class: "select"
+              = f.collection_select :condition, Condition.all, :id, :name, prompt: "選択してください"
               -# %select.select{id: "", name: ""}
               -#   %option{value: ""} 選択してください
               -#   %option{value: ""} 001
