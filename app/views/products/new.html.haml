@@ -64,8 +64,9 @@
           .Eform__productdetails__brand__require
             任意
         .Eform__productdetailsbox
-          .inputform
-            %input.inputarea{placeholder: "ブランドをここに記入"} 
+          = f.fields_for :brand do |i|
+            = i.text_field :name, class: "inputarea", placeholder: "ブランドをここに記入"
+          -# %input.inputarea{placeholder: "ブランドをここに記入"} 
 
         .Eform__productdetails__status
           .Eform__productdetails__status__title
@@ -74,13 +75,8 @@
             必須
         .Eform__productdetailsbox
           .pulldown
-            .selectwraps
-              = f.collection_select :condition, Condition.all, :id, :name, prompt: "選択してください"
-              -# %select.select{id: "", name: ""}
-              -#   %option{value: ""} 選択してください
-              -#   %option{value: ""} 001
-              -#   %option{value: ""} 002
-              -#   %option{value: ""} 003
+            .selectwrap
+              = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
 
 
       .Eform__delivery
@@ -94,7 +90,7 @@
         .Eform__deliverybox
           .pulldown
             .selectwrap
-              = f.collection_select :burden, Burden.all, :id, :name, prompt: "選択してください"
+              = f.collection_select :burden_id, Burden.all, :id, :name, prompt: "選択してください"
         .Eform__delivery--title
           .title
             配送元地域
@@ -103,7 +99,7 @@
         .Eform__deliverybox
           .pulldown
             .selectwrap
-              = f.collection_select :from_area, FromArea.all, :id, :name, prompt: "選択してください"
+              = f.collection_select :from_area_id, FromArea.all, :id, :name, prompt: "選択してください"
         .Eform__delivery--title
           .title
             配送準備日数
@@ -112,7 +108,7 @@
         .Eform__deliverybox
           .pulldown
             .selectwrap
-              = f.collection_select :delivery_days, DeliveryDays.all, :id, :name, prompt: "選択してください"
+              = f.collection_select :delivery_days_id, DeliveryDays.all, :id, :name, prompt: "選択してください"
 
 
       .Eform__price
@@ -128,7 +124,7 @@
             .Eform__price__displayarea__pricedisplayarea__yen
               ¥
             .Eform__price__displayarea__pricedisplayarea__form
-              %input.inputarea{placeholder: "0"} 
+              = f.text_field :price, class: "inputarea", placeholder: "0"
         .Eform__price__displayarea__commissionarea
           .Eform__price__displayarea__commissionarea__title
             販売手数料（10％）

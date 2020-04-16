@@ -4,4 +4,6 @@ class Product < ApplicationRecord
   belongs_to :from_area
   belongs_to :delivery_days
   belongs_to :condition
+  belongs_to :brand
+  accepts_nested_attributes_for :brand
 end
