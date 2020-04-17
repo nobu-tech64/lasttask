@@ -4,14 +4,17 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.build_brand
   end
 
   def create
-    Product.create(post_params)
+    @product = Product.new(post_params)
+    @product.save
+    redirect_to new_product_path(@product)
   end
 
   private
   def post_params
-    params.require(:product).permit(:name, :description, :condition, :size, :burden_id, :from_area, :delivery_days, :price)
+    params.require(:product).permit(:name, :description, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes:[:id, :name])
   end
 end
