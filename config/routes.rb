@@ -3,9 +3,11 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
   }
-  # devise_scope :user do
-  #   get    'users/signup/registration',   to: 'users/registrations#step1'
-  # end
+  devise_scope :user do
+    get 'addresses', to: 'users/registrations#new2'
+    post 'addresses', to: 'users/registrations#create_address'
+    # post 'addresses', to: 'users/registrations#create_address'
+  end
 
   root "top_page#index"
   resources :products, only: [:index, :new, :create]

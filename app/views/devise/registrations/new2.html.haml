@@ -1,0 +1,109 @@
+= form_for @address do |f|
+  = render "devise/shared/error_messages", resource: @address
+
+  .logoheader
+    = link_to root_path do
+      %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+    .signup_progress
+      .signup_progress__dotsborder1_adress
+        %hr{width: "200", color: "silver"}
+      .signup_progress__dotsborder2_adress
+        %hr{width: "100", color: "red"}
+      .signup_progress__dots_adress
+        ●
+        .signup_progress__dots_adress--title
+          会員情報
+      .signup_progress__dots2_adress
+        ●
+        .signup_progress__dots2_adress--title
+          住所情報
+      .signup_progress__dots3_adress
+        ●
+        .signup_progress__dots3_adress--title
+          お支払方法
+
+  .ad
+    .ADform
+      .adressinfo
+        .adressinfo__title
+          発送元・お届け先住所入力
+        .adressinfo__postal_code
+          .adressinfo__postal_code__titleblock
+            .adressinfo__postal_code__titleblock__title
+              郵便番号
+            .adressinfo__postal_code__titleblock__require
+              必須
+          .adressinfo__postal_code__inputblock
+            = f.text_field :postal_code, class: "inputarea", placeholder: "ここに記入"
+
+        .adressinfo__prefectures
+          .adressinfo__prefectures__titleblock
+            .adressinfo__prefectures__titleblock__title
+              都道府県
+            .adressinfo__prefectures__titleblock__require
+              必須
+          .adressinfo__prefectures__inputblock
+            .pulldowns
+              .selectwrap
+                = f.select :prefecture, ["大阪府オンリーだよ？", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], prompt: "選択"
+
+        .adressinfo__municipality
+          .adressinfo__municipality__titleblock
+            .adressinfo__municipality__titleblock__title
+              市区町村
+            .adressinfo__municipality__titleblock__require
+              必須
+          .adressinfo__municipality__inputblock
+            = f.text_field :city, class: "inputarea", placeholder: "ここに記入"
+
+        .adressinfo__adress
+          .adressinfo__adress__titleblock
+            .adressinfo__adress__titleblock__title
+              番地
+            .adressinfo__adress__titleblock__require
+              必須
+          .adressinfo__adress__inputblock
+            = f.text_field :address, class: "inputarea", placeholder: "ここに記入"
+
+        .adressinfo__building
+          .adressinfo__building__titleblock
+            .adressinfo__building__titleblock__title
+              建物名（マンション名等）
+            .adressinfo__building__titleblock__require
+              任意
+          .adressinfo__building__inputblock
+            = f.text_field :building, class: "inputarea", placeholder: "ここに記入"
+
+
+        .adressinfo__phonenumber
+          .adressinfo__phonenumber__titleblock
+            .adressinfo__phonenumber__titleblock__title
+              電話番号
+            .adressinfo__phonenumber__titleblock__require
+              任意
+          .adressinfo__phonenumber__inputblock
+            = f.text_field :phone_number, class: "inputarea", placeholder: "ここに記入"
+
+      .nextbtn
+        = f.submit "登録"
+
+        -# = link_to "/card" do
+        -#   %button.next_btn{:name => "button", type: "submit"}
+        -#     次へ
+
+
+.signup_footer
+  .signup_footer__contents
+    .c1
+      = link_to "#" do
+        会社概要（運用会社）
+    .c2
+      = link_to "#" do
+        プライバシーポリシー
+    .c3
+      = link_to "#" do
+        FURIMA利用規約
+  .signup_footer__logo
+    = link_to root_path do
+      %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+      .slogo © FURIMA
