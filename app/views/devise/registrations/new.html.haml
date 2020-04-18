@@ -105,6 +105,10 @@
             .day_title
               日
 
+      .registerbtn
+        = link_to "/adress" do
+          %button.register_btn{name: "button", type: "submit"}
+            次へ
 
       .a
         = f.submit "Sign up"
