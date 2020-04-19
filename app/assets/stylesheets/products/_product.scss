@@ -64,12 +64,13 @@ select::-ms-expand {
 .ee{
   .Eform{
     background-color: silver;
-    height: 2000px;
+    height: 1900px;
     width: 60vw;
     margin:0 auto;
     &__imageform{
       background-color: #F2F2F2;
-      height: 500px;
+      height: 300px;
+      padding: 40px 30px;
       padding-left: 30px;
       padding-right: 30px;
       padding-top: 40px;
@@ -100,8 +101,32 @@ select::-ms-expand {
         padding-bottom: 10px;
       }
       .Eform__dropbox{
+        height: 200px;
+        box-sizing: border-box;
         .inputarea{
-          text-align: center;
+          // text-align: center;
+          align-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          background-color: rgb(245, 245, 245);
+          cursor: pointer;
+          display: flex;
+          height: 100%;
+          flex-wrap: wrap;
+          -webkit-box-pack: center;
+          justify-content: center;
+          position: relative;
+          border-width: 1px;
+          border-style: dashed;
+          border-color: rgb(204, 204, 204);
+          border-image: initial;
+          transition: all 0.5s ease-out 0s;
+          input{
+            fill: rgb(34, 34, 34);
+            height: 24px;
+            margin-bottom: 8px;
+            width: 24px;
+          }
         }
       }
     }
