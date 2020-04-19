@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20200419031053) do
     t.string   "building"
     t.integer  "phone_number"
     t.integer  "user_id"
+
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
