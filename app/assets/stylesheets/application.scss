@@ -1,7 +1,9 @@
 @import "reset";
 @import "top_page";
 @import "header";
-@import "device/new";
+@import "device/resistrations/signin";
+@import "device/resistrations/address";
+@import "device/sessions/login";
 @import "login";
 @import "logout";
 @import "mypage";
@@ -9,7 +11,7 @@
 @import "item";
 @import "buy_page";
 @import "products/product";
-@import "adress";
+// @import "adress";
 @import "card";
 @import "mypage_card";
 // @import "signupmethod_selection";

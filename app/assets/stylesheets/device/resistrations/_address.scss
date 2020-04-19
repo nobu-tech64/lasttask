@@ -1,0 +1,487 @@
+a{
+  text-decoration: none;
+}
+
+//プルダウンメニューのcss
+.selectwrap{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.selectwrap::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-bottom: solid 2px #b4b3b3;
+  border-right: solid 2px #b4b3b3;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -4px;
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 0 40px 0 10px;
+  border: 1px solid #b4b3b3;
+  border-radius: 2px;
+}
+select::-ms-expand {
+    display: none;
+    z-index: 2;
+}
+
+.logoheader{
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__logo{
+    width: 25vw;
+    height: 100px;
+    margin-top: 25px;
+  }
+  .signup_progress{
+    display: flex;
+    margin-left: 40px;
+    &__dotsborder1_adress{
+      position: absolute;
+      top: 66px;
+      left: 57%;
+      z-index: 1;
+    }
+    &__dotsborder2_adress{
+      position: absolute;
+      top: 66px;
+      left: 57%;
+      z-index: 1;
+    }
+
+    &__dots_adress{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: red;
+      &--title{
+        color: silver;
+        position: absolute;
+        top: 30px;
+        left: 786px;  
+      }
+    }
+    &__dots2_adress{
+      width: 100px;
+      line-height: 150px;
+      color: red;
+      z-index: 2;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 886px;  
+      }
+    }
+    &__dots3_adress{
+      width: 100px;
+      line-height: 150px;
+      z-index: 2;
+      color: silver;
+      &--title{
+        position: absolute;
+        top: 30px;
+        left: 986px;  
+      }
+    }
+  }
+}
+
+.ad{
+  .ADform{
+    height: 1200px;
+    width: 60vw;
+    margin:0 auto;
+    .adressinfo{
+      background-color: #f2f2f2;
+      height: 975px;
+      padding-top: 20px;
+      padding-left: 100px;
+      padding-right: 100px;
+      text-align: center;
+      &__title{
+        border-bottom: 1px solid  silver;
+        height: 100px;
+        text-align: center;
+        font-size: 25px;
+        line-height: 100px;
+      }
+
+
+      &__postal_code{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .inputarea{
+            border-radius: 5px;
+            border: 1px solid silver;
+            height: 40px;
+            width: 400px;
+        }
+        }
+      }
+
+
+      &__prefectures{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .pulldowns{
+            background-color: white;
+            border-radius: 5px;
+            .select{
+              border-radius: 5px;
+              border: 1px solid silver;
+            }
+          }
+        }
+      }
+
+      &__municipality{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .inputarea{
+            border-radius: 5px;
+            border: 1px solid silver;
+            height: 40px;
+            width: 400px;
+        }
+        }
+      }
+
+      &__adress{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .inputarea{
+            border-radius: 5px;
+            border: 1px solid silver;
+            height: 40px;
+            width: 400px;
+        }
+        }
+      }
+      &__building{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: gray;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .inputarea{
+            border-radius: 5px;
+            border: 1px solid silver;
+            height: 40px;
+            width: 400px;
+          }
+        }
+      }
+
+      &__phonenumber{
+        height: 120px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: gray;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          font-size: 15px;
+          padding-top: 20px;
+          .inputarea{
+            border-radius: 5px;
+            border: 1px solid silver;
+            height: 40px;
+            width: 400px;
+          }
+        }
+      }
+
+
+      &__name{
+        height: 200px;
+        font-size: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          padding-top: 20px;
+          font-size: 15px;
+          line-height: 40px;
+          .firstname{
+            .inputarea{
+              border-radius: 5px;
+              border: 1px solid silver;
+              height: 40px;
+              width: 400px;
+            }
+          }
+          .lastname{
+            padding-top: 30px;
+            .inputarea{
+              height: 40px;
+              width: 400px;
+              border-radius: 5px;
+              border: 1px solid silver;
+            }
+          }
+        }
+      }
+
+
+      &__namek{
+        height: 200px;
+        font-size: 20px;
+        padding-top: 20px;
+        &__titleblock{
+          display: flex;
+          justify-content: center;
+          &__title{
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__inputblock{
+          padding-top: 20px;
+          font-size: 15px;
+          line-height: 40px;
+          .firstname{
+            .inputarea{
+              border-radius: 5px;
+              border: 1px solid silver;
+              height: 40px;
+              width: 400px;
+            }
+          }
+          .lastname{
+            padding-top: 30px;
+            .inputarea{
+              height: 40px;
+              width: 400px;
+              border-radius: 5px;
+              border: 1px solid silver;
+            }
+          }
+        }
+      }
+    }
+
+
+
+    .nextbtn{
+      height: 150px;
+      line-height: 150px;
+      font-size: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      text-align: center;
+      .next_btn{
+        margin-top: 20px;
+        font-size: 14px;
+        border: #ea352d;
+        background-color: #ea352d;
+        color: white;
+        width: 320px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+
+.signup_footer{
+  background-color: black;
+  height: 190px;
+  &__contents{
+    display: flex;
+    justify-content: center;
+    color: white;
+    a{
+      color: #fff;
+      font-size: 12px;
+    }
+    .c1{
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    .c2{
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    .c3{
+      margin-top: 40px;
+
+    }
+  }
+  &__logo{
+    margin-top: 30px;
+    text-align: center;
+    img{
+      width: 140px;
+      height: 40px;
+    }
+    .slogo{
+      color: #fff;
+    }
+  }
+}

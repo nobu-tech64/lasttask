@@ -1,17 +1,89 @@
-%h2 Log in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+
+  .logoheader
+    = link_to root_path do
+      %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+
+  .ll
+    .Lform
+      .logininfo
+        .signuplinktitle
+          アカウントをお持ちではない方はこちら
+        .signupbtn
+          = link_to new_user_registration_path do
+            %button.signup_btn{name: "button", type: "submit"}
+              新規会員登録          
+        .logininfo__facebookbtn
+          %button.facebook_btn{name: "button", type: "submit"}
+            .logininfo__facebookbtn__fas-font
+              .logininfo__facebookbtn__fas-font__fas
+                %i.fab.fa-facebook-square
+              .logininfo__facebookbtn__fas-font__font
+                facebookでログイン
+              .logininfo__facebookbtn__fas-font__space
+
+        .logininfo__googlebtn
+          %button.google_btn{name: "button", type: "submit"}
+            .logininfo__googlebtn__btnfont
+              .logininfo__googlebtn__btnfont__fas
+                %i.fab.fa-google
+              .logininfo__googlebtn__btnfont__color
+                .logininfo__googlebtn__btnfont__color--color1
+                  G
+                .logininfo__googlebtn__btnfont__color--color2
+                  o
+                .logininfo__googlebtn__btnfont__color--color3
+                  o
+                .logininfo__googlebtn__btnfont__color--color4
+                  g
+                .logininfo__googlebtn__btnfont__color--color5
+                  l
+                .logininfo__googlebtn__btnfont__color--color6
+                  e
+                .logininfo__googlebtn__btnfont__color--color7
+                  でログイン
+              .logininfo__googlebtn__btnfont__space
+
+        .logininfo__mailadress
+          = f.email_field :email, class: "inputarea", placeholder: "メールアドレス"
+        .logininfo__password
+          = f.password_field :password, class: "inputarea", placeholder: "パスワード"
+        - if devise_mapping.rememberable?
+          .field
+            = f.check_box :remember_me
+            = f.label :覚えといたろか？
+        .logininfo__loginbtn
+          = f.submit "ログイン", class: "login_btn"
+
+
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+    %p © FURIMA
+
+
+-#   .actions
+-#     = f.submit "Log in"
+-# = render "devise/shared/links"

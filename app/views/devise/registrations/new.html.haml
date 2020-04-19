@@ -106,12 +106,12 @@
               日
 
       .registerbtn
-        = link_to "/adress" do
-          %button.register_btn{name: "button", type: "submit"}
+        = f.submit "次へ", class: "register_btn"
+
+        -# = link_to "/adress" do
+        -#   %button.register_btn{name: "button", type: "submit"}
             次へ
 
-      .a
-        = f.submit "Sign up"
 
 -#   .lsssks
 -#     = f.password_field :password, autocomplete: "new-password"
