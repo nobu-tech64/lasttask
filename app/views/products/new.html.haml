@@ -15,7 +15,9 @@
           最大X枚まで投稿できます
         .Eform__dropbox
           .inputarea
-            画像ドロップエリア（仮）
+            = f.fields_for :image do |i|
+              = i.file_field :image
+            -# 画像ドロップエリア（仮）
 
 
       .Eform__itemname

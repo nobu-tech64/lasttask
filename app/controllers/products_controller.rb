@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @product.build_brand
+    @product.images.new
   end
 
   def create
@@ -15,6 +16,6 @@ class ProductsController < ApplicationController
 
   private
   def post_params
-    params.require(:product).permit(:name, :description, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes:[:id, :name])
+    params.require(:product).permit(:name, :description, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes: [:id, :name], image_attributes: [:image])
   end
 end
