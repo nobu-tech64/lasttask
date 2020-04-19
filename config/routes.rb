@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
 
-  root "top_page#index"
+  # root "top_page#index"
+  root "products#new"
   resources :products, only: [:index, :new, :create]
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
