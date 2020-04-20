@@ -132,3 +132,9 @@ Things you may want to cover:
 |buyer_id|references|foreign_key: true|
 - belongs_to :seller, optional:true, dependent: :destroy
 - belongs_to :buyer, optional:true, dependent: :destroy
+
+## 4/20エラー（マイグレーションファイルが更新されていない）→原因不明
+
+本番環境のマイグレーションファイルをdownした状態で自動デプロイすると、ローカル環境のマイグレーションファイルが本番環境に反映する。
+
+ただし、本番環境・開発環境共に、外部キー（foreign_key :true）が設定されている状態だとdownできないので、その場合はデータベースを再作成（drop,create）する必要がある。
