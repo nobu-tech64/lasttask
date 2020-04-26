@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   belongs_to :from_area
   belongs_to :delivery_days
   belongs_to :condition
-  belongs_to :brand
+  belongs_to :brand, dependent: :destroy
   belongs_to :category
   accepts_nested_attributes_for :brand
   has_many :images
