@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :from_area_id, null: false
       t.string :delivery_days_id, null: false
       t.integer :price, null: false
-      t.references :brand
+      t.references :brand, foreign_key: true
       t.timestamps
     end
     add_index :products, :name, unique: true

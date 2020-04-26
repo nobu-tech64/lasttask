@@ -58,19 +58,6 @@ ActiveRecord::Schema.define(version: 20200419031053) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["brand_id"], name: "index_products_on_brand_id", using: :btree
-    t.index ["name"], name: "index_products_on_name", unique: true, using: :btree
-  end
-
-  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "first_name",      null: false
-    t.string   "last_name",       null: false
-    t.string   "first_name_ruby", null: false
-    t.string   "last_name_ruby",  null: false
-    t.integer  "birthyear",       null: false
-    t.integer  "birthmonth",      null: false
-    t.integer  "birthday",        null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -94,4 +81,5 @@ ActiveRecord::Schema.define(version: 20200419031053) do
   end
 
   add_foreign_key "images", "products"
+  add_foreign_key "products", "brands"
 end
