@@ -61,7 +61,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.build_address(@address.attributes)
     @user.save
     session["devise.regist_data"]["user"].clear
-    sign_in(:user, @user)
+    redirect_to controller: '/card', action: 'ccard'
+    # sign_in(:user, @user)
   end
 
 
