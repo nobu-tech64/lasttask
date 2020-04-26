@@ -14,9 +14,17 @@
         .Eform__imageform--title2
           最大X枚まで投稿できます
         .Eform__dropbox
-          .inputarea
+          .image-box
+            .previews
+              - if @product.persisted?
+                - @product.images.each_with_index do |image, i|
+                  = image_tag image.src.url, data: {index: i}, width: "100", height: '100'
             = f.fields_for :images do |i|
-              = i.file_field :image
+              .js-file_group{"data-index" => "#{i.index}"}
+                = i.file_field :image, class: 'js-file'
+                %span.jsremove
+              - if @product.persisted?
+                = image.check_box :_destroy, data:{index: image.index}, class: "hidden-destroy"
             -# 画像ドロップエリア（仮）
 
 
@@ -48,17 +56,19 @@
           商品の詳細
         .Eform__productdetails__category
           .Eform__productdetails__category__title
-            カテゴリー
+            = f.label 'カテゴリー', class: 'listing-default__label'
           .Eform__productdetails__category__require
             必須
-        .Eform__productdetailsbox
-          .pulldown
-            .selectwrap
-              %select.select{id: "", name: ""}
-                %option{value: ""} 選択してください
-                %option{value: ""} 001
-                %option{value: ""} 002
-                %option{value: ""} 003
+        .Eform__productdetailsboxes
+          .selectwrapper
+            .selectwrapper__box
+              = f.select :category, @category_parent_array, {}, {class: 'selectwrapper__box--select', id: 'parent_category'}
+              %i.fas.selectwrapper__box--arrow-down
+              -# %select.select{id: "", name: ""}
+              -#   %option{value: ""} 選択してください
+              -#   %option{value: ""} 001
+              -#   %option{value: ""} 002
+              -#   %option{value: ""} 003
 
         .Eform__productdetails__brand
           .Eform__productdetails__brand__title
