@@ -346,6 +346,9 @@ a{
                 background-color: white;
               }
             }
+            select{ //子カテゴリーと孫カテゴリー用
+              padding-left: 10px;
+            }
             ::after{
               content: '';
               width: 6px;
@@ -361,30 +364,21 @@ a{
               right: 10px;
               margin-top: -4px;
             }
-            // &--arrow-down{
-            //   content: '';
-            //   width: 6px;
-            //   height: 6px;
-            //   border: 0px;
-            //   border-bottom: solid 2px #b4b3b3;
-            //   border-right: solid 2px #b4b3b3;
-            //   -ms-transform: rotate(45deg);
-            //   -webkit-transform: rotate(45deg);
-            //   transform: rotate(45deg);
-            //   position: absolute;
-            //   top: 50%;
-            //   right: 10px;
-            //   margin-top: -4px;
-            // }
-            // select{
-            //   font-weight: normal;
-            //   width: 100%;
-            //   height: 36px;
-            //   position: relative;
-            //   display: inline-block;
-            //   border-radius: 4px;
-            //   background-color: white;
-            // }
+          }
+          ::after{ //子カテゴリ、孫カテゴリー用
+            content: '';
+            width: 6px;
+            height: 6px;
+            border: 0px;
+            border-bottom: solid 2px #b4b3b3;
+            border-right: solid 2px #b4b3b3;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin-top: -4px;
           }
         }
       }

@@ -13,7 +13,6 @@ $(function(){
                             <option value>選択してください</option>
                               ${insertHTML}
                           </select>
-                          <i class='fas selectwrapper__box--arrow-down'></i>
                         </div>
                       </div>`
     $('.Eform__productdetailsboxes').append(childSelectHtml);
@@ -28,7 +27,6 @@ $(function(){
                                   <option value>選択してください</option>
                                     ${insertHTML}
                                 </select>
-                                <i class='fas selectwrapper__box--arrow-down'></i>
                               </div>
                             </div>`
     $('.Eform__productdetailsboxes').append(grandchildSelectHtml);
