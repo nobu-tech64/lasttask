@@ -1,6 +1,6 @@
 $(function(){
   function appendOption(category){
-    var html = `<option value="${category.name}" data-category="${category.id}">${category.name}</option>`;
+    var html = `<option value="${category.id}">${category.name}</option>`;
     return html;
   }
 
@@ -10,7 +10,7 @@ $(function(){
     childSelectHtml = `<div class='selectwrapper' id= 'children_wrapper'>
                         <div class="selectwrapper__box">
                           <select class="selectwrapper__box--select" id="child_category" name="category_id">
-                            <option value="選択してください">選択してください</option>
+                            <option value>選択してください</option>
                               ${insertHTML}
                           </select>
                           <i class='fas selectwrapper__box--arrow-down'></i>
@@ -24,8 +24,8 @@ $(function(){
     var grandchildSelectHtml = '';
     grandchildSelectHtml = `<div class='selectwrapper' id= 'grandchildren_wrapper'>
                               <div class="selectwrapper__box">
-                                <select class="selectwrapper__box--select" id="grandchild_category" name="category_id">
-                                  <option value="選択してください">選択してください</option>
+                                <select class="selectwrapper__box--select" id="grandchild_category" name="product[category_id]">
+                                  <option value>選択してください</option>
                                     ${insertHTML}
                                 </select>
                                 <i class='fas selectwrapper__box--arrow-down'></i>
@@ -35,7 +35,7 @@ $(function(){
   }
   // 親カテゴリー選択後のイベント
   $('#parent_category').on('change', function(){
-    var parentCategory = document.getElementById('parent_category').value;
+    var parentCategory = document.getElementById('product_category').value;
     if (parentCategory != "選択してください") {//親カテゴリーが初期値でないことを確認
       $.ajax({
         url: 'get_category_children',
@@ -66,7 +66,7 @@ $(function(){
   });
   // 子カテゴリー選択後のイベント
   $('.Eform__productdetailsboxes').on('change', '#child_category', function(){
-    var childId = $('#child_category option:selected').data('category');
+    var childId = document.getElementById('child_category').value
     if (childId != "選択してください"){
       $.ajax({
         url: 'get_category_grandchildren',

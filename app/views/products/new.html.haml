@@ -1,3 +1,4 @@
+- console
 = form_for @product do |f|
   .logoheader
     = link_to root_path do
@@ -62,13 +63,10 @@
         .Eform__productdetailsboxes
           .selectwrapper
             .selectwrapper__box
-              = f.select :category, @category_parent_array, {}, {class: 'selectwrapper__box--select', id: 'parent_category'}
-              %i.fas.selectwrapper__box--arrow-down
-              -# %select.select{id: "", name: ""}
-              -#   %option{value: ""} 選択してください
-              -#   %option{value: ""} 001
-              -#   %option{value: ""} 002
-              -#   %option{value: ""} 003
+              .selectwrapper__box--select#parent_category
+                = f.collection_select :category, @category_parent_array, :id, :name, prompt: "選択してください", name: "category_id"
+              -# = f.select :category, @category_parent_array, {}, {class: 'selectwrapper__box--select', id: 'parent_category'}
+                %i.fas.selectwrapper__box--arrow-down
 
         .Eform__productdetails__brand
           .Eform__productdetails__brand__title
