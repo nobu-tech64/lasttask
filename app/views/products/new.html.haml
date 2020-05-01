@@ -64,7 +64,6 @@
             .selectwrapper__box
               .selectwrapper__box--select#parent_category
                 = f.collection_select :category, @category_parent_array, :id, :name, prompt: "選択してください", name: "category_id"
-              -# = f.select :category, @category_parent_array, {}, {class: 'selectwrapper__box--select', id: 'parent_category'}
                 %i.fas.selectwrapper__box--arrow-down
 
         .Eform__productdetails__brand
