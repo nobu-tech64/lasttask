@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20200426043702) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["brand_id"], name: "index_products_on_brand_id", using: :btree
+    t.index ["name"], name: "index_products_on_name", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   root "top_page#index"
   resources :products, only: [:index, :new, :create]
-  get '/card/new', to: 'card#ccard'
-
+  # get '/cards/new', to: 'cards#new'
+  resources :cards, only: [:index, :new, :create]
 
 
 
