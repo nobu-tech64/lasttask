@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show]
+
   def index
   end
 
@@ -32,8 +34,17 @@ class ProductsController < ApplicationController
     @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
 
+  def show
+  end
+
   private
   def post_params
     params.require(:product).permit(:name, :description, :category_id, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes: [:id, :name], images_attributes: [:image])
   end
+
+  def set_product
+    @product = Product.find(1)
+#    (params[:id])
+  end
+
 end
