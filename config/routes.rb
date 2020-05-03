@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       get 'get_category_grandchildren', defaults: { format: 'json' }
     end
   end
+  resources :trades, only: [:index, :new, :create, :show]
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
   get "/signup" => "top_page#signup"
