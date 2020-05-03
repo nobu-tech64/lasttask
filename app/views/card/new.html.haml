@@ -1,40 +1,101 @@
 
 = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %label カード番号
-  = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
-  %br
-  %label 有効期限
-  %select#exp_month{name: "exp_month", type: "text"}
-    %option{value: ""} --
-    %option{value: "1"}01
-    %option{value: "2"}02
-    %option{value: "3"}03
-    %option{value: "4"}04
-    %option{value: "5"}05
-    %option{value: "6"}06
-    %option{value: "7"}07
-    %option{value: "8"}08
-    %option{value: "9"}09
-    %option{value: "10"}10
-    %option{value: "11"}11
-    %option{value: "12"}12
-  %span 月/
-  %select#exp_year{name: "exp_year", type: "text"}
-    %option{value: ""} --
-    %option{value: "2019"}19
-    %option{value: "2020"}20
-    %option{value: "2021"}21
-    %option{value: "2022"}22
-    %option{value: "2023"}23
-    %option{value: "2024"}24
-    %option{value: "2025"}25
-    %option{value: "2026"}26
-    %option{value: "2027"}27
-    %option{value: "2028"}28
-    %option{value: "2029"}29
-  %span 年
-  %br
-  %label セキュリティコード
-  = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
-  #card_token
-  = submit_tag "追加する", id: "token_submit"
+  .logoheader
+    %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+
+
+  .cdi
+    .cardinfoform
+      .cardinfo
+        .cardinfo__title
+          お支払い方法
+        .cardinfo__cardnumber
+          .cardinfo__cardnumber__titleblock
+            .cardinfo__cardnumber__titleblock__title
+              カード番号
+            .cardinfo__cardnumber__titleblock__require
+              必須
+          .cardinfo__cardnumber__inputblock
+            = text_field_tag "number", "", class: "inputarea", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
+          .cardicon
+            %i.fab.fa-cc-visa
+            %i.fab.fa-cc-jcb
+            %i.fab.fa-cc-mastercard
+            %i.fab.fa-cc-discover
+            %i.fab.fa-cc-amex
+            %i.fab.fa-cc-apple-pay
+            %i.fab.fa-cc-amazon-pay
+
+        .cardinfo__deadline
+          .cardinfo__deadline__titleblock
+            .cardinfo__deadline__titleblock__title
+              カード期限
+            .cardinfo__deadline__titleblock__require
+              必須
+          .cardinfo__deadline__inputblock
+            .month
+              .selectwrap
+                %select#exp_month{name: "exp_month", type: "text", class: "select"}
+                  %option{value: ""} --
+                  %option{value: "1"}01
+                  %option{value: "2"}02
+                  %option{value: "3"}03
+                  %option{value: "4"}04
+                  %option{value: "5"}05
+                  %option{value: "6"}06
+                  %option{value: "7"}07
+                  %option{value: "8"}08
+                  %option{value: "9"}09
+                  %option{value: "10"}10
+                  %option{value: "11"}11
+                  %option{value: "12"}12
+            .month_title
+              月
+            .year
+              .selectwrap
+                %select#exp_year{name: "exp_year", type: "text", class: "select"}
+                  %option{value: ""} --
+                  %option{value: "2019"}19
+                  %option{value: "2020"}20
+                  %option{value: "2021"}21
+                  %option{value: "2022"}22
+                  %option{value: "2023"}23
+                  %option{value: "2024"}24
+                  %option{value: "2025"}25
+                  %option{value: "2026"}26
+                  %option{value: "2027"}27
+                  %option{value: "2028"}28
+                  %option{value: "2029"}29
+            .year_title
+              年
+
+        .cardinfo__securitynumber
+          .cardinfo__securitynumber__titleblock
+            .cardinfo__securitynumber__titleblock__title
+              セキュリィ番号
+            .cardinfo__securitynumber__titleblock__require
+              必須
+          .cardinfo__securitynumber__inputblock
+            = text_field_tag "cvc", "", class: "inputarea", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
+            #card_token
+
+      .nextbtn
+        = submit_tag "入力完了", id: "token_submit", class: "next_btn"
+
+    -# .nextbtn
+    -#   %button.next_btn{name: "button", type: "submit"}
+    -#     会員登録する
+
+
+  -# %label カード番号
+  -# %br
+  -# %label 有効期限
+
+  -# %span 月/
+
+  -# %span 年
+  -# %br
+  -# %label セキュリティコード
+  -# = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
+  -# #card_token
+  -# = submit_tag "追加する", id: "token_submit"
