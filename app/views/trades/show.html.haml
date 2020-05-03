@@ -1,0 +1,128 @@
+.Cheader
+  = render 'header'
+
+  .bbbbb
+    .Cform
+      .itembox
+        .itembox__name
+          カレー
+        .itembox__image
+          .mainbox
+            %img.mainimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
+            .subbox
+              %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
+              %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
+              %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
+        .itembox__price
+          ¥330
+        .itembox__pricestatus
+          (税込)
+          /送料パスと連動
+        .deliveryfee_status
+          送料込み
+        %button.buy_btn{name: "button", type: "submit"}
+          購入画面に進む
+        .itemdetail 
+          キンッキンに冷えてやがる・・・！悪魔的だあああああああああああああああああああああああああああ
+      .products_infomation
+        .a
+          .b
+            出品者
+          %ul.seller_name
+            ユーザネームパス
+        .a
+          .b
+            カテゴリー
+          %ul.categorypass
+            %a.Lcategory{href: "#"} 飲料
+            %a.Mcategory{href: "#"} うまい
+            %a.Scategory{href: "#"} 最強
+        .a
+          .b
+            ブランド
+          %ul.brand
+            ブランドパス
+        .a
+          .b
+            商品のサイズ
+          %ul.size
+            サイズパス
+        .a
+          .b
+            商品の状態
+          %ul.item_status
+            商品状態パス
+        .a
+          .b
+            配送料負担
+          %ul.delivery_fee
+            配送料パス
+        .a
+          .b
+            配送元地域
+          %ul.areaname
+            地域パス
+        .a
+          .b
+            発送準備日数
+          %ul.days
+            配送準備パス
+      .like_or_hate
+        .likebtn
+          %i.fas.fa-star
+          お気に入り 0
+        .hatebtn
+          %a{href: "#"}
+            %i.fas.fa-flag
+              不適切な商品の通報
+        
+      .comment
+        %textarea{cols: "60", rows: "10"} ここに記入してください
+        .noticemsgarea
+          .noticemsg
+            相手のことを考え丁寧なコメントを心がけましょう。
+            %br/
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        %button.commentbtn{name: "button", type: "submit"}
+          %i.fas.fa-comment
+            コメントする
+  .links
+    .nextitem
+      %a{href: "#"} < 前の商品
+    .otheritem
+      %a{href: "#"} 飲料をもっと見る
+    .backitem
+      %a{href: "#"} 後ろの商品 >
+
+
+
+  .footer
+    .footer__contents
+      .footer__contents__content
+        %h1.footer__contents__content__title FURIMAについて
+        %ul
+          %li
+            = link_to "会社概要（運営会社）", "#"
+          %li
+            = link_to "プライバシーポリシー", "#"
+          %li
+            = link_to "FURIMA利用規約", "#"
+          %li
+            = link_to "ポイントに関する特約", "#"
+      
+      .footer__contents__content
+        %h1.footer__contents__content__title ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to "FURIMAガイド", "#"
+          %li
+            = link_to "FURIMAロゴ利用ガイドライン", "#"
+          %li
+            = link_to "お知らせ", "#"
+    .footer__logo
+      %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+      %p © FURIMA
+
+  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"}
+  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js", type: "text/javascript"}

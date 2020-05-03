@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :trades, only: [:index, :new, :create, :show]
 
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
