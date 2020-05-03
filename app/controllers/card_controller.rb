@@ -8,13 +8,11 @@ class CardController < ApplicationController
   end
 
   def pay #payjpとCardのデータベース作成を実施します。
-    Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
-    if params['payjp-token'].blank?
+    Payjp.api_key = "sk_test_1e0139507a3138d861f93ed5"
+        if params['payjp-token'].blank?
       redirect_to action: "new"
     else
       customer = Payjp::Customer.create(
-      description: '登録テスト', #なくてもOK
-      email: current_user.email, #なくてもOK
       card: params['payjp-token'],
       metadata: {user_id: current_user.id}
       ) #念の為metadataにuser_idを入れましたがなくてもOK
@@ -44,7 +42,7 @@ class CardController < ApplicationController
     if card.blank?
       redirect_to action: "new" 
     else
-      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      Payjp.api_key = "sk_test_1e0139507a3138d861f93ed5"
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
