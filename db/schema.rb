@@ -48,24 +48,29 @@ ActiveRecord::Schema.define(version: 20200501083222) do
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                           null: false
-    t.text     "description",      limit: 65535, null: false
+    t.text     "description",      limit: 65535
     t.integer  "category_id"
-    t.string   "condition_id",                   null: false
-    t.string   "burden_id",                      null: false
-    t.string   "from_area_id",                   null: false
-    t.string   "delivery_days_id",               null: false
+    t.integer  "condition_id",     limit: 1,     null: false
+    t.integer  "burden_id",        limit: 1,     null: false
+    t.integer  "from_area_id",     limit: 1,     null: false
+    t.integer  "delivery_days_id", limit: 1,     null: false
     t.integer  "price",                          null: false
     t.integer  "brand_id"
+    t.integer  "user_id"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["brand_id"], name: "index_products_on_brand_id", using: :btree
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
-    t.index ["name"], name: "index_products_on_name", unique: true, using: :btree
+    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
   create_table "trades", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id", null: false
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_trades_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_trades_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -91,4 +96,7 @@ ActiveRecord::Schema.define(version: 20200501083222) do
   add_foreign_key "images", "products"
   add_foreign_key "products", "brands"
   add_foreign_key "products", "categories"
+  add_foreign_key "products", "users"
+  add_foreign_key "trades", "products"
+  add_foreign_key "trades", "users"
 end
