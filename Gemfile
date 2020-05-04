@@ -76,3 +76,5 @@ gem 'active_hash'
 gem 'ancestry'
 gem 'therubyracer'
 gem 'payjp'
+gem 'dotenv-rails'
+
