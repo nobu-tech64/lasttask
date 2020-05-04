@@ -94,14 +94,16 @@
       .cardinfo__title
         %label 登録クレジットカード情報
         %br
+        カード番号：　
         = "**** **** **** " + @default_card_information.last4
         %br
+        カード期限：　
         - exp_month = @default_card_information.exp_month.to_s
         - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
         = exp_month + " / " + exp_year
         = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
           %input{ type: "hidden", name: "card_id", value: "" }
-          %button 削除する
+          %button{class: "nextbtn"} 削除する
   -#       お支払い方法
   -#     .cardinfo__cardnumber
   -#       .cardinfo__cardnumber__titleblock
