@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   get "/mypage_card" => "top_page#mypage_card"
   get "/card_edit" => "top_page#card_edit"
   get "/adress_edit" => "top_page#adress_edit"
+  get "products/:id" => "products#show" 
 end

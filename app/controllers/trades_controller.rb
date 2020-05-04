@@ -6,7 +6,7 @@ class TradesController < ApplicationController
     
   end
   def show
-    
+    @product = Product.find(params[:id])
   end
   def pay
     Payjp.api_key = 'sk_test_94625a533c095949ce56a8f6'
