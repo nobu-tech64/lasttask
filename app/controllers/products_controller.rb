@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show]
 
   def index
+    @products = Product.all.limit(3)
+    binding.pry
   end
 
   def new
@@ -13,8 +15,9 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(post_params)
-    if @product.save
-      redirect_to new_product_path(@product)
+    # @images = @products.images.build
+    if @product.save!
+      redirect_to root_path
     end
   end
 
@@ -31,6 +34,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @products = Product.find(params[:id])
   end
 
   private
@@ -39,8 +43,8 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(1)
-#    (params[:id])
+    @products = Product.find(1)
+  #  (params[:id])
   end
 
 end

@@ -208,8 +208,12 @@
       &__productLists{
         display: flex;
         justify-content: center;
-        &__productList{
+        .productList{
           padding: 30px;
+          &--field{
+            width: 200px;
+            height: 200px;
+          }
         }
       }
     }

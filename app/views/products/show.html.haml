@@ -5,7 +5,7 @@
   .Cform
     .itembox
       .itembox__name
-        = @product.name
+        = @products.name
       .itembox__image
         .mainbox
           %img.mainimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
@@ -15,16 +15,16 @@
             %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
       .itembox__price
         ¥
-        = @product.price
+        = @products.price
       .itembox__pricestatus
         (税込)
         /送料パスと連動
       .deliveryfee_status
-        = @product.burden_id
+        = @products.burden_id
       %button.buy_btn{name: "button", type: "submit"}
         購入画面に進む
       .itemdetail 
-        = @product.description
+        = @products.description
     .products_infomation
       .a
         .b
@@ -35,27 +35,27 @@
         .b
           カテゴリー
         %ul.categorypass
-          = @product.category.name
+          = @products.categories.name
       .a
         .b
           ブランド
         %ul.brand
-          = @product.brand.name
+          = @products.brand.name
       .a
         .b
           商品の状態
         %ul.item_status
-          = @product.condition_id
+          = @products.condition_id
       .a
         .b
           配送料負担
         %ul.delivery_fee
-          = @product.burden_id
+          = @products.burden_id
       .a
         .b
           配送元地域
         %ul.areaname
-          = @product.from_area_id
+          = @products.from_area_id
       .a
         .b
           発送準備日数
