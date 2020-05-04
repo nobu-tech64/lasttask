@@ -94,6 +94,11 @@ GEM
     devise-i18n-views (0.3.7)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
+
     erubis (2.7.0)
     excon (0.73.0)
     execjs (2.7.0)
@@ -313,6 +318,7 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
+  dotenv-rails
   fog-aws
   font-awesome-sass
   haml-rails

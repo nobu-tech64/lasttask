@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'card/new'
+
+  get 'card/show'
+
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
@@ -15,7 +19,17 @@ Rails.application.routes.draw do
       get 'get_category_grandchildren', defaults: { format: 'json' }
     end
   end
+
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
+  end
+
   resources :trades, only: [:index, :new, :create, :show]
+
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
   get "/signup" => "top_page#signup"
