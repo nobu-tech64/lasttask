@@ -1,0 +1,6 @@
+.productList
+  = link_to product_path(product) do
+    = image_tag product.images[0].image.url, alt: "画像", class: "productList--field"
+    
+
+  -# product.images[0].image.url

@@ -57,9 +57,17 @@
 
   .mycontent__right
     .mycontent__right__payment
-      = link_to mypage_card_path do
+      = link_to new_card_path do
         %button.payment_btn{:name => "button", :type => "submit"}
-          クレジットカードを追加
+          クレジットカード情報確認・追加
+
+
+    -# .mycontent__right__ccdelete
+    -#   = link_to card_index_path do
+    -#     %button.ccdelete_btn{:name => "button", :type => "submit"}
+    -#       クレジットカードを削除
+
+
 
 .footer
   .footer__contents

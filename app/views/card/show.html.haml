@@ -1,0 +1,220 @@
+%head
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css", rel: "stylesheet", type: "text/css"}
+  %link{href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css", rel: "stylesheet", type: "text/css"}
+
+.header
+  .header__headerTop
+    %h1
+      %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png", width: "150px"}
+    .header__searchPlace
+      .header__searchPlace__content
+        = form_for root_path do |f|
+          = f.text_field :search, class: "header__searchPlace__content__field", placeholder: "キーワードから探す"
+      .header__searchPlace__btn
+        %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/icon-search1.png", width: "25px"}
+  .header__headerBottom
+    .header__headerBottom__left
+      %ul
+        %li
+          = link_to "カテゴリー", "#"
+        %li
+          = link_to "ブランド", "#"
+    .header__headerBottom__right
+      %ul
+        - if user_signed_in?
+          %li
+            = link_to "マイページ", "/mypage"
+          %li
+            = link_to "カートを見る", "#"
+        - else
+          %li
+            = link_to "ログイン", new_user_session_path
+          %li
+            = link_to "新規会員登録", new_user_registration_path
+          %li
+            = link_to "カートを見る", "#"
+
+
+.mycontent
+  .mycontent__left
+    .mycontent__left--menu
+      -# 適宜aタグ等で変更してください
+      %ul.mypage
+        -# 出品、購入関連
+        %li.list-title マイページ
+        %li.list
+          %a{href: "#"} おしらせ
+        %li.list
+          %a{href: "#"} やることリスト
+        %li.list
+          %a{href: "#"} いいね！一覧
+        %li.list
+          %a{href: "/exhibition"} 出品する
+        %li.list
+          %a{href: "#"} 下書き一覧
+        %li.list
+          %a{href: "#"} 出品中
+        %li.list
+          %a{href: "#"} 取引中
+        %li.list
+          %a{href: "#"} 売却済み
+        %li.list
+          %a{href: "#"} 購入取引中
+        %li.list
+          %a{href: "#"} 購入済み
+        %li.list
+          %a{href: "#"} ニュース一覧
+        %li.list
+          %a{href: "#"} 評価一覧
+        %li.list
+          %a{href: "#"} ガイド
+        %li.list
+          %a{href: "#"} お問い合わせ
+
+      %ul.config
+        -# プロフ、本人確認、クレカ等
+        %li.list-title 設定
+        %li.list
+          %a{href: "#"} プロフィール
+        %li.list
+          %a{href: "#"} 発送元・お届け先住所変更
+        %li.list
+          %a{href: "/payment"} お支払方法
+        %li.list
+          %a{href: "#"} メール・パスワード
+        %li.list
+          %a{href: "#"} 本人情報
+        %li.list
+          %a{href: "#"} 電話番号の確認
+        %li.list
+          %a{href: "/logout"} ログアウト
+
+  .mycontent__right
+    .mycontent__right__card
+      .cardinfo__title
+        %label 登録クレジットカード情報
+        %br
+        カード番号：　
+        = "**** **** **** " + @default_card_information.last4
+        %br
+        カード期限：　
+        - exp_month = @default_card_information.exp_month.to_s
+        - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+        = exp_month + " / " + exp_year
+        = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+          %input{ type: "hidden", name: "card_id", value: "" }
+          %button{class: "nextbtn"} 削除する
+  -#       お支払い方法
+  -#     .cardinfo__cardnumber
+  -#       .cardinfo__cardnumber__titleblock
+  -#         .cardinfo__cardnumber__titleblock__title
+  -#           カード番号
+  -#         .cardinfo__cardnumber__titleblock__require
+  -#           必須
+  -#       .cardinfo__cardnumber__inputblock
+  -#         %input.inputarea{:size => "50", :placeholder => "半角数字のみ"} 
+  -#       .cardicon
+  -#         %i.fab.fa-cc-visa
+  -#         %i.fab.fa-cc-jcb
+  -#         %i.fab.fa-cc-mastercard
+  -#         %i.fab.fa-cc-discover
+  -#         %i.fab.fa-cc-amex
+  -#         %i.fab.fa-cc-apple-pay
+  -#         %i.fab.fa-cc-amazon-pay
+
+
+  -#     .cardinfo__deadline
+  -#       .cardinfo__deadline__titleblock
+  -#         .cardinfo__deadline__titleblock__title
+  -#           カード期限
+  -#         .cardinfo__deadline__titleblock__require
+  -#           必須
+  -#       .cardinfo__deadline__inputblock
+  -#         .month
+  -#           .selectwrap
+  -#             %select.select{id: "", name: ""}
+  -#               %option{value: ""} 1
+  -#               %option{value: ""} 2
+  -#               %option{value: ""} 3
+  -#               %option{value: ""} 4
+  -#               %option{value: ""} 5
+  -#               %option{value: ""} 6
+  -#               %option{value: ""} 7
+  -#               %option{value: ""} 8
+  -#               %option{value: ""} 9
+  -#               %option{value: ""} 10
+  -#               %option{value: ""} 11
+  -#               %option{value: ""} 12
+  -#         .month_title
+  -#           月
+  -#         .year
+  -#           .selectwrap
+  -#             %select.select{id: "", name: ""}
+  -#               %option{value: ""} 2033
+  -#               %option{value: ""} 2032
+  -#               %option{value: ""} 2031
+  -#               %option{value: ""} 2030
+  -#               %option{value: ""} 2029
+  -#               %option{value: ""} 2028
+  -#               %option{value: ""} 2027
+  -#               %option{value: ""} 2026
+  -#               %option{value: ""} 2025
+  -#               %option{value: ""} 2024
+  -#               %option{value: ""} 2023
+  -#               %option{value: ""} 2022
+  -#               %option{value: ""} 2021
+  -#               %option{value: ""} 2020
+  -#         .year_title
+  -#           年
+
+  -#     .cardinfo__securitynumber
+  -#       .cardinfo__securitynumber__titleblock
+  -#         .cardinfo__securitynumber__titleblock__title
+  -#           セキュリィ番号
+  -#         .cardinfo__securitynumber__titleblock__require
+  -#           必須
+  -#       .cardinfo__securitynumber__inputblock
+  -#         %input.inputarea{size: "50", placeholder: "半角数字のみ"} 
+  -#     .mycardbtn
+  -#       = link_to destroy_user_session_path, method: :delete do
+  -#         %button.mycard_btn{name: "button", type: "submit"}
+  -#           追加する
+
+
+%label 登録クレジットカード情報
+%br
+= "**** **** **** " + @default_card_information.last4
+%br
+- exp_month = @default_card_information.exp_month.to_s
+- exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+= exp_month + " / " + exp_year
+= form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+  %input{ type: "hidden", name: "card_id", value: "" }
+  %button 削除する
+
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+    %p © FURIMA

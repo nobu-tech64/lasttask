@@ -3,7 +3,7 @@
     %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
   .signup_progress
     .signup_progress__dotsborder
-      %hr{width: "200", color: "silver"}
+      %hr{width: "100", color: "silver"}
     .signup_progress__dots_signup
       ●
       .signup_progress__dots_signup--title
@@ -12,10 +12,8 @@
       ●
       .signup_progress__dots2_signup--title
         住所情報
-    .signup_progress__dots3_signup
-      ●
-      .signup_progress__dots3_signup--title
-        お支払方法
+
+
 .ss
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
