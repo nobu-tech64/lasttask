@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def new
+    
     @product = Product.new
     @product.build_brand
     @product.images.new
@@ -21,7 +22,7 @@ class ProductsController < ApplicationController
       @product.images.build
       # renderでユーザーが入力した内容を残しつつ画面を商品出品ページに遷移するが、@category_parent_arrayは渡せてないので改めて渡し直す必要がある
       @category_parent_array = Category.where(ancestry: nil)
-      render :new
+      redirect_to new_product_path(@product)
     end
   end
 
@@ -43,7 +44,7 @@ class ProductsController < ApplicationController
 
   private
   def post_params
-    params.require(:product).permit(:name, :description, :category_id, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes: [:id, :name], images_attributes: [:image])
+    params.require(:product).permit(:name, :description, :category_id, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes: [:id, :name], images_attributes: [:image]).merge(user_id: current_user.id)
   end
 
   def set_product
