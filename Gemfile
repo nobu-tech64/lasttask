@@ -77,4 +77,3 @@ gem 'ancestry'
 gem 'therubyracer'
 gem 'payjp'
 gem 'dotenv-rails'
-
