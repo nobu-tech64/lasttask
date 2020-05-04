@@ -3,7 +3,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all.limit(3)
-    binding.pry
   end
 
   def new
@@ -16,8 +15,13 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(post_params)
     # @images = @products.images.build
-    if @product.save!
+    if @product.save
       redirect_to root_path
+    else
+      @product.images.build
+      # renderでユーザーが入力した内容を残しつつ画面を商品出品ページに遷移するが、@category_parent_arrayは渡せてないので改めて渡し直す必要がある
+      @category_parent_array = Category.where(ancestry: nil)
+      render :new
     end
   end
 
