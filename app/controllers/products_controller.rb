@@ -63,8 +63,18 @@ class ProductsController < ApplicationController
       if @product.update(product_update_params)
         redirect_to product_path(@product.id)
       else
-        redirect_to edit_product
+        redirect_to root_path
       end
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    if @product.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
@@ -75,6 +85,10 @@ class ProductsController < ApplicationController
   def set_product
     @products = Product.find(params[:id])
   #  (params[:id])
+  end
+
+  def product_update_params
+    params.require(:product).permit(:name, :description, :category_id, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes: [:id, :name], images_attributes: [:image]).merge(seller_id: current_user.id)
   end
 
 end
