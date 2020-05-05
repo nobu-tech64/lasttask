@@ -69,7 +69,7 @@ a{
     margin:0 auto;
     &__imageform{
       background-color: #F2F2F2;
-      height: 300px;
+      // height: 300px;
       padding: 40px 30px;
       padding-left: 30px;
       padding-right: 30px;
@@ -78,54 +78,132 @@ a{
       &--title{
         display: flex;
         font-size: 20px;
-          .title{
-            text-align: center;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.4em;
-          }
-          .require{
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            height: 28px;
-            width: 46px;
-            text-align: center;
-            line-height: 28px;
-            margin-left: 20px;
-            font-size: 14px;
-          }
+        .title{
+          text-align: center;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.4em;
+        }
+        .require{
+          border-radius: 5px;
+          color: white;
+          background-color: red;
+          height: 28px;
+          width: 46px;
+          text-align: center;
+          line-height: 28px;
+          margin-left: 20px;
+          font-size: 14px;
+        }
       }
       &--title2{
         padding-top: 10px;
         padding-bottom: 10px;
       }
       .Eform__dropbox{
-        height: 200px;
+        // height: 200px;
         box-sizing: border-box;
+        width: 620px;
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
         .image-box{
-          // text-align: center;
-          align-content: center;
-          -webkit-box-align: center;
-          align-items: center;
-          background-color: rgb(245, 245, 245);
-          cursor: pointer;
+          // // text-align: center;
+          // align-content: center;
+          // -webkit-box-align: center;
+          // align-items: center;
+          // background-color: rgb(245, 245, 245);
+          // cursor: pointer;
+
           display: flex;
-          height: 100%;
-          flex-wrap: wrap;
-          -webkit-box-pack: center;
-          justify-content: center;
-          position: relative;
-          border-width: 1px;
-          border-style: dashed;
-          border-color: rgb(204, 204, 204);
-          border-image: initial;
-          transition: all 0.5s ease-out 0s;
-          input{
-            fill: rgb(34, 34, 34);
-            height: 24px;
-            margin-bottom: 8px;
-            width: 24px;
+          // height: 100%;
+
+          // -webkit-box-pack: center;
+          // justify-content: center;
+          // position: relative;
+          // border-width: 1px;
+          // border-style: dashed;
+          // border-color: rgb(204, 204, 204);
+          // border-image: initial;
+          // transition: all 0.5s ease-out 0s;
+          // input{
+          //   fill: rgb(34, 34, 34);
+          //   height: 24px;
+          //   margin-bottom: 8px;
+          //   width: 24px;
+          // }
+
+          .preview-box {
+            height: 162px;
+            width: 112px;
+            margin: 0 15px 10px 0;
+            .upper-box {
+              height: 112px;
+              width: 100%;
+              img{
+                width: 112px;
+                height: 112px;
+              }
+            }
+            .lower-box {
+              display: flex;
+              text-align: center;
+              .update-box {
+                color: #00b0ff;
+                width: 50%;
+                height: 50px;
+                line-height: 50px;
+                border: 1px solid #eee;
+                background: #f5f5f5;
+                cursor: pointer;
+              }
+              .delete-box {
+                color: #00b0ff;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                border: 1px solid #eee;
+                background: #f5f5f5;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .label-content{
+          // margin-bottom: 10px;
+          width: 100%;
+          .label-box {
+            display: block;
+            border: 1px dashed #ccc;
+            position: relative;
+            background: #f5f5f5;
+            width: 100%;
+            height: 162px;
+            cursor: pointer;
+            &__text-visible {
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              right: 16px;
+              text-align: center;
+              font-size: 14px;
+              line-height: 1.5;
+              font-weight: bold;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+              pointer-events: none;
+              white-space: pre-wrap;
+              word-wrap: break-word;
+            }
+          }
+        }
+        .hidden-content {
+          .hidden-field {
+            display: none;
+          }
+          .hidden-checkbox {
+            display: none;
           }
         }
       }
