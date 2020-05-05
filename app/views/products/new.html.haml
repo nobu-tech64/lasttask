@@ -19,10 +19,10 @@
               - if @product.persisted?
                 - @product.images.each_with_index do |image, i|
                   = image_tag image.src.url, data: {index: i}, width: "100", height: '100'
-            = f.fields_for :images do |i|
-              .js-file_group{"data-index" => "#{i.index}"}
-                = i.file_field :image, class: 'js-file'
-                %span.jsremove
+              = f.fields_for :images do |i|
+                .js-file_group{"data-index" => "#{i.index}"}
+                  = i.file_field :image, class: 'js-file'
+                  %span.jsremove
               - if @product.persisted?
                 = image.check_box :_destroy, data:{index: image.index}, class: "hidden-destroy"
             -# 画像ドロップエリア（仮）

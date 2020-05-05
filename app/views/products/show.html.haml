@@ -8,11 +8,23 @@
         = @products.name
       .itembox__image
         .mainbox
-          %img.mainimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
+          %img.mainimage{src: @products.images[0].image.url}
           .subbox
-            %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
-            %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
-            %img.subimage{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/a001.png"}
+            -if @products.images[1].nil?
+            -else
+              %img.subimage{src: @products.images[1].image.url}
+            -if @products.images[2].nil?
+            -else
+              %img.subimage{src: @products.images[2].image.url}
+            -if @products.images[3].nil?
+            -else
+              %img.subimage{src: @products.images[3].image.url}
+            -if @products.images[4].nil?
+            -else
+              %img.subimage{src: @products.images[4].image.url}
+            -if @products.images[5].nil?
+            -else
+              %img.subimage{src: @products.images[5].image.url}
       .itembox__price
         ¥
         = @products.price
@@ -20,9 +32,19 @@
         (税込)
         /送料パスと連動
       .deliveryfee_status
-        = @products.burden_id
-      %button.buy_btn{name: "button", type: "submit"}
-        購入画面に進む
+        = @products.burden.name
+      - if user_signed_in?
+        - if user_signed_in? && (current_user.id == @products.user_id)
+          %button.buy_btn{name: "button", type: "submit"}
+            編集
+          %button.buy_btn{name: "button", type: "submit"}
+            削除
+        - else
+          %button.buy_btn{name: "button", type: "submit"}
+            購入画面に進む
+      - else
+        %button.buy_btn{name: "button", type: "submit"}
+          = link_to "登録してね", new_user_registration_path
       .itemdetail 
         = @products.description
     .products_infomation
@@ -30,12 +52,14 @@
         .b
           出品者
         %ul.seller_name
-          ユーザネームパス
+          = @products.user.nickname
       .a
         .b
           カテゴリー
         %ul.categorypass
-          = @products.categories.name
+          = @products.category.root.name
+          = @products.category.parent.name
+          = @products.category.name
       .a
         .b
           ブランド
@@ -45,22 +69,22 @@
         .b
           商品の状態
         %ul.item_status
-          = @products.condition_id
+          = @products.condition.name
       .a
         .b
           配送料負担
         %ul.delivery_fee
-          = @products.burden_id
+          = @products.burden.name
       .a
         .b
           配送元地域
         %ul.areaname
-          = @products.from_area_id
+          = @products.from_area.name
       .a
         .b
           発送準備日数
         %ul.days
-          7日
+          = @products.delivery_days.name
     .like_or_hate
       .likebtn
         %i.fas.fa-star
