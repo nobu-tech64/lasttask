@@ -1,3 +1,4 @@
+= stylesheet_link_tag "mypage_card", :media => "all"
 = form_for @product do |f|
   .logoheader
     = link_to root_path do
@@ -16,15 +17,15 @@
         .Eform__dropbox
           .image-box
             .previews
-              - if @product.persisted?
-                - @product.images.each_with_index do |image, i|
-                  = image_tag image.src.url, data: {index: i}, width: "100", height: '100'
-              = f.fields_for :images do |i|
-                .js-file_group{"data-index" => "#{i.index}"}
-                  = i.file_field :image, class: 'js-file'
-                  %span.jsremove
-              - if @product.persisted?
-                = image.check_box :_destroy, data:{index: image.index}, class: "hidden-destroy"
+              -# - if @product.persisted?
+              -#   - @product.images.each_with_index do |image, i|
+              -#     = image_tag image.src.url, data: {index: i}, width: "100", height: '100'
+              -# = f.fields_for :images do |i|
+              -#   .js-file_group{"data-index" => "#{i.index}"}
+              -#     = i.file_field :image, class: 'js-file'
+              -#     %span.jsremove
+              -# - if @product.persisted?
+              -#   = image.check_box :_destroy, data:{index: image.index}, class: "hidden-destroy"
             -# 画像ドロップエリア（仮）
 
 
@@ -63,8 +64,14 @@
           .selectwrapper
             .selectwrapper__box
               .selectwrapper__box--select#parent_category
-                = f.collection_select :category, @category_parent_array, :id, :name, prompt: "選択してください", name: "category_id"
-                %i.fas.selectwrapper__box--arrow-down
+                = f.select :category_id, options_for_select(@category_parent_array.map{|c|[c, {}]}, @product.category.parent.parent.name)
+              .selectwrapper__box--parent
+                = f.select :category_id, options_for_select(@category_child_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.parent.id)
+              .selectwrapper__box--child
+                = f.select :category_id, options_for_select(@category_grandchild_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.id)
+
+                -# = f.collection_select :category, @category_parent_array, :id, :name, prompt: "選択してください", name: "category_id"
+                  -# %i.fas.selectwrapper__box--arrow-down
 
         .Eform__productdetails__brand
           .Eform__productdetails__brand__title

@@ -6,6 +6,8 @@ class Product < ApplicationRecord
   belongs_to :condition
   belongs_to :brand, dependent: :destroy
 
+  belongs_to :user
+
   belongs_to :category
   accepts_nested_attributes_for :brand
 
