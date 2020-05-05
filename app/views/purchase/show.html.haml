@@ -1,0 +1,62 @@
+
+.logoheader
+  = link_to root_path do
+    %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+
+.bb
+  .Bform
+    .varification
+      .varification__title
+        購入内容の確認
+      .varification__infomation
+        = @products.name
+        .b
+        = @products.description
+      .varification__price
+        .a
+          支払金額
+        .b
+        .zenimark
+          ¥
+        .puraisu
+          = @products.price
+
+      .varification__paymentmethod
+        .a
+          支払方法
+        .card
+          カード番号：　
+          = "**** **** **** " + @default_card_information.last4
+      .varification__buy_btn
+        = form_tag(action: :pay, method: :post) do
+          %button.buy_btn 購入する
+
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+    %p © FURIMA
+
+
+
