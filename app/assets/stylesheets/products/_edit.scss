@@ -1,0 +1,716 @@
+a{
+  text-decoration: none;
+}
+
+//プルダウンメニューのcss
+// .selectwraps{
+//   font-weight: normal;
+//   width: 100%;
+//   position: relative;
+//   display: inline-block;
+//   select{
+//     font-weight: normal;
+//     width: 100%;
+//     height: 36px;
+//     position: relative;
+//     display: inline-block;
+//     background-color: white;
+//   }
+// }
+// .selectwrap::after {
+//   content: '';
+//   width: 6px;
+//   height: 6px;
+//   border: 0px;
+//   border-bottom: solid 2px #b4b3b3;
+//   border-right: solid 2px #b4b3b3;
+//   -ms-transform: rotate(45deg);
+//   -webkit-transform: rotate(45deg);
+//   transform: rotate(45deg);
+//   position: absolute;
+//   top: 50%;
+//   right: 10px;
+//   margin-top: -4px;
+// }
+// .select {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   width: 100%;
+//   height: 40px;
+//   background: transparent;
+//   position: relative;
+//   z-index: 1;
+//   padding: 0 40px 0 10px;
+//   border: 1px solid #b4b3b3;
+//   border-radius: 2px;
+// }
+// select::-ms-expand {
+//     display: none;
+// }
+
+
+.logoheader{
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  &__logo{
+    width: 25vw;
+    height: 100px;
+    margin-top: 25px;
+  }
+}
+
+.ee{
+  .Eform{
+    background-color: silver;
+    // height: 1900px;
+    width: 60vw;
+    margin:0 auto;
+    &__imageform{
+      background-color: #F2F2F2;
+      height: 300px;
+      padding: 40px 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
+      margin-bottom: 1px;
+      &--title{
+        display: flex;
+        font-size: 20px;
+          .title{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4em;
+          }
+          .require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 14px;
+          }
+      }
+      &--title2{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .Eform__dropbox{
+        height: 200px;
+        box-sizing: border-box;
+        .image-box{
+          // text-align: center;
+          align-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          background-color: rgb(245, 245, 245);
+          cursor: pointer;
+          display: flex;
+          height: 100%;
+          flex-wrap: wrap;
+          -webkit-box-pack: center;
+          justify-content: center;
+          position: relative;
+          border-width: 1px;
+          border-style: dashed;
+          border-color: rgb(204, 204, 204);
+          border-image: initial;
+          transition: all 0.5s ease-out 0s;
+          input{
+            fill: rgb(34, 34, 34);
+            height: 24px;
+            margin-bottom: 8px;
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    &__itemname{
+      background-color: #f2f2f2;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
+      font-weight: bold;
+      &--top{
+        color: rgb(136, 136, 136);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin-bottom: 24px;
+      }
+      &--title{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+          .title{
+            text-align: center;
+          }
+          .require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      .Eform__itemnamebox{
+        .inputform{
+          .inputarea{
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: normal;
+            padding-left: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+          }
+        }
+      }
+    }
+
+
+    &__description{
+      background-color:#f2f2f2;
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 40px;
+      margin-bottom: 1px;
+      &--title{
+        display: flex;
+        align-items: center;
+          .title{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4em;
+          }
+          .require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      .Eform__descriptionbox{
+        .inputform{
+          .inputarea{
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+            font-size: 16px;
+            padding-left: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+          }
+        }
+      }
+    }
+
+
+    &__productdetails{
+      background-color: #f2f2f2;
+      padding: 40px 30px;
+      margin-bottom: 1px;
+      font-weight: bold;
+      &__text{
+        color: rgb(136, 136, 136);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin-bottom: 24px;
+      }
+      &__category{
+        display: flex;
+          &__title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4em;
+          }
+          &__require{
+            font-weight: normal;
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      &__brand{
+        display: flex;
+        font-weight: normal;
+          &__title{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4em;
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: #c0c0c0;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      &__status{
+        display: flex;
+        font-weight: normal;
+          &__title{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4em;
+          }
+          &__require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+      }
+      .Eform__productdetailsboxes{
+        font-weight: normal;
+        .inputarea{
+          width: 100%;
+          height: 40px;
+          box-sizing: border-box;
+          font-size: 16px;
+          margin-bottom: 20px;
+          padding: 0 0 0 10px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+        }
+        .selectwrapper{
+          // background-color: white;
+          height: 36px;
+          margin-bottom: 30px;
+          border-radius: 4px;
+          &__box{
+            font-weight: normal;
+            width: 100%;
+            height: 36px;
+            position: relative;
+            display: inline-block;
+            &--select{
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              font-weight: normal;
+              width: 100%;
+              height: 36px;
+              position: relative;
+              display: inline-block;
+              border-radius: 4px;
+              background-color: white;
+              select{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding-left: 10px;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+              }
+              &--parent{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+                margin-top: 20px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding-left: 10px;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+              }
+              &--child{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+                margin-top: 20px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding-left: 10px;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+              }
+              &--child2{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+                margin-top: 20px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding-left: 10px;
+                font-weight: normal;
+                width: 100%;
+                height: 36px;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: white;
+              }              
+            }
+            select{ //子カテゴリーと孫カテゴリー用
+              padding-left: 10px;
+            }
+            ::after{
+              content: '';
+              width: 6px;
+              height: 6px;
+              border: 0px;
+              border-bottom: solid 2px #b4b3b3;
+              border-right: solid 2px #b4b3b3;
+              -ms-transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+              position: absolute;
+              top: 50%;
+              right: 10px;
+              margin-top: -4px;
+            }
+          }
+          ::after{ //子カテゴリ、孫カテゴリー用
+            content: '';
+            width: 6px;
+            height: 6px;
+            border: 0px;
+            border-bottom: solid 2px #b4b3b3;
+            border-right: solid 2px #b4b3b3;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin-top: -4px;
+          }
+        }
+      }
+      .Eform__productdetailsbox{
+        font-weight: normal;
+        .inputarea{
+          width: 100%;
+          height: 40px;
+          box-sizing: border-box;
+          font-size: 16px;
+          margin-bottom: 20px;
+          padding: 0 0 0 10px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background-color: white;
+        }
+        .selectwrapper{
+          margin-bottom: 30px;
+          border-radius: 4px;
+          &__box{
+            font-weight: normal;
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            select{
+              font-weight: normal;
+              width: 100%;
+              height: 36px;
+              position: relative;
+              display: inline-block;
+              border-radius: 4px;
+            }
+          }
+        }
+        .pulldown{
+          font-weight: normal;
+          width: 100%;
+          height: 40px;
+          position: relative;
+          display: inline-block;
+          border-radius: 4px;
+          background-color: white;
+        }
+      }
+    }
+
+    &__delivery{
+      font-weight: bold;
+      background-color: #f2f2f2;
+      height: 350px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
+      margin-bottom: 1px;
+      &--top{
+        color: rgb(136, 136, 136);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin-bottom: 24px;
+      }
+      &--title{
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        line-height: 1.4em;
+          .title{
+            text-align: center;
+            font-size: 16px;
+          }
+          .require{
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: normal;
+          }
+      }
+      .Eform__deliverybox{
+        .pulldown{
+          background-color: white;
+          margin-bottom: 30px;
+          border-radius: 4px;
+          .selectwrap{
+            font-weight: normal;
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            select{
+              font-weight: normal;
+              width: 100%;
+              height: 36px;
+              position: relative;
+              display: inline-block;
+              // background-color: white;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    &__price{
+      background-color: #f2f2f2;
+      height: 250px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 40px;
+      font-weight: bold;
+      &__top{
+        color: rgb(136, 136, 136);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin-bottom: 24px;
+      }
+      &__displayarea{
+        font-weight: normal;
+        display: flex;
+        justify-content: space-between;
+        line-height: 40px;
+        height: 40px;
+        &__pricearea{
+          display: flex;
+          align-items: center;
+          position: relative;
+          &__title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4em;
+          }
+          &__require{
+            position: absolute;
+            top: 6px;
+            left: 65px;
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            height: 28px;
+            width: 46px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 20px;
+            font-size: 16px;
+          }
+        }
+        &__pricedisplayarea{
+          display: flex;
+          &__yen{
+            margin-right: 10px;
+          }
+          &__form{
+            .inputarea{
+              width: 200px;
+              height: 40px;
+              font-size: 16px;
+              font-weight: normal;
+              text-align: right;
+              padding-right: 10px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+            }
+          }
+        }
+        &__commissionarea{
+          display: flex;
+          justify-content: space-between;
+          font-weight: normal;
+          padding-top: 30px;
+          border-bottom: 1px solid silver;
+          padding-bottom: 30px;
+          // &__title{
+          // }
+        }
+        &__profitarea{
+          display: flex;
+          justify-content: space-between;
+          font-weight: normal;
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+.eee{
+  // height: 300px;
+  width: 60vw;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  .exhibition_btn{
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ea352d;
+    color: white;
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    border: #ea352d;
+    border-radius: 4px;
+  }
+  .home_btn{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(73, 73, 255);
+    color: white;
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    border:  rgb(73, 73, 255);
+    border-radius: 4px;
+  }
+}
+
+
+.footer{
+  padding: 60px 0;
+  background-color: #272727;
+  text-align: center;
+  margin-top: 30px;
+  a{
+    color: #fff;
+    font-size: 12px;
+  }
+  &__contents{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 450px;
+    color: #fff;
+    &__content{
+      a{
+        text-decoration: none;
+      }
+      &__title{
+        margin: 0 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  &__logo{
+    margin-top: 30px;
+    img{
+      width: 140px;
+      height: 40px;
+    }
+    p{
+      color: #fff;
+    }
+  }
+}

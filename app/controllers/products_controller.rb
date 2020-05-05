@@ -42,6 +42,31 @@ class ProductsController < ApplicationController
     @products = Product.find(params[:id])
   end
 
+  def edit
+    @category = Category.order("id ASC").limit(13)
+    @product = Product.find(params[:id]).presence || "商品は存在しません"
+
+    # 親セレクトボックスの初期値(配列)
+    @category_parent_array = []
+    # categoriesテーブルから親カテゴリーのみを抽出、配列に格納
+    Category.where(ancestry: nil).each do |parent|
+      @category_parent_array << parent.name
+    end
+    # itemに紐づいていいる孫カテゴリーの親である子カテゴリが属している子カテゴリーの一覧を配列で取得
+    @category_child_array = @product.category.parent.parent.children
+    # itemに紐づいていいる孫カテゴリーが属している孫カテゴリーの一覧を配列で取得
+    @category_grandchild_array = @product.category.parent.children
+  end
+
+  def update
+    @product = Product.find(params[:id])
+      if @product.update(product_update_params)
+        redirect_to product_path(@product.id)
+      else
+        redirect_to edit_product
+      end
+  end
+
   private
   def post_params
     params.require(:product).permit(:name, :description, :category_id, :condition_id, :burden_id, :from_area_id, :delivery_days_id, :price, brand_attributes: [:id, :name], images_attributes: [:image]).merge(user_id: current_user.id)

@@ -1,0 +1,189 @@
+= stylesheet_link_tag "mypage_card", :media => "all"
+= form_for @product do |f|
+  .logoheader
+    = link_to root_path do
+      %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+
+  .ee
+    .Eform
+      .Eform__imageform
+        .Eform__imageform--title
+          .title
+            出品画像
+          .require
+            必須
+        .Eform__imageform--title2
+          最大５枚まで投稿できます
+        .Eform__dropbox
+          .image-box
+            .previews
+              -# - if @product.persisted?
+              -#   - @product.images.each_with_index do |image, i|
+              -#     = image_tag image.src.url, data: {index: i}, width: "100", height: '100'
+              -# = f.fields_for :images do |i|
+              -#   .js-file_group{"data-index" => "#{i.index}"}
+              -#     = i.file_field :image, class: 'js-file'
+              -#     %span.jsremove
+              -# - if @product.persisted?
+              -#   = image.check_box :_destroy, data:{index: image.index}, class: "hidden-destroy"
+            -# 画像ドロップエリア（仮）
+
+
+      .Eform__itemname
+        .Eform__itemname--top
+          商品について
+        .Eform__itemname--title
+          .title
+            商品名
+          .require
+            必須
+        .Eform__itemnamebox
+          .inputform
+            = f.text_field :name, class: "inputarea", size: "50", placeholder: "商品名をここに記入"
+            -# %input.inputarea{size: "50", placeholder: "商品名をここに記入"} 
+      .Eform__description
+        .Eform__description--title
+          .title
+            出品説明
+          .require
+            必須
+        .Eform__descriptionbox
+          .inputform
+            = f.text_area :description, class: "inputarea", placeholder: "商品説明をここに記入"
+            -# %input.inputarea{placeholder: "商品説明をここに記入"} 
+
+      .Eform__productdetails
+        .Eform__productdetails__text
+          商品の詳細
+        .Eform__productdetails__category
+          .Eform__productdetails__category__title
+            = f.label 'カテゴリー', class: 'listing-default__label'
+          .Eform__productdetails__category__require
+            必須
+        .Eform__productdetailsboxes
+          .selectwrapper
+            .selectwrapper__box
+              .selectwrapper__box--select#parent_category
+                = f.select :category_id, options_for_select(@category_parent_array.map{|c|[c, {}]}, @product.category.parent.parent.name)
+              .selectwrapper__box--parent
+                = f.select :category_id, options_for_select(@category_child_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.parent.id)
+              .selectwrapper__box--child
+                = f.select :category_id, options_for_select(@category_grandchild_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.id)
+
+                -# = f.collection_select :category, @category_parent_array, :id, :name, prompt: "選択してください", name: "category_id"
+                  -# %i.fas.selectwrapper__box--arrow-down
+
+        .Eform__productdetails__brand
+          .Eform__productdetails__brand__title
+            ブランド
+          .Eform__productdetails__brand__require
+            任意
+        .Eform__productdetailsbox
+          = f.fields_for :brand do |i|
+            = i.text_field :name, class: "inputarea", placeholder: "ブランドをここに記入"
+          -# %input.inputarea{placeholder: "ブランドをここに記入"} 
+
+        .Eform__productdetails__status
+          .Eform__productdetails__status__title
+            出品の状態
+          .Eform__productdetails__status__require
+            必須
+        .Eform__productdetailsbox
+          .pulldown
+            .selectwrap
+              = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
+
+
+      .Eform__delivery
+        .Eform__delivery--top
+          配送について
+        .Eform__delivery--title
+          .title
+            配送料の負担
+          .require
+            必須
+        .Eform__deliverybox
+          .pulldown
+            .selectwrap
+              = f.collection_select :burden_id, Burden.all, :id, :name, prompt: "選択してください"
+        .Eform__delivery--title
+          .title
+            配送元地域
+          .require
+            必須
+        .Eform__deliverybox
+          .pulldown
+            .selectwrap
+              = f.collection_select :from_area_id, FromArea.all, :id, :name, prompt: "選択してください"
+        .Eform__delivery--title
+          .title
+            配送準備日数
+          .require
+            必須
+        .Eform__deliverybox
+          .pulldown
+            .selectwrap
+              = f.collection_select :delivery_days_id, DeliveryDays.all, :id, :name, prompt: "選択してください"
+
+
+      .Eform__price
+        .Eform__price__top
+          価格について
+        .Eform__price__displayarea
+          .Eform__price__displayarea__pricearea
+            .Eform__price__displayarea__pricearea__title
+              販売価格
+            .Eform__price__displayarea__pricearea__require
+              必須
+          .Eform__price__displayarea__pricedisplayarea
+            .Eform__price__displayarea__pricedisplayarea__yen
+              ¥
+            .Eform__price__displayarea__pricedisplayarea__form
+              = f.text_field :price, class: "inputarea", placeholder: "0"
+        .Eform__price__displayarea__commissionarea
+          .Eform__price__displayarea__commissionarea__title
+            販売手数料（10％）
+          .Eform__price__displayarea__commissionarea__commission
+            ー
+        .Eform__price__displayarea__profitarea
+          .Eform__price__displayarea__profitarea__title
+            販売利益
+          .Eform__price__displayarea__profitarea__profit
+            ー
+
+
+  .eee
+    = f.submit "出品する", class: "exhibition_btn"
+    -# %button.exhibition_btn{name: "button", type: "submit"}
+      出品する
+    %br
+    = link_to "/" do
+      %button.home_btn{name: "button", type: "submit"}
+        ホームに戻る
+
+  .footer
+    .footer__contents
+      .footer__contents__content
+        %h1.footer__contents__content__title FURIMAについて
+        %ul
+          %li
+            = link_to "会社概要（運営会社）", "#"
+          %li
+            = link_to "プライバシーポリシー", "#"
+          %li
+            = link_to "FURIMA利用規約", "#"
+          %li
+            = link_to "ポイントに関する特約", "#"
+      
+      .footer__contents__content
+        %h1.footer__contents__content__title ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to "FURIMAガイド", "#"
+          %li
+            = link_to "FURIMAロゴ利用ガイドライン", "#"
+          %li
+            = link_to "お知らせ", "#"
+    .footer__logo
+      %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+      %p © FURIMA
