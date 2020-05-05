@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   root "top_page#index"
-  resources :products, only: [:index, :new, :create, :show, :edit, :destroy] do
+  resources :products, only: [:index, :new, :create, :show, :edit, :destroy, :update] do
     collection do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }

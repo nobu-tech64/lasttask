@@ -35,16 +35,29 @@
         = @products.burden.name
       - if user_signed_in?
         - if user_signed_in? && (current_user.id == @products.seller_id)
+          - if @products.buyer_id == nil
+            %button.buy_btn{name: "button", type: "submit"}
+              = link_to "編集", edit_product_path
+            %button.buy_btn{name: "button", type: "submit"}
+              = link_to 'この商品を削除する', product_path(@products), method: :delete, class: "determine_btn"
+          - else
+            %button.buy_btn{name: "button", type: "submit"}
+              SOLD OUT
+        - else
+          - if @products.buyer_id == nil
+            %button.buy_btn{name: "button", type: "submit"}
+              購入画面に進む
+          - else
+            %button.buy_btn{name: "button", type: "submit"}
+              SOLD OUT
+      - else
+        - if @products.buyer_id == nil
           %button.buy_btn{name: "button", type: "submit"}
-            = link_to "編集", edit_product_path
-          %button.buy_btn{name: "button", type: "submit"}
-            削除
+            = link_to "登録してね", new_user_registration_path
         - else
           %button.buy_btn{name: "button", type: "submit"}
-            購入画面に進む
-      - else
-        %button.buy_btn{name: "button", type: "submit"}
-          = link_to "登録してね", new_user_registration_path
+            SOLD OUT
+          
       .itemdetail 
         = @products.description
     .products_infomation
