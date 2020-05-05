@@ -19,7 +19,7 @@
         .zenimark
           ¥
         .puraisu
-          = @products.price
+          = @products.price.to_s(:delimited)
 
       .varification__paymentmethod
         .a

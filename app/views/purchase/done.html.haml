@@ -1,3 +1,92 @@
-%h2 購入が完了しました！
-%p Apple MacBook Pro 13インチ
-%p ¥10000000000000000000(送料込み)
+
+
+.confirm____container
+  .confirm__simple__header__logo
+    = link_to root_path do
+      %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
+  .buy-main
+    .buy-main__box
+      .buy-content
+        %h2.buy-content__completed-message_1
+          %i.fa.fa-clock
+          発送をお待ちください
+          %h2.buy-content__completed-message_2
+            出品者からの発送通知をお待ちください
+            %h2.buy-content__header
+              購入が完了しました
+
+        .buy-content__product
+          .buy-content__product__inner
+            .buy-product-main
+              .buy-product-image
+                -# = image_tag "https://static.mercdn.net/thumb/photos/m47187028411_1.jpg?1568902155", width: "100px"  #フロント実装時の仮置き画像
+                -# = image_tag "#{@product.images[0].image}", height: "64px" , width: "64px"
+                .buy-product-name  
+                  = @products.name
+            %form.buy-form
+              %p.buy-price
+                ¥
+                = @products.price.to_s(:delimited)
+        .buy-content__user-info
+          .buy-content__user-info__inner
+            .arigatou
+              %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/%E3%81%82%E3%82%8A%E3%81%8B%E3%82%99%E3%81%A8%E3%81%86.png", width: "300px"}
+              
+    .abc
+      = link_to "/" do
+        %button.home_btn{name: "button", type: "submit"}
+          ホームに戻る
+
+        -#     %h3 配送先
+        -#     .user-info-text
+        -#       〒150-0041
+        -#       -# = @addresses.postal_code.to_s
+        -#       %br
+        -#       東京都渋谷区神南1丁目18−2
+        -#       -# = @addresses.prefecture + @addresses.city + @addresses.street + @addresses.building
+        -#       %br
+        -#       山田花子
+        -#       -# = @users.f_name_kanji + " " + @user.l_name_kanji
+        -#     .user-info-fix
+        -#       = link_to "#" do
+        -#         変更する
+        -#         %span 
+        -#         %i.fa.fa-chevron-right
+        -# .buy-content__user-info
+        -#   .buy-content__user-info__inner
+        -#     %h3 支払方法
+        -#     .user-info-text
+        -#       ********0890
+        -#       %br
+        -#       06/23
+        -#     .user-info-fix
+        -#       = link_to "#" do
+        -#         変更する
+        -#         %span
+        -#         %i.fa.fa-chevron-right
+.footer
+  .footer__contents
+    .footer__contents__content
+      %h1.footer__contents__content__title FURIMAについて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）", "#"
+        %li
+          = link_to "プライバシーポリシー", "#"
+        %li
+          = link_to "FURIMA利用規約", "#"
+        %li
+          = link_to "ポイントに関する特約", "#"
+    
+    .footer__contents__content
+      %h1.footer__contents__content__title ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "FURIMAガイド", "#"
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", "#"
+        %li
+          = link_to "お知らせ", "#"
+  .footer__logo
+    %img{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo-white.png"}
+    %p © FURIMA

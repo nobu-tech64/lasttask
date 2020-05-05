@@ -4,16 +4,16 @@
       %img.logoheader__logo{src: "https://lasttask2020.s3-ap-northeast-1.amazonaws.com/logo.png"}
 
   .ee
-    .Eform
-      .Eform__imageform
-        .Eform__imageform--title
+    .EEform
+      .EEform__imageform
+        .EEform__imageform--title
           .title
             出品画像
           .require
             必須
-        .Eform__imageform--title2
+        .EEform__imageform--title2
           最大５枚まで投稿できます
-        .Eform__dropbox
+        .EEform__dropbox
           .image-box
             .previews
               -# - if @product.persisted?
@@ -28,38 +28,38 @@
             -# 画像ドロップエリア（仮）
 
 
-      .Eform__itemname
-        .Eform__itemname--top
+      .EEform__itemname
+        .EEform__itemname--top
           商品について
-        .Eform__itemname--title
+        .EEform__itemname--title
           .title
             商品名
           .require
             必須
-        .Eform__itemnamebox
+        .EEform__itemnamebox
           .inputform
             = f.text_field :name, class: "inputarea", size: "50", placeholder: "商品名をここに記入"
             -# %input.inputarea{size: "50", placeholder: "商品名をここに記入"} 
-      .Eform__description
-        .Eform__description--title
+      .EEform__description
+        .EEform__description--title
           .title
             出品説明
           .require
             必須
-        .Eform__descriptionbox
+        .EEform__descriptionbox
           .inputform
             = f.text_area :description, class: "inputarea", placeholder: "商品説明をここに記入"
             -# %input.inputarea{placeholder: "商品説明をここに記入"} 
 
-      .Eform__productdetails
-        .Eform__productdetails__text
+      .EEform__productdetails
+        .EEform__productdetails__text
           商品の詳細
-        .Eform__productdetails__category
-          .Eform__productdetails__category__title
+        .EEform__productdetails__category
+          .EEform__productdetails__category__title
             = f.label 'カテゴリー', class: 'listing-default__label'
-          .Eform__productdetails__category__require
+          .EEform__productdetails__category__require
             必須
-        .Eform__productdetailsboxes
+        .EEform__productdetailsboxes
           .selectwrapper
             .selectwrapper__box
               .selectwrapper__box--select#parent_category
@@ -69,87 +69,87 @@
               .selectwrapper__box--child
                 = f.select :category_id, options_for_select(@category_grandchild_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.id)
 
-        .Eform__productdetails__brand
-          .Eform__productdetails__brand__title
+        .EEform__productdetails__brand
+          .EEform__productdetails__brand__title
             ブランド
-          .Eform__productdetails__brand__require
+          .EEform__productdetails__brand__require
             任意
-        .Eform__productdetailsbox
+        .EEform__productdetailsbox
           = f.fields_for :brand do |i|
             = i.text_field :name, class: "inputarea", placeholder: "ブランドをここに記入"
           -# %input.inputarea{placeholder: "ブランドをここに記入"} 
 
-        .Eform__productdetails__status
-          .Eform__productdetails__status__title
+        .EEform__productdetails__status
+          .EEform__productdetails__status__title
             出品の状態
-          .Eform__productdetails__status__require
+          .EEform__productdetails__status__require
             必須
-        .Eform__productdetailsbox
+        .EEform__productdetailsbox
           .pulldown
             .selectwrap
               = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
 
 
-      .Eform__delivery
-        .Eform__delivery--top
+      .EEform__delivery
+        .EEform__delivery--top
           配送について
-        .Eform__delivery--title
+        .EEform__delivery--title
           .title
             配送料の負担
           .require
             必須
-        .Eform__deliverybox
+        .EEform__deliverybox
           .pulldown
             .selectwrap
               = f.collection_select :burden_id, Burden.all, :id, :name, prompt: "選択してください"
-        .Eform__delivery--title
+        .EEform__delivery--title
           .title
             配送元地域
           .require
             必須
-        .Eform__deliverybox
+        .EEform__deliverybox
           .pulldown
             .selectwrap
               = f.collection_select :from_area_id, FromArea.all, :id, :name, prompt: "選択してください"
-        .Eform__delivery--title
+        .EEform__delivery--title
           .title
             配送準備日数
           .require
             必須
-        .Eform__deliverybox
+        .EEform__deliverybox
           .pulldown
             .selectwrap
               = f.collection_select :delivery_days_id, DeliveryDays.all, :id, :name, prompt: "選択してください"
 
 
-      .Eform__price
-        .Eform__price__top
+      .EEform__price
+        .EEform__price__top
           価格について
-        .Eform__price__displayarea
-          .Eform__price__displayarea__pricearea
-            .Eform__price__displayarea__pricearea__title
+        .EEform__price__displayarea
+          .EEform__price__displayarea__pricearea
+            .EEform__price__displayarea__pricearea__title
               販売価格
-            .Eform__price__displayarea__pricearea__require
+            .EEform__price__displayarea__pricearea__require
               必須
-          .Eform__price__displayarea__pricedisplayarea
-            .Eform__price__displayarea__pricedisplayarea__yen
+          .EEform__price__displayarea__pricedisplayarea
+            .EEform__price__displayarea__pricedisplayarea__yen
               ¥
-            .Eform__price__displayarea__pricedisplayarea__form
+            .EEform__price__displayarea__pricedisplayarea__form
               = f.text_field :price, class: "inputarea", placeholder: "0"
-        .Eform__price__displayarea__commissionarea
-          .Eform__price__displayarea__commissionarea__title
-            販売手数料（10％）
-          .Eform__price__displayarea__commissionarea__commission
-            ー
-        .Eform__price__displayarea__profitarea
-          .Eform__price__displayarea__profitarea__title
-            販売利益
-          .Eform__price__displayarea__profitarea__profit
-            ー
+        -# .EEform__price__displayarea__commissionarea
+        -#   .EEform__price__displayarea__commissionarea__title
+        -#     販売手数料（10％）
+        -#   .EEform__price__displayarea__commissionarea__commission
+        -#     ー
+        -# .EEform__price__displayarea__profitarea
+        -#   .EEform__price__displayarea__profitarea__title
+        -#     販売利益
+        -#   .EEform__price__displayarea__profitarea__profit
+        -#     ー
 
 
   .eee
-    = f.submit '変更する', class: 'exhibition__btn determine__btn', id: 'send'
+    = f.submit '変更する', class: 'determine__btn', id: 'send'
     -# = f.submit "変更する", class: "exhibition_btn"
     -# %button.exhibition_btn{name: "button", type: "submit"}
       出品する
