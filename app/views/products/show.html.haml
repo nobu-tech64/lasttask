@@ -46,7 +46,8 @@
         - else
           - if @products.buyer_id == nil
             %button.buy_btn{name: "button", type: "submit"}
-              購入画面に進む
+              = link_to "購入画面に進む", product_purchase_index_path(@products)
+
           - else
             %button.buy_btn{name: "button", type: "submit"}
               SOLD OUT

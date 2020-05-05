@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
   get 'card/new'
 
   get 'card/show'
+
+
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -12,12 +15,22 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
 
-  root "top_page#index"
+  
   resources :products, only: [:index, :new, :create, :show, :edit, :destroy, :update] do
     collection do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }
     end
+
+
+    resources :purchase do
+      collection do
+        get 'show', to: 'purchase#show'
+        post 'pay', to: 'purchase#pay'
+        get 'done', to: 'purchase#done'
+      end
+    end
+
   end
 
   resources :card, only: [:new, :show] do
@@ -29,7 +42,7 @@ Rails.application.routes.draw do
   end
 
   resources :trades, only: [:index, :new, :create, :show]
-
+  root "top_page#index"
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
   get "/signup" => "top_page#signup"
