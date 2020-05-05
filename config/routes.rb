@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'purchase/index'
+
+  get 'purchase/done'
+
+  resources :purchase, only: [:index] do
+    collection do
+      get 'index', to: 'purchase#index'
+      post 'pay', to: 'purchase#pay'
+      get 'done', to: 'purchase#done'
+    end
+  end
+
   get 'card/new'
 
   get 'card/show'
@@ -28,7 +40,9 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :trades, only: [:index, :new, :create, :show]
+
 
   get "/mypage" => "top_page#mypage"
   get "/login" => "top_page#login"
