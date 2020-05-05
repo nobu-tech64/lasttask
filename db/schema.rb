@@ -64,12 +64,14 @@ ActiveRecord::Schema.define(version: 20200501144726) do
     t.integer  "delivery_days_id", limit: 1,     null: false
     t.integer  "price",                          null: false
     t.integer  "brand_id"
-    t.integer  "user_id"
+    t.integer  "buyer_id"
+    t.integer  "seller_id",                      null: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["brand_id"], name: "index_products_on_brand_id", using: :btree
+    t.index ["buyer_id"], name: "index_products_on_buyer_id", using: :btree
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
-    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
+    t.index ["seller_id"], name: "index_products_on_seller_id", using: :btree
   end
 
   create_table "trades", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -104,7 +106,8 @@ ActiveRecord::Schema.define(version: 20200501144726) do
   add_foreign_key "images", "products"
   add_foreign_key "products", "brands"
   add_foreign_key "products", "categories"
-  add_foreign_key "products", "users"
+  add_foreign_key "products", "users", column: "buyer_id"
+  add_foreign_key "products", "users", column: "seller_id"
   add_foreign_key "trades", "products"
   add_foreign_key "trades", "users"
 end

@@ -15,5 +15,8 @@ class User < ApplicationRecord
   validates :first_name_kana, presence: true, format: { with: kana }
   validates :last_name_kana, presence: true, format: { with: kana }
   has_one :address
-  has_many :products
+  
+  has_many :buyer_products, class_name: 'Product', foreign_key: 'buyer_id'
+  has_many :seller_products, class_name: 'Product', foreign_key: 'seller_id'
+
 end
