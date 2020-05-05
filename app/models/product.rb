@@ -1,16 +1,19 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :burden
-  belongs_to :from_area
-  belongs_to :delivery_days
-  belongs_to :condition
-  belongs_to :brand, dependent: :destroy
+  belongs_to :burden, optional: true
+  belongs_to :from_area, optional: true
+  belongs_to :delivery_days, optional: true
+  belongs_to :condition, optional: true
+  belongs_to :brand, optional: true, dependent: :destroy
 
-  belongs_to :category
+  belongs_to :category, optional: true
   accepts_nested_attributes_for :brand
 
   has_many :images
   accepts_nested_attributes_for :images, allow_destroy: true
+
+  belongs_to :buyer, class_name: 'User', foreign_key: 'buyer_id', optional: true
+  belongs_to :seller, class_name: 'User', foreign_key: 'seller_id', optional: true
   
   validates :name, presence: true, length: { maximum: 40 }
   validates :description, length: { maximum: 1000 }
