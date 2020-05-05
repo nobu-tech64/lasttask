@@ -34,7 +34,7 @@
       .deliveryfee_status
         = @products.burden.name
       - if user_signed_in?
-        - if user_signed_in? && (current_user.id == @products.user_id)
+        - if user_signed_in? && (current_user.id == @products.seller_id)
           %button.buy_btn{name: "button", type: "submit"}
             = link_to "編集", edit_product_path
           %button.buy_btn{name: "button", type: "submit"}
@@ -52,7 +52,7 @@
         .b
           出品者
         %ul.seller_name
-          = @products.user.nickname
+          = @products.seller.nickname
       .a
         .b
           カテゴリー
@@ -60,6 +60,7 @@
           = @products.category.root.name
           = @products.category.parent.name
           = @products.category.name
+
       .a
         .b
           ブランド
