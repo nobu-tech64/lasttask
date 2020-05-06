@@ -62,7 +62,7 @@ class ProductsController < ApplicationController
       if @product.update(product_update_params)
         redirect_to product_path(@product.id)
       else
-        redirect_to root_path
+        redirect_to product_path(@product.id)
       end
   end
 
