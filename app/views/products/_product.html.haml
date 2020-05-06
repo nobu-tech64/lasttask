@@ -3,5 +3,6 @@
     - if product.buyer_id == nil
       = image_tag product.images[0].image.url, alt: "画像", class: "productList--field"
     - else
-      SOLD OUT
       = image_tag product.images[0].image.url, alt: "画像", class: "productList--field"
+      .productList__soldout
+        SOLD OUT
