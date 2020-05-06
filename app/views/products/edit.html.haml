@@ -15,17 +15,26 @@
           最大５枚まで投稿できます
         .EEform__dropbox
           .image-box
-            .previews
-              -# - if @product.persisted?
-              -#   - @product.images.each_with_index do |image, i|
-              -#     = image_tag image.src.url, data: {index: i}, width: "100", height: '100'
-              -# = f.fields_for :images do |i|
-              -#   .js-file_group{"data-index" => "#{i.index}"}
-              -#     = i.file_field :image, class: 'js-file'
-              -#     %span.jsremove
-              -# - if @product.persisted?
-              -#   = image.check_box :_destroy, data:{index: image.index}, class: "hidden-destroy"
-            -# 画像ドロップエリア（仮）
+            - @product.images.each do |image|
+              .preview-box
+                .upper-box
+                  = image_tag image.image.url, width: "112", height: "112", alt: "preview"
+                .lower-box
+                  .delete-box
+                    .delete-btn
+                      %span 削除
+          .label-content
+            //プレビューの数に合わせてforオプションを指定
+            = f.label :"images_attributes_#{@product.images.length}_image", class: "label-box", id: "label-box--#{@product.images.length}" do
+              %pre.label-box__text-visible クリックしてファイルをアップロード
+          .hidden-content
+            = f.fields_for :images do |i|
+              //プレビューが出ている分のfile_fieldとdelete用のチェックボックスを設置
+              = i.file_field :image, class: "hidden-field"
+              = i.check_box:_destroy, class: "hidden-checkbox"
+              //5つのfile_fieldを準備するに当たって、足りない分を表示
+            - @product.images.length.upto(4) do |i|
+              %input{name: "product[images_attributes][#{i}][image]", id: "product_images_attributes_#{i}_image", class:"hidden-field", type:"file"}
 
 
       .EEform__itemname
@@ -64,8 +73,12 @@
             .selectwrapper__box
               .selectwrapper__box--select#parent_category
                 = f.select :category_id, options_for_select(@category_parent_array.map{|c|[c, {}]}, @product.category.parent.parent.name)
+          .selectwrapper
+            .selectwrapper__box
               .selectwrapper__box--parent
                 = f.select :category_id, options_for_select(@category_child_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.parent.id)
+          .selectwrapper
+            .selectwrapper__box
               .selectwrapper__box--child
                 = f.select :category_id, options_for_select(@category_grandchild_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.id)
 
