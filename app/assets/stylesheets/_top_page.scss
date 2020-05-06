@@ -208,6 +208,7 @@
       &__productLists{
         display: flex;
         justify-content: center;
+        height: 250px;
         .productList{
           padding: 30px;
           &--field{
