@@ -31,7 +31,7 @@ class PurchaseController < ApplicationController
 
   def done
     @products = Product.find(params[:product_id])
-
+    @products.update(buyer_id: current_user.id)
   end
 
 
@@ -46,7 +46,7 @@ class PurchaseController < ApplicationController
       :name,
       :description,
       :price,
-    )
+    ).merge(buyer_id: current_user.id)
   end
 
 end

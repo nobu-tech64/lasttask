@@ -214,6 +214,10 @@
             width: 200px;
             height: 200px;
           }
+          &__soldout{
+            background-color: red;
+            text-align: center;
+          }
         }
       }
     }
