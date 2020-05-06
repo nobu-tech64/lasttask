@@ -75,11 +75,11 @@
                 = f.select :category_id, options_for_select(@category_parent_array.map{|c|[c, {}]}, @product.category.parent.parent.name)
           .selectwrapper
             .selectwrapper__box
-              .selectwrapper__box--parent
+              .selectwrapper__box--child
                 = f.select :category_id, options_for_select(@category_child_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.parent.id)
           .selectwrapper
             .selectwrapper__box
-              .selectwrapper__box--child
+              .selectwrapper__box--gchild
                 = f.select :category_id, options_for_select(@category_grandchild_array.map{|c|[c[:name], c[:id], {'data-category'=>c[:id], 'id'=>c[:id]}]}, @product.category.id)
 
         .EEform__productdetails__brand
